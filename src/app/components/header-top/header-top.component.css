@@ -1,0 +1,14 @@
+.header-top-container {
+    background: #6F2FA1;
+    height: 49px;
+    display: flex;
+    justify-content: flex-end;
+}
+.header-content {   
+    display: flex;
+    align-items: center;
+}
+.header-content a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
