@@ -7,7 +7,7 @@
         </p>
     </div>
     <div style="margin-top: 36px;margin-bottom: 85px;">
-        <div class="row" style="padding: 0 7%;">
+        <div class="row mx-0" style="padding: 0 7%;">
             <div class="card border-0 col-3">
                 <div class="details-module card-body">
                     <div class="details-module-img">
@@ -58,54 +58,56 @@
 </div>
 <div class="make-appointment-container">
     <h2>Make an Appointment</h2>
-    <div class="row make-appointment-content">
-        <div class="col-6">
-            <div class="make-appointment-content-img"></div>
-        </div>
-        <div class="col-6 make-appointment-form">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <select>
-                        <option val="">Select a lawyer </option>
-                        <option val="1">Option 1</option>
-                        <option val="2">Option 2</option>
-                        <option val="3">Option 3</option>
-                        <option val="4">Option 4</option>
-                    </select>
+    <div class="container">
+        <div class="row make-appointment-content mx-0">
+            <div class="col-6">
+                <div class="image-wrapper">
+                    <img class="make-appointment-content-img" src="assets/img/banner-2.png" alt="">
+                    <div class="image-overlay"></div>
                 </div>
             </div>
-            <div class="row mb-4">
-                <div class="col-6">
-                    <input type="text" name="" id="" placeholder="First Name">
-                </div>
-                <div class="col-6">
-                    <input type="text" name="" id="" placeholder="Last Name">
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-12">
-                    <select>
-                        <option val="">Enter your location </option>
-                        <option val="1">Option 1</option>
-                        <option val="2">Option 2</option>
-                        <option val="3">Option 3</option>
-                        <option val="4">Option 4</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-12">
-                    <select>
-                        <option val="">Type of Law </option>
-                        <option val="1">Option 1</option>
-                        <option val="2">Option 2</option>
-                        <option val="3">Option 3</option>
-                        <option val="4">Option 4</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <textarea name="" id="" cols="30" rows="10">Message </textarea>
+            <div class="col-6 make-appointment-form">
+                <form>
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <select>
+                                <option val="">Select a lawyer </option>
+                                <option val="1">Option 1</option>
+                                <option val="2">Option 2</option>
+                                <option val="3">Option 3</option>
+                                <option val="4">Option 4</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <input type="text" name="" id="" placeholder="First Name">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <input type="text" name="" id="" placeholder="Last Name">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <select>
+                                <option val="">Enter your location </option>
+                                <option val="1">Option 1</option>
+                                <option val="2">Option 2</option>
+                                <option val="3">Option 3</option>
+                                <option val="4">Option 4</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <select>
+                                <option val="">Type of Law </option>
+                                <option val="1">Option 1</option>
+                                <option val="2">Option 2</option>
+                                <option val="3">Option 3</option>
+                                <option val="4">Option 4</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="" id="" cols="30" rows="4" placeholder="Message"></textarea>
+                            <button type="submit" class="requestBtn">Request For Appointment </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
