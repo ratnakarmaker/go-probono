@@ -1,5 +1,5 @@
 .navbar .navbar-brand img {
-    width: 447px;
+    width: 230px;
 }
 
 .navbar-right {
@@ -40,4 +40,8 @@
 
 .navbar-right .navbar-toggler-icon {
     background-image: url('../../../assets/humburger.svg') !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
