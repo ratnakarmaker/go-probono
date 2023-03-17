@@ -11,6 +11,8 @@ import { CarouselSliderComponent } from './features/components/home/carousel-sli
 import { HomeComponent } from './features/components/home/home.component';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { HelpSectionComponent } from './features/components/home/help-section/help-section.component';
+import { MakeAppointmentComponent } from './features/components/home/make-appointment/make-appointment.component';
+import { PowerOfLawComponent } from './features/components/home/power-of-law/power-of-law.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { HelpSectionComponent } from './features/components/home/help-section/he
     CarouselSliderComponent,
     HomeComponent,
     HelpSectionComponent,
+    PowerOfLawComponent,
+    MakeAppointmentComponent,
   ],
   imports: [
     BrowserModule,

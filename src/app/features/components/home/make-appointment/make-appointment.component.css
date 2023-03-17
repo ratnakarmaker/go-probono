@@ -1,0 +1,88 @@
+.make-appointment-container {
+    background: #F5F5F5;
+}
+
+.make-appointment-container h2 {
+    color: #6F2FA1;
+    font-size: 48px;
+    font-weight: 500;
+    padding-top: 33px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 16px;
+}
+
+.make-appointment-content {
+    margin-top: 53px;
+    justify-content: center;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(161, 132, 213, 0.35);
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.make-appointment-content-img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.make-appointment-form input {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 14px;
+    border: none;
+    width: 100%;
+    height: 52px;
+}
+
+.make-appointment-form select {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 16px;
+    border: none;
+    width: 100%;
+    height: 52px;
+}
+
+.make-appointment-form textarea {
+    font-size: 14px;
+    line-height: 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    border: none;
+    padding: 21px 28px;
+    width: 100%;
+    height: 159px;
+}
+
+.make-appointment-form textarea:focus,
+.make-appointment-form select:focus,
+.make-appointment-form input:focus {
+    outline: none;
+}
+
+.requestBtn {
+    background-color: #6F2FA1;
+    color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    padding: 16px;
+    font-size: 25px;
+    line-height: 30px;
+}
