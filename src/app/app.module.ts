@@ -13,6 +13,7 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { HelpSectionComponent } from './features/components/home/help-section/help-section.component';
 import { MakeAppointmentComponent } from './features/components/home/make-appointment/make-appointment.component';
 import { PowerOfLawComponent } from './features/components/home/power-of-law/power-of-law.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PowerOfLawComponent } from './features/components/home/power-of-law/pow
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCarouselModule.forRoot(),
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
