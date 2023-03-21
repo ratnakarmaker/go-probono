@@ -6,6 +6,28 @@
     border-left: 1px solid #dcdcdc;
 }
 
+.profile-nav-item-list {
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    padding: 0;
+}
+
+.profile-nav-item-list a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .87);
+    border-bottom: 1px solid #00bdf6
+}
+
+.profile-nav-item-list a:last-child {
+    border-bottom: none;
+}
+
+
 .my-profile-container {
     border-top: 5px solid #056683;
     padding: 10px 20px;
