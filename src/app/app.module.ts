@@ -14,6 +14,9 @@ import { HelpSectionComponent } from './features/components/home/help-section/he
 import { MakeAppointmentComponent } from './features/components/home/make-appointment/make-appointment.component';
 import { PowerOfLawComponent } from './features/components/home/power-of-law/power-of-law.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { LoginComponent } from './features/components/login/login.component';
+import { RegistrationComponent } from './features/components/registration/registration.component';
+import { ProfileComponent } from './features/components/profile/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HelpSectionComponent,
     PowerOfLawComponent,
     MakeAppointmentComponent,
+    LoginComponent,
+    RegistrationComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
