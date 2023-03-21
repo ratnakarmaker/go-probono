@@ -43,7 +43,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MatCarouselModule.forRoot()
+    MatCarouselModule.forRoot(),
   ],
 })
 export class FeatureModule {}
