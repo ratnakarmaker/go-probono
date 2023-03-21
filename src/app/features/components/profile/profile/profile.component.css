@@ -1,0 +1,147 @@
+.profile-container {
+    border-top: 5px solid #056683;
+    /* padding: 10px 20px; */
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+}
+
+.my-profile-container {
+    border-top: 5px solid #056683;
+    padding: 10px 20px;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+}
+
+.avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #4aba70;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.avatar i {
+    font-size: 62px;
+}
+
+.user-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.user-img-container {
+    padding: 1.5rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.user-name {
+    --text-opacity: 1;
+    color: rgba(117, 117, 117, var(--text-opacity));
+    text-align: center;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.user-phone {
+    --text-opacity: 1;
+    color: rgba(117, 117, 117, var(--text-opacity));
+    text-align: center;
+    font-size: 1rem;
+}
+
+.user-data-container {
+    margin-top: 2rem;
+}
+
+.user-data {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    --text-opacity: 1;
+    color: rgba(117, 117, 117, var(--text-opacity));
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.user-data-title {
+    border-bottom: 1px solid grey;
+}
+
+.user-ad-data-row {
+    display: flex;
+    /* margin-bottom: 0.75rem; */
+}
+
+.user-additional-data {
+    padding-top: .5rem;
+}
+
+.ad-text-style {
+    width: 8rem;
+    --text-opacity: 1;
+    color: rgba(66, 66, 66, var(--text-opacity));
+}
+
+.update-btn-container {
+    margin-bottom: 1rem;
+    /* margin-left: 2rem; */
+}
+
+.update-btn {
+    border: none;
+    border-radius: 0;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: #6F2FA1;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.spinner-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOR MOBILE SCREEN */
+@media screen and (max-width: 767px) {
+    .update-btn-container {
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .user-img {
+        transform: scale(0.75, 0.75);
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .user-data {
+        font-size: 1em;
+    }
+}
+
+
+/* FOR MOBILE SCREEN */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        margin-bottom: 25px;
+    }
+}
