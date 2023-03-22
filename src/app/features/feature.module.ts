@@ -8,8 +8,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CarouselSliderComponent } from './components/home/carousel-slider/carousel-slider.component';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
-import { LawListsComponent } from './components/law-base/law-lists/law-lists.component';
-import { MainLawsComponent } from './components/law-base/main-laws/main-laws.component';
 import { FactorialsLawComponent } from './components/home/factorials-law/factorials-law.component';
 import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from '../components/footer/footer.component';
@@ -26,12 +24,16 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'main-laws',
-        component: MainLawsComponent,
+        path: 'law',
+        loadChildren: () =>
+          import('./components/laws/laws.module').then((m) => m.LawsModule),
       },
       {
-        path: 'laws/:id',
-        component: LawListsComponent,
+        path: 'advocate',
+        loadChildren: () =>
+          import('./components/advocates/advocates.module').then(
+            (m) => m.AdvocatesModule
+          ),
       },
       {
         path: '',
@@ -49,8 +51,6 @@ const routes: Routes = [
     MakeAppointmentComponent,
     PowerOfLawComponent,
     CarouselSliderComponent,
-    LawListsComponent,
-    MainLawsComponent,
     FactorialsLawComponent,
     LandingComponent,
     FooterComponent,

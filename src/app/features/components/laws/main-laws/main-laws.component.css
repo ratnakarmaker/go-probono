@@ -16,10 +16,12 @@
   height: 50px;
   transition-duration: 1s;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: start;
   align-items: center;
   padding: 12px 8px 8px 12px;
+  transition-delay: 500ms;
+  transition-property: height, background-color;
 }
 .law-container .law-text .title {
   font-size: 18px;
@@ -28,19 +30,19 @@
 .law-container .law-text .subtitle {
   font-size: 14px;
   font-weight: 400;
-  display: none;
-  margin: 8px 0 0 0;
+  margin: 16px 0 0 0;
 }
 .law-container .law-text .description {
   font-size: 12px;
   font-weight: 100;
-  display: none;
-  margin: 8px 0 0 0;
+  padding: 8px 16px 0 16px;
 }
 .law-container .law-spacer {
   background-color: #6f2fa100;
   height: 300px;
   transition-duration: 1s;
+  transition-delay: 500ms;
+  transition-property: height, background-color;
 }
 .law-container:hover .law-text {
   height: 300px;
