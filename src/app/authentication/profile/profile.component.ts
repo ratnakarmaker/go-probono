@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-// import { AuthenticationService } from 'src/app/core/services/authentication.service';
 import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
   // horizontalPosition: MatSnackBarHorizontalPosition = 'start';
@@ -14,7 +13,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     // private authService: AuthenticationService,
-    private title: Title,
+    private title: Title
   ) {}
 
   public setTitle(newTitle: string) {
@@ -36,5 +35,4 @@ export class ProfileComponent implements OnInit {
   onActivate(event: any) {
     window.scroll(0, 0);
   }
-
 }

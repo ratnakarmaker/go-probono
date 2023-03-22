@@ -1,8 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-import { throwError } from 'rxjs';
+import {
+  Component,
+  HostListener,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+} from '@angular/core';
+
 export interface PhotosApi {
   albumId?: number;
   id?: number;
@@ -14,10 +18,9 @@ export interface PhotosApi {
 @Component({
   selector: 'app-carousel-slider',
   templateUrl: './carousel-slider.component.html',
-  styleUrls: ['./carousel-slider.component.css']
+  styleUrls: ['./carousel-slider.component.css'],
 })
 export class CarouselSliderComponent implements OnInit {
-
   isBrowser: boolean;
   screenSize: any;
 
@@ -36,25 +39,24 @@ export class CarouselSliderComponent implements OnInit {
     navText: ['<', '>'],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       400: {
-        items: 2
+        items: 2,
       },
       740: {
-        items: 3
+        items: 3,
       },
       940: {
-        items: 1
-      }
+        items: 1,
+      },
     },
-    nav: true
-  }
+    nav: true,
+  };
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: object,
-    // private http: HttpClient,
-  ) { 
+    @Inject(PLATFORM_ID) private platformId: object // private http: HttpClient,
+  ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
@@ -77,5 +79,4 @@ export class CarouselSliderComponent implements OnInit {
   onResize(event: any) {
     this.screenSize = window.innerWidth;
   }
-
 }

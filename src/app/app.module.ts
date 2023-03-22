@@ -13,34 +13,28 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { HelpSectionComponent } from './features/components/home/help-section/help-section.component';
 import { MakeAppointmentComponent } from './features/components/home/make-appointment/make-appointment.component';
 import { PowerOfLawComponent } from './features/components/home/power-of-law/power-of-law.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { LoginComponent } from './features/components/login/login.component';
-import { RegistrationComponent } from './features/components/registration/registration.component';
-import { ProfileComponent } from './features/components/profile/profile/profile.component';
+// import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderNavbarComponent,
-    HeaderTopComponent,
-    CarouselSliderComponent,
-    HomeComponent,
-    HelpSectionComponent,
-    PowerOfLawComponent,
-    MakeAppointmentComponent,
-    LoginComponent,
-    RegistrationComponent,
-    ProfileComponent,
+    // CarouselSliderComponent,
+    // HomeComponent,
+    // HelpSectionComponent,
+    // PowerOfLawComponent,
+    // MakeAppointmentComponent,
+    // LoginComponent,
+    // RegistrationComponent,
+    // ProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCarouselModule.forRoot(),
-    CarouselModule,
+    // CarouselModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
