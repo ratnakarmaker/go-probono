@@ -17,10 +17,10 @@ export class MainLawsComponent implements OnInit {
   lawList: Law[] = [
     {
       id: 1,
-      header: 'Law 1',
-      subtitle: 'Law 1 Law 1',
+      header: 'অর্থ আইন, ১৯৯৮',
+      subtitle: '১৯৯৮ সনের ১৪ নং আইন',
       description:
-        'Law 1Law 1Law 1Law 1Law 1Law 1Law 1Law 1Law 1Law 1Law 1Law 1Law 1Law 1',
+        'সরকারের আর্থিক প্রস্তাবাবলী কার্যকরকরণ এবং কতিপয় আইন সংশোধনকল্পে প্রণীত আইন',
     },
   ];
 

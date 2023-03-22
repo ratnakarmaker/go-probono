@@ -1,0 +1,46 @@
+.law-list-accordion .accordion-item{
+    border: none
+}
+.law-list-accordion .accordion-button::after {
+  display: none;
+}
+.law-list-accordion .accordion-button{
+    background-color: #ffffffff;
+    color: #6f2fa1ff;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+}
+.law-list-accordion .collapsed{
+    background-color: #6f2fa1ff;
+    color: #ffffffff;
+    border: 1px solid #6f2fa1ff;
+}
+.law-list-accordion .accordion-button:focus{
+    box-shadow: none;
+}
+.law-list-pagination .holder{
+    display: flex;
+    justify-content: center;
+}
+.law-list-pagination .holder .pagination .page-link{
+    color: #6f2fa1ff;
+    background-color: #ffffffff;
+    cursor: pointer;
+}
+.law-list-pagination .holder .pagination .active{
+    background-color: #6f2fa1ff;
+    color: #ffffffff;
+}
+.law-list-search .input-group{
+    height: 50px;
+}
+.law-list-search .input-group .form-control:focus{
+    box-shadow: none;
+}
+.law-list-search .input-group .btn{
+    box-shadow: none;
+    margin: 0px;
+}
