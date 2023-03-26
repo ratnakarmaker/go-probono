@@ -1,3 +1,4 @@
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainLawsComponent } from './main-laws/main-laws.component';
@@ -30,6 +31,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [MainLawsComponent, LawListComponent, LawDetailsComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), FontAwesomeModule],
 })
 export class LadyJusticeModule {}
