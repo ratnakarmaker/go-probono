@@ -1,1 +1,15 @@
-<p>carousel works!</p>
+<div class="container-fluid p-0 carousel-slider">
+  <ngb-carousel #carousel [interval]="700000" [pauseOnHover]="true">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <img [src]="image?.img" alt="">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{image?.caption}}</h3>
+        <button class="btn btn-primary">
+          Click Here
+        </button>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

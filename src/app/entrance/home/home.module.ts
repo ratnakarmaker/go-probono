@@ -1,3 +1,4 @@
+import { ComponentModule } from './../../commons/component/component.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SliderComponent } from './slider/slider.component';
@@ -25,6 +26,6 @@ const routes: Routes = [
     PowerOfLawComponent,
     LandingComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), ComponentModule],
 })
 export class HomeModule {}
