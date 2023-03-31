@@ -8,65 +8,24 @@
         </button>
       </div>
     </div>
-    <div class="col-12 law-list-accordion">
-      <div class="accordion" id="accordionExample">
-        <!-- <ng-container *ngFor="let act of actList; let i=index;"> -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" [id]="'heading'+0">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#body0"
-              aria-expanded="true" aria-controls="body0">
-              <span>{{actList[0].title}}</span>
+    <div class="col-12 pb-3 law-list-accordion">
+      <ngb-accordion #lawListAcc="ngbAccordion" [closeOthers]="true">
+        <ng-container *ngFor="let act of actList; let i=index;">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span>{{act.title}}</span>
               <span>
-                <!-- <i class="fa fa-calendar"></i> -->
                 <fa-icon icon="calendar"></fa-icon>
-                {{actList[2].date}}
+                {{act.date}}
               </span>
-            </button>
-          </h2>
-          <div [id]="'body'+0" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body" [innerHTML]="actList[0].description">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" [id]="'heading'+1">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#body1"
-              aria-expanded="true" aria-controls="body1">
-              <span>{{actList[1].title}}</span>
-              <span>
-                <!-- <i class="fa fa-calendar"></i> -->
-                <fa-icon icon="calendar"></fa-icon>
-                {{actList[1].date}}
-              </span>
-            </button>
-          </h2>
-          <div [id]="'body'+1" class="accordion-collapse collapse" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body" [innerHTML]="actList[1].description">
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" [id]="'heading'+2">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#body2"
-              aria-expanded="true" aria-controls="body2">
-              <span>{{actList[2].title}}</span>
-              <span>
-                <!-- <i class="fa fa-calendar"></i> -->
-                <fa-icon icon="calendar"></fa-icon>
-                {{actList[2].date}}
-              </span>
-            </button>
-          </h2>
-          <div [id]="'body'+2" class="accordion-collapse collapse" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body" [innerHTML]="actList[2].description">
-            </div>
-          </div>
-        </div>
-        <!-- </ng-container> -->
-      </div>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <div [innerHTML]="act.description">
+              </div>
+            </ng-template>
+          </ngb-panel>
+        </ng-container>
+      </ngb-accordion>
     </div>
     <div class="col-12 law-list-pagination">
       <nav aria-label="Page navigation example" class="holder">

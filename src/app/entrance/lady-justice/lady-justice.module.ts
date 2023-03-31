@@ -5,6 +5,7 @@ import { MainLawsComponent } from './main-laws/main-laws.component';
 import { LawListComponent } from './law-list/law-list.component';
 import { LawDetailsComponent } from './law-details/law-details.component';
 import { Routes, RouterModule } from '@angular/router';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [MainLawsComponent, LawListComponent, LawDetailsComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), FontAwesomeModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    FontAwesomeModule,
+    NgbAccordionModule,
+  ],
 })
 export class LadyJusticeModule {}
