@@ -38,23 +38,6 @@
   }
 }
 
-::ng-deep .law-list-search {
-  .input-group {
-    height: 50px;
-
-    .form-control {
-      &:focus {
-        box-shadow: none;
-      }
-    }
-
-    .btn {
-      box-shadow: none;
-      margin: 0px;
-    }
-  }
-}
-
 ::ng-deep .law-list-pagination {
   .holder {
     display: flex;

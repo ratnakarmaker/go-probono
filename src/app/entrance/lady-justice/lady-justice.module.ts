@@ -6,6 +6,8 @@ import { LawListComponent } from './law-list/law-list.component';
 import { LawDetailsComponent } from './law-details/law-details.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
+import { ComponentModule } from 'src/app/commons/component/component.module';
 
 const routes: Routes = [
   {
@@ -37,6 +39,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FontAwesomeModule,
     NgbAccordionModule,
+    FormFieldsModule,
+    ComponentModule,
   ],
 })
 export class LadyJusticeModule {}
