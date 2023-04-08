@@ -4,15 +4,20 @@
       <app-search-box></app-search-box>
     </div>
     <div class="col-12 pb-3 law-list-accordion">
+      <div class="q-a-text">
+        <div class="q-a-btn">
+          Q/A
+        </div>
+      </div>
       <ngb-accordion #lawListAcc="ngbAccordion" [closeOthers]="true">
         <ng-container *ngFor="let act of actList; let i=index;">
           <ngb-panel>
             <ng-template ngbPanelTitle>
               <span>{{act.title}}</span>
-              <span>
+              <!-- <span>
                 <fa-icon icon="calendar"></fa-icon>
                 {{act.date}}
-              </span>
+              </span> -->
             </ng-template>
             <ng-template ngbPanelContent>
               <div [innerHTML]="act.description">
@@ -23,15 +28,7 @@
       </ngb-accordion>
     </div>
     <div class="col-12 law-list-pagination">
-      <nav aria-label="Page navigation example" class="holder">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link">Previous</a></li>
-          <li class="page-item"><a class="page-link active">1</a></li>
-          <li class="page-item"><a class="page-link">2</a></li>
-          <li class="page-item"><a class="page-link">3</a></li>
-          <li class="page-item"><a class="page-link">Next</a></li>
-        </ul>
-      </nav>
+      <app-pagination [total]="250" [page]="12" [size]="10" [(page)]="page"></app-pagination>
     </div>
   </div>
 </div>

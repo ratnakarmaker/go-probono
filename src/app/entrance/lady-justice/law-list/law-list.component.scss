@@ -1,4 +1,16 @@
 ::ng-deep .law-list-accordion {
+  .q-a-text {
+    padding-top: 16px;
+
+    .q-a-btn {
+      width: fit-content;
+      padding: 8px 32px 8px 32px;
+      color: #ffffffff;
+      background-color: green;
+      border-radius: 5px;
+    }
+  }
+
   .accordion-item {
     border: none;
   }
@@ -31,7 +43,7 @@
     border: 1px solid #6f2fa1ff;
   }
 
-  .accordion-body{
+  .accordion-body {
     border-width: 0 1px 1px 1px;
     border-style: solid;
     border-color: black;

@@ -13,6 +13,8 @@ interface Act {
   styleUrls: ['./law-list.component.scss'],
 })
 export class LawListComponent {
+  page: number = 10;
+
   actList: Act[] = [
     {
       id: 1,
