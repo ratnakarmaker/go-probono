@@ -45,6 +45,8 @@ export class PaginationComponent implements OnInit, OnChanges, OnDestroy {
   @Output() pageChange: EventEmitter<number> = new EventEmitter<number>();
   @Output() sizeChange: EventEmitter<number> = new EventEmitter<number>();
 
+  @Output() valueChanged: EventEmitter<undefined> = new EventEmitter();
+
   ngOnDestroy(): void {}
   ngOnChanges(changes: SimpleChanges): void {
     if (
