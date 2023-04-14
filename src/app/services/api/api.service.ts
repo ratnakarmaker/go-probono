@@ -16,9 +16,12 @@ export class ApiService {
 
   private getHeader(): { headers: HttpHeaders } {
     let token: string | null = this.storage.getToken();
-    return token
-      ? { headers: new HttpHeaders().set('Authorization', `Bearer ${token}`) }
-      : { headers: new HttpHeaders() };
+    return {
+      headers: new HttpHeaders({
+        'Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': '*',
+      })?.set('Authorization', token ? `${token}` : ''),
+    };
   }
 
   private getLeanParams(params?: any): any {
@@ -171,12 +174,11 @@ export class ApiService {
 
   public post(
     listKey: string,
-    dataId: number | string,
     data: any = {},
     parameters?: any,
     selfShowMessage?: boolean
   ): Observable<any> {
-    let route: string = `${this.apiList[listKey]}${dataId ? '/' + dataId : ''}`;
+    let route: string = `${this.apiList[listKey]}/`;
     let params: any = { ...this.getLeanParams(parameters) };
     return new Observable((subscriber: Subscriber<any>) => {
       let tempSubs: Subscription = this._post(

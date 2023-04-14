@@ -1,6 +1,6 @@
 <div class="reg-section">
   <div class="reg-form col-12 col-xl-6">
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form [formGroup]="dataForm" (submit)="register()">
       <div class="avatar d-flex justify-content-center align-items-center">
         <fa-icon icon="user" size="3x"></fa-icon>
       </div>
@@ -8,37 +8,41 @@
       <div class="form-group row">
         <div class="col-12 col-md-6">
           <label for="name" class="fw-bold">Name</label>
-          <input id="name" type="text" class="form-control" placeholder="Your name" required="required" />
+          <input id="name" formControlName="name" type="text" class="form-control" placeholder="Your name"
+            required="required" />
         </div>
         <div class="col-12 col-md-6">
           <label for="email" class="fw-bold">Email</label>
-          <input id="email" type="email" class="form-control" placeholder="Email address" required="required" />
+          <input id="email" formControlName="email" type="email" class="form-control" placeholder="Email address"
+            required="required" />
         </div>
       </div>
       <div class="form-group row">
         <div class="col-12 col-md-6">
           <label for="mobile" class="fw-bold">Mobile</label>
-          <input id="mobile" type="text" class="form-control" placeholder="Phone number" required="required" />
+          <input id="mobile" formControlName="mobile" type="text" class="form-control" placeholder="Phone number"
+            required="required" />
         </div>
         <div class="col-12 col-md-6">
           <label for="pass" class="fw-bold">Password</label>
-          <input id="pass" type="password" class="form-control" placeholder="Type password" required="required" />
+          <input id="pass" formControlName="password" type="password" class="form-control" placeholder="Type password"
+            required="required" />
         </div>
       </div>
       <div class="form-group row">
         <label for="gender" class="fw-bold">Gender</label>
         <div class="d-flex gap-2">
           <div>
-            <input id="male" name="gender" type="radio">
+            <input id="male" formControlName="gender" name="gender" type="radio" value="Male">
             <label for="male" class="ms-2">Male</label>
           </div>
           <div>
-            <input id="female" name="gender" type="radio">
+            <input id="female" formControlName="gender" name="gender" type="radio" value="Female">
             <label for="female" class="ms-2">Female</label>
           </div>
         </div>
       </div>
-      <input type="submit" class="btn btn-primary btn-block btn-lg" value="Register Now" routerLink="/" />
+      <input type="submit" class="btn btn-primary btn-block btn-lg" value="Register Now" />
     </form>
   </div>
 </div>
