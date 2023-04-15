@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api/api.service';
 
 interface Law {
   header: string;
@@ -24,9 +25,15 @@ export class MainLawsComponent {
     },
   ];
 
-  constructor(public router: Router, public route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private api: ApiService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getMainLaws();
+  }
 
   lawDescription(law: Law) {
     this.router.navigate([`../main-laws/${law?.id}`], {
@@ -46,5 +53,9 @@ export class MainLawsComponent {
       relativeTo: this.route,
       queryParams: { major_id: law?.id },
     });
+  }
+
+  getMainLaws() {
+    this.api.list('LAW_LIST_API').subscribe((response: any) => {});
   }
 }

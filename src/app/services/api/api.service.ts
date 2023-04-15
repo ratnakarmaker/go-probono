@@ -18,8 +18,8 @@ export class ApiService {
     let token: string | null = this.storage.getToken();
     return {
       headers: new HttpHeaders({
-        'Control-Allow-Origin': '*',
-        'Access-Control-Allow-Origin': '*',
+        // 'Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
       })?.set('Authorization', token ? `${token}` : ''),
     };
   }
@@ -178,7 +178,7 @@ export class ApiService {
     parameters?: any,
     selfShowMessage?: boolean
   ): Observable<any> {
-    let route: string = `${this.apiList[listKey]}/`;
+    let route: string = `${this.apiList[listKey]}`;
     let params: any = { ...this.getLeanParams(parameters) };
     return new Observable((subscriber: Subscriber<any>) => {
       let tempSubs: Subscription = this._post(
@@ -307,5 +307,9 @@ export class ApiService {
       return pV + cV[0] + '=' + cV[1] + '&';
     }, '')}_token=${this.storage.getToken()}`;
     window.open(route);
+  }
+
+  public imagePath(url: string): string {
+    return `${this.baseUrl}/${url}`;
   }
 }

@@ -1,21 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent {
-  protected images: any[] = Array.from({ length: 4 }).map(
-    (tada: any, i: number) => {
-      return {
-        caption: `Slide No ${i}`,
-        button: {
-          text: '',
-          path: '',
-        },
-        img: '../../../../assets/img/banner-1.png',
-      };
-    }
-  );
+export class CarouselComponent implements OnChanges {
+  @Input() images: any[] = [];
+
+  constructor(protected api: ApiService) {}
+
+  ngOnChanges(changes: SimpleChanges): void {}
+
+  goTo(url: string) {
+    window.open(url);
+  }
 }

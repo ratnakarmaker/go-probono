@@ -1,13 +1,13 @@
 <div class="container-fluid p-0 carousel-slider">
-  <ngb-carousel #carousel [interval]="700000" [pauseOnHover]="true">
+  <ngb-carousel #carousel [interval]="4000" [pauseOnHover]="true">
     <ng-template ngbSlide *ngFor="let image of images">
       <div class="picsum-img-wrapper">
-        <img [src]="image?.img" alt="">
+        <img [src]="api.imagePath(image?.image)" alt="">
       </div>
       <div class="carousel-caption">
-        <h3>{{image?.caption}}</h3>
-        <button class="btn btn-primary">
-          Click Here
+        <h3>{{image?.slider_text}}</h3>
+        <button class="btn btn-primary" (click)="goTo(image?.button_url)">
+          {{image?.button_text}}
         </button>
       </div>
     </ng-template>
