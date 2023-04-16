@@ -1,4 +1,12 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-navs',
@@ -7,6 +15,12 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class NavsComponent implements OnChanges {
   @Input() items: any[] = [];
+
+  @Input() key: number | null = null;
+  @Output() keyChange: EventEmitter<number> = new EventEmitter<number>();
+
+  @Input() reset: Subject<any> = new Subject<any>();
+  @Output() search: EventEmitter<undefined> = new EventEmitter<undefined>();
 
   constructor() {}
 

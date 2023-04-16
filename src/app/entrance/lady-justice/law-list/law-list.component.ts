@@ -35,13 +35,18 @@ export class LawListComponent {
 
   routeParamSearchGet() {
     this.route.queryParams.subscribe((params: any) => {
-      this.text_search = params?.text;
-      this.law_search = params?.law;
+      this.text_search = params?.text ?? '';
+      this.law_search = params?.law ?? 0;
       this.getAllLaws();
     });
   }
 
   search(source: 'text' | 'law') {
+    if (source === 'text') {
+      this.law_search = 0;
+    } else if (source === 'law') {
+      this.text_search = '';
+    }
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams:
@@ -53,7 +58,15 @@ export class LawListComponent {
 
   getAllLaws() {
     this.api
-      .list('KNOW_YOUR_LAW_API', {}, this.text_search ?? this.law_search ?? '')
+      .list(
+        'KNOW_YOUR_LAW_API',
+        {},
+        this.text_search
+          ? this.text_search
+          : this.law_search != 0
+          ? this.law_search
+          : ''
+      )
       .subscribe((response: any) => {
         this.actList = response;
       });

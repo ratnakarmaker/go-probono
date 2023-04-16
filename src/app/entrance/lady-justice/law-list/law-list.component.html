@@ -1,7 +1,7 @@
 <div class="container-fluid pb-4">
   <div class="row">
     <div class="col-3">
-      <app-navs [items]="majorList"></app-navs>
+      <app-navs [items]="majorList" [(key)]="law_search" (search)="search('law')"></app-navs>
     </div>
     <div class="col-9">
       <div class="row">
