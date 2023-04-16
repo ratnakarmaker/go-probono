@@ -103,9 +103,10 @@ export class ApiService {
   public list(
     listKey: string,
     parameters: any = {},
+    routeAddons?: string | number,
     selfShowMessage?: boolean
   ) {
-    let route: string = this.apiList[listKey];
+    let route: string = `${this.apiList[listKey]}${routeAddons ?? ''}`;
     let params: any = { ...this.getLeanParams(parameters) };
     return new Observable((subscriber: Subscriber<any>) => {
       let tempSubs: Subscription = this._get(route, params).subscribe({

@@ -1,7 +1,8 @@
 <div class="container-fluid p-0 search-box">
   <div class="input-group">
-    <input type="search" id="form1" class="form-control" placeholder="Search" />
-    <button type="button" class="btn input-group-append">
+    <input type="search" id="form1" class="form-control" placeholder="Search" [(ngModel)]="key"
+      (ngModelChange)="keyChange.emit($event)" />
+    <button type="button" class="btn input-group-append" (click)="search.emit()">
       <fa-icon icon="search"></fa-icon>
     </button>
   </div>
