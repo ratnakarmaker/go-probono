@@ -1,7 +1,9 @@
 <div class="container-fluid p-0">
   <div class="row">
     <div class="col-12" *ngFor="let item of items; let i = index;">
-      {{item?.title ?? item?.name}}
+      <button class="btn item">
+        {{item?.title ?? item?.name}}
+      </button>
     </div>
   </div>
 </div>
