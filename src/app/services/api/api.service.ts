@@ -311,6 +311,6 @@ export class ApiService {
   }
 
   public imagePath(url: string): string {
-    return `${this.baseUrl}/${url}`;
+    return `${this.baseUrl}${url?.startsWith('/') ? url : '/' + url}`;
   }
 }
