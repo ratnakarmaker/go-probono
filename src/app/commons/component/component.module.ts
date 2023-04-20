@@ -11,6 +11,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { NavsComponent } from './navs/navs.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SlideShowComponent } from './slide-show/slide-show.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PaginationComponent,
     AccordionComponent,
     NavsComponent,
+    SlideShowComponent,
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PaginationComponent,
     AccordionComponent,
     NavsComponent,
+    SlideShowComponent,
   ],
 })
 export class ComponentModule {}

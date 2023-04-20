@@ -42,31 +42,18 @@ export class LawListComponent {
   }
 
   search(source: 'text' | 'law') {
-    if (source === 'text') {
-      this.law_search = 0;
-    } else if (source === 'law') {
-      this.text_search = '';
-    }
     this.router.navigate([], {
       relativeTo: this.route,
-      queryParams:
-        source === 'text'
-          ? { text: this.text_search }
-          : { law: this.law_search },
+      queryParams: { text: this.text_search, law: this.law_search },
     });
   }
 
   getAllLaws() {
     this.api
-      .list(
-        'KNOW_YOUR_LAW_API',
-        {},
-        this.text_search
-          ? this.text_search
-          : this.law_search != 0
-          ? this.law_search
-          : ''
-      )
+      .list('KNOW_YOUR_LAW_API', {
+        text: this.text_search,
+        law: this.law_search,
+      })
       .subscribe((response: any) => {
         this.actList = response;
       });

@@ -1,0 +1,16 @@
+<div class="container-fluid p-0">
+  <div class="slide-container">
+    <ng-container *ngFor="let slide of slideList; let s_i=index;">
+      <div class="custom-slide" [ngStyle]="{'width': (100/options?.show_count)+'%'}">
+        <div class="first-layer" [ngStyle]="{'background-image':
+        'url('+api.imagePath(slide?.thumbnail)+')'}"></div>
+        <div class="second-layer"></div>
+        <div class="inner-container">
+          <span class="header">{{slide?.image_text}}</span>
+          <span class="description">{{slide?.headline}}</span>
+          <span class="read-more">READ MORE</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
+import { ApiService } from 'src/app/services/api/api.service';
+
+@Component({
+  selector: 'app-slide-show',
+  templateUrl: './slide-show.component.html',
+  styleUrls: ['./slide-show.component.scss'],
+})
+export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
+  @Input() data: any[] = [];
+  @Input() options: any;
+
+  protected slideList: any[] = [];
+  private currentIndex: number = 0;
+  private interval: any;
+
+  constructor(protected api: ApiService) {}
+
+  ngOnDestroy(): void {
+    window.clearInterval(this.interval);
+  }
+
+  ngOnInit(): void {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes?.['data']?.currentValue?.length) {
+      this.slideList = JSON.parse(JSON.stringify(this.data));
+      if (this.data?.length > this.options?.show_count) {
+        window.setInterval(() => {
+          this.animator();
+        }, this.options?.duration ?? 2000);
+      }
+    }
+  }
+
+  animator() {
+    if (this.slideList.length >= this.data.length * 2) {
+      this.slideList = JSON.parse(JSON.stringify(this.data));
+      this.currentIndex = 0;
+    }
+    let element: any =
+      window.document.getElementsByClassName('custom-slide')[0];
+    let style: any = window.getComputedStyle(element);
+    element.style.marginLeft = `${
+      Number(style?.['margin-left']?.slice(0, -2)) -
+      Number(style?.['width']?.slice(0, -2))
+    }px`;
+    this.slideList.push(this.slideList[this.currentIndex]);
+    this.currentIndex += 1;
+  }
+}
