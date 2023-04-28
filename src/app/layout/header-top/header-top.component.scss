@@ -1,21 +1,19 @@
-.header-top-container {
-    background: #6F2FA1;
-    height: 49px;
-    display: flex;
-    align-items: center;
-}
+.header-top {
+  background: #6F2FA1;
 
-.header-content {
+  .header-content {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
-    gap: 36px;
-}
+    justify-content: flex-end;
+    height: 50px;
 
-.header-content a {
-    color: #FFFFFF;
-    font-size: 16px;
-    text-underline-offset: 2px;
-    display: flex;
-    gap: 7px;
+    a {
+      color: #FFFFFF;
+      font-size: 16px;
+      text-underline-offset: 2px;
+      white-space: nowrap;
+      margin-right: 28px;
+    }
+  }
 }

@@ -1,9 +1,11 @@
 import {
   Component,
+  EventEmitter,
   Input,
   OnChanges,
   OnDestroy,
   OnInit,
+  Output,
   SimpleChanges,
 } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
@@ -16,6 +18,8 @@ import { ApiService } from 'src/app/services/api/api.service';
 export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
   @Input() data: any[] = [];
   @Input() options: any;
+
+  @Output() slide_clicked: EventEmitter<any> = new EventEmitter<any>();
 
   protected slideList: any[] = [];
   private currentIndex: number = 0;

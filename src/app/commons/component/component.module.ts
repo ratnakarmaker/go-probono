@@ -12,6 +12,7 @@ import { NavsComponent } from './navs/navs.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlideShowComponent } from './slide-show/slide-show.component';
+import { PageContainerComponent } from './page-container/page-container.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
     AccordionComponent,
     NavsComponent,
     SlideShowComponent,
+    PageContainerComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +38,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
     AccordionComponent,
     NavsComponent,
     SlideShowComponent,
+    PageContainerComponent,
   ],
 })
 export class ComponentModule {}

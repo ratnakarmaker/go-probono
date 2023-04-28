@@ -1,7 +1,8 @@
-<div class="container-fluid p-0">
+<div class="container">
   <div class="slide-container">
     <ng-container *ngFor="let slide of slideList; let s_i=index;">
-      <div class="custom-slide" [ngStyle]="{'width': (100/options?.show_count)+'%'}">
+      <div class="custom-slide" [ngStyle]="{'width': (100/options?.show_count)+'%'}"
+        (click)="slide_clicked.next(slide)">
         <div class="first-layer" [ngStyle]="{'background-image':
         'url('+api.imagePath(slide?.thumbnail)+')'}"></div>
         <div class="second-layer"></div>
