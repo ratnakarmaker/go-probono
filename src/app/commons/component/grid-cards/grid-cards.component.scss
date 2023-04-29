@@ -1,0 +1,95 @@
+.grid-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 3px rgba(180, 180, 180, 1);
+  overflow: hidden;
+  position: relative;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: block;
+
+  .grid-spacer {
+    height: 0%;
+    white-space: nowrap;
+    width: 100%;
+    transition-duration: 1s;
+  }
+
+  .grid-content {
+    height: 100%;
+    width: 100%;
+    background-color: #00000088;
+    color: #ffffffff;
+    transition-duration: 1s;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+
+    .description {
+      height: 45%;
+
+      .content {
+        height: 80%;
+        overflow: hidden;
+        display: block;
+      }
+
+      p {
+        margin: 0px;
+        padding-right: 10%;
+        text-align: end
+      }
+    }
+  }
+
+  @at-root .animation {
+    &:hover {
+      .grid-spacer {
+        height: 20%;
+        margin-bottom: 0px;
+      }
+
+      .grid-content {
+        background-color: #6f2fa1bb;
+      }
+    }
+
+    .grid-spacer {
+      height: 100%;
+      white-space: nowrap;
+      width: 100%;
+      margin-bottom: -60px;
+      transition-duration: 1s;
+    }
+
+    .grid-content {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-color: #6f2fa1ff;
+      color: #ffffffff;
+      transition-duration: 1s;
+
+      .description {
+        height: 40%;
+
+        .content {
+          height: 80%;
+          overflow: hidden;
+          display: block;
+        }
+
+        p {
+          margin: 0px;
+          padding-right: 10%;
+          text-align: end;
+        }
+      }
+    }
+  }
+}

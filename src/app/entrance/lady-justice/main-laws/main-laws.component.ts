@@ -10,6 +10,21 @@ import { ApiService } from 'src/app/services/api/api.service';
 export class MainLawsComponent {
   lawList: any[] = [];
 
+  protected buttons: any[] = [
+    {
+      action: 'description',
+      icon: 'eye',
+      tooltip: 'Law Description',
+      class: 'btn-primary',
+    },
+    {
+      action: 'laws',
+      icon: 'book',
+      tooltip: 'Q/A List',
+      class: 'btn-secondary',
+    },
+  ];
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -18,6 +33,19 @@ export class MainLawsComponent {
 
   ngOnInit(): void {
     this.getMainLaws();
+  }
+
+  protected buttonClicked({ action, data }: { action: string; data: any }) {
+    switch (action) {
+      case 'description':
+        this.lawDescription(data);
+        break;
+      case 'laws':
+        this.lawListView(data);
+        break;
+      default:
+        break;
+    }
   }
 
   lawDescription(law: any) {
@@ -42,7 +70,13 @@ export class MainLawsComponent {
 
   getMainLaws() {
     this.api.list('LAW_LIST_API').subscribe((response: any) => {
-      this.lawList = response;
+      this.lawList = response?.map((tada: any) => {
+        return {
+          image_src: tada?.thumbnail,
+          title: tada?.name,
+          description: tada?.headline,
+        };
+      });
     });
   }
 }

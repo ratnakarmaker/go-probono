@@ -20,7 +20,7 @@ export class NavsComponent implements OnChanges {
   @Output() keyChange: EventEmitter<number> = new EventEmitter<number>();
 
   @Input() reset: Subject<any> = new Subject<any>();
-  @Output() search: EventEmitter<undefined> = new EventEmitter<undefined>();
+  @Output() search: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
 

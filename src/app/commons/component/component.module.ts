@@ -6,6 +6,7 @@ import {
   NgbAccordionModule,
   NgbCarouselModule,
   NgbPaginationModule,
+  NgbTooltipModule,
 } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionComponent } from './accordion/accordion.component';
 import { NavsComponent } from './navs/navs.component';
@@ -13,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { PageContainerComponent } from './page-container/page-container.component';
+import { GridCardsComponent } from './grid-cards/grid-cards.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { PageContainerComponent } from './page-container/page-container.componen
     NavsComponent,
     SlideShowComponent,
     PageContainerComponent,
+    GridCardsComponent,
   ],
   imports: [
     CommonModule,
     NgbCarouselModule,
     NgbAccordionModule,
     NgbPaginationModule,
+    NgbTooltipModule,
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
@@ -39,6 +43,7 @@ import { PageContainerComponent } from './page-container/page-container.componen
     NavsComponent,
     SlideShowComponent,
     PageContainerComponent,
+    GridCardsComponent,
   ],
 })
 export class ComponentModule {}
