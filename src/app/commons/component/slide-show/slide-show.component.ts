@@ -37,7 +37,7 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
     if (changes?.['data']?.currentValue?.length) {
       this.slideList = JSON.parse(JSON.stringify(this.data));
       if (this.data?.length > this.options?.show_count) {
-        window.setInterval(() => {
+        this.interval = window.setInterval(() => {
           this.animator();
         }, this.options?.duration ?? 2000);
       }

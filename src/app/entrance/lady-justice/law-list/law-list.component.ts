@@ -30,13 +30,13 @@ export class LawListComponent {
 
   ngOnInit(): void {
     this.routeParamSearchGet();
-    this.getMajorLaws();
   }
 
   routeParamSearchGet() {
     this.route.queryParams.subscribe((params: any) => {
       this.text_search = params?.text ?? '';
       this.law_search = params?.law ?? 0;
+      console.log(params);
       this.getAllLaws();
     });
   }
@@ -51,17 +51,11 @@ export class LawListComponent {
   getAllLaws() {
     this.api
       .list('KNOW_YOUR_LAW_API', {
-        text: this.text_search,
-        law: this.law_search,
+        search: this.text_search,
+        slug: this.law_search,
       })
       .subscribe((response: any) => {
         this.actList = response;
       });
-  }
-
-  getMajorLaws() {
-    this.api.list('LAW_LIST_API').subscribe((response: any) => {
-      this.majorList = [{ id: 0, name: 'All' }, ...response];
-    });
   }
 }

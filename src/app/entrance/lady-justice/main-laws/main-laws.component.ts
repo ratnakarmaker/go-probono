@@ -49,7 +49,8 @@ export class MainLawsComponent {
   }
 
   lawDescription(law: any) {
-    this.router.navigate([`../main-laws/${law?.id}`], {
+    console.log(law);
+    this.router.navigate([`../main-laws/${law?.slug}`], {
       relativeTo: this.route,
     });
   }
@@ -57,14 +58,14 @@ export class MainLawsComponent {
   lawListView(law: any) {
     this.router.navigate([`../law-list`], {
       relativeTo: this.route,
-      queryParams: { law: law?.id },
+      queryParams: { law: law?.slug },
     });
   }
 
   advocateListView(law: any) {
     this.router.navigate(['../../advocates'], {
       relativeTo: this.route,
-      queryParams: { law: law?.id },
+      queryParams: { law: law?.slug },
     });
   }
 
@@ -72,6 +73,7 @@ export class MainLawsComponent {
     this.api.list('LAW_LIST_API').subscribe((response: any) => {
       this.lawList = response?.map((tada: any) => {
         return {
+          ...tada,
           image_src: tada?.thumbnail,
           title: tada?.name,
           description: tada?.headline,
