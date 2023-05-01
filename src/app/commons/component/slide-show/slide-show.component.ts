@@ -37,11 +37,15 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
     if (changes?.['data']?.currentValue?.length) {
       this.slideList = JSON.parse(JSON.stringify(this.data));
       if (this.data?.length > this.options?.show_count) {
-        this.interval = window.setInterval(() => {
-          this.animator();
-        }, this.options?.duration ?? 2000);
+        this.startAnimation();
       }
     }
+  }
+
+  startAnimation() {
+    this.interval = window.setInterval(() => {
+      this.animator();
+    }, this.options?.duration ?? 2000);
   }
 
   animator() {
@@ -58,5 +62,13 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
     }px`;
     this.slideList.push(this.slideList[this.currentIndex]);
     this.currentIndex += 1;
+  }
+
+  consoler(data: any) {
+    if (data === 'enter') {
+      this.ngOnDestroy();
+    } else if (data === 'out') {
+      this.startAnimation();
+    }
   }
 }
