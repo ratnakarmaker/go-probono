@@ -20,7 +20,7 @@
                 <ng-template ngbPanelTitle>
                   <div class="container-fluid p-0 question">
                     <div class="d-flex flex-row justify-content-start align-items-start">
-                      <div class="q-a-header">Question: </div>
+                      <div class="q-a-header">Question {{i+1}}: </div>
                       <div class="q-a-content">{{act.question}}</div>
                     </div>
                   </div>
@@ -29,7 +29,7 @@
                   <div class="container-fluid p-0 answer">
                     <div class="d-flex flex-row justify-content-start align-items-start">
                       <div class="q-a-header">Answer: </div>
-                      <div class="q-a-content" [innerHTML]="act.eng_answer">
+                      <div class="q-a-content" [innerHTML]="act.answer">
                       </div>
                     </div>
                   </div>

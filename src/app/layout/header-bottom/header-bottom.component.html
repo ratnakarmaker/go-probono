@@ -11,10 +11,16 @@
         <img src="assets/icon/search.svg" alt="search">
       </div>
       <button class="btn appointment-btn">My Appointment </button>
-      <img src="assets/icon/notification.svg" alt="">
-      <a routerLink="/profile">
-        <img class="navbar-avatar" src="assets/avatar.png" alt="">
-      </a>
+      <fa-icon class="notification" icon="bell" size="xl"></fa-icon>
+      <app-menu-holder>
+        <div menu_opener>
+          <img *ngIf="storage?.getToken()" class="navbar-avatar" src="assets/avatar.png" alt="">
+          <a (click)="login()" *ngIf="!storage?.getToken()">
+            <fa-icon class="notification" icon="user" size="xl"></fa-icon>
+          </a>
+        </div>
+        <app-navs *ngIf="storage?.getToken()" menu_content [items]="nav_list" (search)="changePath($event)"></app-navs>
+      </app-menu-holder>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
         <span class="navbar-toggler-icon"></span>

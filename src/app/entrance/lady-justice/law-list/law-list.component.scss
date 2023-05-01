@@ -13,18 +13,27 @@
 
   .accordion-item {
     border: none;
-    .question{
+    padding: 8px 0;
+
+    &:last-child {
+      padding: 8px 0 0 0;
+    }
+
+    .question {
       font-size: 16px;
       font-weight: bold;
     }
-    .answer{
+
+    .answer {
       font-size: 12px;
       font-weight: normal;
     }
-    .q-a-header{
+
+    .q-a-header {
       width: 10%;
     }
-    .q-a-content{
+
+    .q-a-content {
       width: 90%
     }
   }

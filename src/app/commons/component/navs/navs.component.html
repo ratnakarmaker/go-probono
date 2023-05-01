@@ -1,8 +1,7 @@
 <div class="container-fluid p-0 item-container">
   <div class="row">
-    <div class="col-12 p-0" *ngFor="let item of items; let i = index;">
-      <button class="btn item" [ngClass]="{'selected': item?.id == key}"
-        (click)="key = item?.id; keyChange.emit(item?.id); search.emit(item)">
+    <div class="col-12" *ngFor="let item of items; let i = index;">
+      <button class="btn item" [ngClass]="{'selected': item?.id == key}" (click)="navSelected(item)">
         {{item?.title ?? item?.name}}
       </button>
     </div>

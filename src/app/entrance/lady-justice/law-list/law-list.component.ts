@@ -5,7 +5,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 interface Act {
   id?: number;
   question: string;
-  eng_answer: string;
+  answer: string;
 }
 
 @Component({

@@ -15,6 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { PageContainerComponent } from './page-container/page-container.component';
 import { GridCardsComponent } from './grid-cards/grid-cards.component';
+import { MenuHolderComponent } from './menu-holder/menu-holder.component';
+import { CustomCardComponent } from './custom-card/custom-card.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { GridCardsComponent } from './grid-cards/grid-cards.component';
     SlideShowComponent,
     PageContainerComponent,
     GridCardsComponent,
+    MenuHolderComponent,
+    CustomCardComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +48,7 @@ import { GridCardsComponent } from './grid-cards/grid-cards.component';
     SlideShowComponent,
     PageContainerComponent,
     GridCardsComponent,
+    MenuHolderComponent,
   ],
 })
 export class ComponentModule {}

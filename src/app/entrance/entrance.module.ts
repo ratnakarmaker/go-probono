@@ -38,6 +38,14 @@ const routes: Routes = [
           import('./advocates/advocates.module').then((m) => m.AdvocatesModule),
         title: 'Advocates',
       },
+      {
+        path: 'profile',
+        loadChildren: () =>
+          import('./user-profile/user-profile.module').then(
+            (m) => m.UserProfileModule
+          ),
+        title: 'Profile',
+      },
     ],
   },
 ];

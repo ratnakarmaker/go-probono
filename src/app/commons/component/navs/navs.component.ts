@@ -25,4 +25,12 @@ export class NavsComponent implements OnChanges {
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {}
+
+  navSelected(nav: any) {
+    if (this.key !== null) {
+      this.key = nav?.id;
+      this.keyChange.emit(nav?.id);
+    }
+    this.search.emit(nav);
+  }
 }

@@ -1,23 +1,8 @@
 <div class="container-fluid p-0">
   <div class="row">
     <div [ngClass]="{'selected': true}" class="{{c_class}}" *ngFor="let item of items; let i=index;">
-      <div class="grid-card" [ngStyle]="{'background-image': 'url('+api.imagePath(item?.image_src)+')'}">
-        <div class="grid-spacer"></div>
-        <div class="grid-content pt-3 pb-3">
-          <div class="title h4 text-center">{{item?.title}}</div>
-          <div class="subtitle h6 text-center mt-3">{{item?.subtitle}}</div>
-          <div class="description text-center mt-3">
-            <span class="content" [innerHTML]="item?.description"></span>
-            <p>Read More</p>
-          </div>
-          <div class="actions d-flex justify-content-around align-items-center ps-4 pe-4 pb-2 mt-3">
-            <button *ngFor="let btn of buttons; let j=index;" class="btn" [ngClass]="btn?.class"
-              [ngbTooltip]="btn?.tooltip" (click)="state_change.emit({action: btn?.action, data: item});">
-              <fa-icon [icon]="btn?.icon"></fa-icon>
-            </button>
-          </div>
-        </div>
-      </div>
+      <app-custom-card [item]="item" [buttons]="buttons" [c_class]="c_class"
+        (selected)="state_change.emit({action: $event?.action, data: item});"></app-custom-card>
     </div>
   </div>
 </div>
