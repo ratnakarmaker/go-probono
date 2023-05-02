@@ -62,6 +62,12 @@ const routes: Routes = [
           ),
         title: 'Team',
       },
+      {
+        path: 'events',
+        loadChildren: () =>
+          import('./events/events.module').then((m) => m.EventsModule),
+        title: 'Events',
+      },
     ],
   },
 ];

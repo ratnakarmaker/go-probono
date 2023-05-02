@@ -9,4 +9,5 @@ export const api_collection: any = {
   KNOW_YOUR_LAW_API: 'kyl/',
   GLOBAL_SEARCH_API: 'global-search/',
   TEAM_API: 'team/',
+  EVENT_API: 'event/',
 };

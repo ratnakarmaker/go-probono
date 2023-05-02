@@ -22,4 +22,4 @@ const routes: Routes = [
   declarations: [ListComponent, DetailsComponent],
   imports: [CommonModule, RouterModule.forChild(routes), ComponentModule],
 })
-export class TeamMembersModule {}
+export class EventsModule {}

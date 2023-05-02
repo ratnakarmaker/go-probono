@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
 import { ComponentModule } from 'src/app/commons/component/component.module';
+import { LawsComponent } from './laws/laws.component';
 
 const routes: Routes = [
   {
@@ -30,10 +31,20 @@ const routes: Routes = [
     component: LawDetailsComponent,
     title: '',
   },
+  {
+    path: 'laws',
+    component: LawsComponent,
+    title: '',
+  },
 ];
 
 @NgModule({
-  declarations: [MainLawsComponent, LawListComponent, LawDetailsComponent],
+  declarations: [
+    MainLawsComponent,
+    LawListComponent,
+    LawDetailsComponent,
+    LawsComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
