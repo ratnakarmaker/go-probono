@@ -29,7 +29,9 @@ export class HeaderBottomComponent {
 
   changePath(data: any) {
     if (data?.id === 1) {
+      this.router.navigate(['profile']);
     } else if (data?.id === 2) {
+      console.log('logout');
     }
   }
 
@@ -41,5 +43,9 @@ export class HeaderBottomComponent {
     this.router.navigate(['/search-result'], {
       queryParams: { text: this.search_text },
     });
+  }
+
+  appointment() {
+    this.router.navigate(['profile/appointments']);
   }
 }

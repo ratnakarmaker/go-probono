@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class TeamsComponent implements OnInit {
     show_count: 3,
     dration: 1500,
   };
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, private router: Router) {}
   ngOnInit(): void {
     this.getTeams();
   }
@@ -29,5 +30,9 @@ export class TeamsComponent implements OnInit {
         };
       });
     });
+  }
+
+  membersList() {
+    this.router.navigate(['team-members']);
   }
 }

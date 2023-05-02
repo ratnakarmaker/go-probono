@@ -44,7 +44,7 @@ const routes: Routes = [
           import('./user-profile/user-profile.module').then(
             (m) => m.UserProfileModule
           ),
-        title: 'Profile',
+        title: '',
       },
       {
         path: 'search-result',
@@ -53,6 +53,14 @@ const routes: Routes = [
             (m) => m.SearchResultModule
           ),
         title: 'Search Result',
+      },
+      {
+        path: 'team-members',
+        loadChildren: () =>
+          import('./team-members/team-members.module').then(
+            (m) => m.TeamMembersModule
+          ),
+        title: 'Team',
       },
     ],
   },

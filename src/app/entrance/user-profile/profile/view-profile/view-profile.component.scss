@@ -1,0 +1,55 @@
+.profile-view {
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #6F2FA1;
+  }
+
+  .img-section {
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px #bdbdbdff;
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .phone {
+      font-size: 14px;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    .update-btn {
+      width: 100%;
+      background-color: #6F2FA1;
+      color: #ffffff;
+    }
+  }
+
+  .data-section {
+    border-left: 1px solid #6F2FA1;
+    padding: 0 0 0 10%;
+
+    table {
+
+      th,
+      td {
+        height: 60px;
+      }
+
+      th {
+        color: #000000ff;
+      }
+
+      td {
+        color: #464646ff;
+      }
+    }
+  }
+}

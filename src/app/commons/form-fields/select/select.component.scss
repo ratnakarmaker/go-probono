@@ -1,0 +1,31 @@
+.form-group {
+  padding: 0 0 12px 0;
+
+  .select-label {
+    font-weight: bold;
+    color: gray;
+    margin: 0 0 4px 0;
+  }
+
+  .select-field {
+    border: 1px solid #000000;
+
+    &:focus {
+      box-shadow: none;
+      border: 1px solid #A184D5;
+
+      .select-label {
+        color: #6F2FA1;
+      }
+    }
+
+    &:focus-visible {
+      box-shadow: none;
+      border: 1px solid #A184D5;
+
+      .select-label {
+        color: #6F2FA1;
+      }
+    }
+  }
+}

@@ -20,7 +20,7 @@ export class ApiService {
       headers: new HttpHeaders({
         // 'Control-Allow-Origin': '*',
         // 'Access-Control-Allow-Origin': '*',
-      })?.set('Authorization', token ? `${token}` : ''),
+      })?.set('token', token ? `${token}` : ''),
     };
   }
 
@@ -50,6 +50,7 @@ export class ApiService {
   }
 
   private _get(route: string, params?: any): Observable<any> {
+    console.log(this.getHeader());
     return this.http.get<any>(`${this.apiUrl}/${route}`, {
       ...this.getHeader(),
       params,
