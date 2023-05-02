@@ -8,4 +8,5 @@ export const api_collection: any = {
   HELP_CENTER_RULES_API: 'help-center/',
   KNOW_YOUR_LAW_API: 'kyl/',
   GLOBAL_SEARCH_API: 'global-search/',
+  TEAM_API: 'team/',
 };

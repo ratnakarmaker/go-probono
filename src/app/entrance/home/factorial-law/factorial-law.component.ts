@@ -16,7 +16,14 @@ export class FactorialLawComponent implements OnInit {
   constructor(private api: ApiService) {}
   ngOnInit(): void {
     this.api.list('LAW_LIST_API').subscribe((response: any) => {
-      this.slideData = [...response];
+      this.slideData = response?.map((tada: any) => {
+        return {
+          ...tada,
+          image_src: tada?.thumbnail,
+          title: tada?.image_text,
+          description: tada?.headline,
+        };
+      });
     });
   }
 }

@@ -1,0 +1,10 @@
+<div class="container-fluid pb-2">
+  <div class="row">
+    <app-slide-show #teams_slide id="teams_slide" [c_id]="'teams_slide'" class="col-12" [data]="teams"
+      [options]="options">
+    </app-slide-show>
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <a class="btn btn-primary" [routerLink]="'./team-members'">All Team Members</a>
+    </div>
+  </div>
+</div>

@@ -17,6 +17,7 @@ import { PageContainerComponent } from './page-container/page-container.componen
 import { GridCardsComponent } from './grid-cards/grid-cards.component';
 import { MenuHolderComponent } from './menu-holder/menu-holder.component';
 import { CustomCardComponent } from './custom-card/custom-card.component';
+import { TeamCardComponent } from './team-card/team-card.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CustomCardComponent } from './custom-card/custom-card.component';
     GridCardsComponent,
     MenuHolderComponent,
     CustomCardComponent,
+    TeamCardComponent,
   ],
   imports: [
     CommonModule,

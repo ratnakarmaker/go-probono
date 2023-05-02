@@ -1,6 +1,7 @@
 <div class="container-fluid pb-2">
   <div class="row">
-    <app-slide-show class="col-12" [data]="slideData" [options]="options"></app-slide-show>
+    <app-slide-show #laws_slide id="laws_slide" [c_id]="'laws_slide'" class="col-12" [data]="slideData"
+      [options]="options"></app-slide-show>
     <div class="col-12 d-flex justify-content-center align-items-center">
       <a class="btn btn-primary" [routerLink]="'./lady-justice/main-laws'">View All Law</a>
     </div>

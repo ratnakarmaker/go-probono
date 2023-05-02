@@ -8,6 +8,7 @@ import { MakeAppointmentComponent } from './make-appointment/make-appointment.co
 import { PowerOfLawComponent } from './power-of-law/power-of-law.component';
 import { LandingComponent } from './landing/landing.component';
 import { Routes, RouterModule } from '@angular/router';
+import { TeamsComponent } from './teams/teams.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     MakeAppointmentComponent,
     PowerOfLawComponent,
     LandingComponent,
+    TeamsComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes), ComponentModule],
 })

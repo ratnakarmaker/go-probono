@@ -18,17 +18,18 @@ import { ApiService } from 'src/app/services/api/api.service';
 export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
   @Input() data: any[] = [];
   @Input() options: any;
+  @Input() c_id: string = '';
 
   @Output() slide_clicked: EventEmitter<any> = new EventEmitter<any>();
 
   protected slideList: any[] = [];
   private currentIndex: number = 0;
-  private interval: any;
+  private interval: any = {};
 
   constructor(protected api: ApiService) {}
 
   ngOnDestroy(): void {
-    window.clearInterval(this.interval);
+    window.clearInterval(this.interval[this.c_id]);
   }
 
   ngOnInit(): void {}
@@ -43,9 +44,11 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   startAnimation() {
-    this.interval = window.setInterval(() => {
-      this.animator();
-    }, this.options?.duration ?? 2000);
+    if (this.data?.length > this.options?.show_count) {
+      this.interval[this.c_id] = window.setInterval(() => {
+        this.animator();
+      }, this.options?.duration ?? 2000);
+    }
   }
 
   animator() {

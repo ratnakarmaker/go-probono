@@ -33,6 +33,7 @@
     .title {
       white-space: nowrap;
       font-size: 16px;
+      font-weight: bold;
     }
 
     .subtitle {
@@ -89,6 +90,7 @@
       .title {
         white-space: nowrap;
         font-size: 16px;
+        font-weight: bold;
       }
 
       .subtitle {
@@ -113,5 +115,22 @@
         }
       }
     }
+  }
+}
+
+.card-additional {
+  padding-top: 8px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-size: 15px;
   }
 }
