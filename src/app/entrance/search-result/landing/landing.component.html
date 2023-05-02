@@ -1,10 +1,12 @@
-<div class="container page-container">
+<div class="container page-container pb-5">
   <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-12">
       <app-navs [items]="navs" [(key)]="current_tab_id"></app-navs>
     </div>
     <div class="col-lg-9 col-md-8 col-sm-12 result-container">
-      <app-grid-cards [items]="search_result?.[current_tab_id]" [c_class]="'col-xl-4 col-md-6 col-sm-12 p-3 law'">
+      <app-grid-cards *ngIf="current_tab_id === 'laws' || current_tab_id === 'events' || current_tab_id === 'teams'"
+        [items]="search_result?.[current_tab_id]" [c_class]="'col-xl-4 col-md-6 col-sm-12 p-3 law'"
+        (state_change)="goTo($event)">
       </app-grid-cards>
     </div>
   </div>

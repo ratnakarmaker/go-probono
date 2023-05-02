@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { LandingComponent } from './landing/landing.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentModule } from 'src/app/commons/component/component.module';
+import { LawsComponent } from './laws/laws.component';
+import { KylComponent } from './kyl/kyl.component';
+import { LawyerComponent } from './lawyer/lawyer.component';
+import { EventComponent } from './event/event.component';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
   {
@@ -13,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [LandingComponent],
+  declarations: [LandingComponent, LawsComponent, KylComponent, LawyerComponent, EventComponent, TeamComponent],
   imports: [CommonModule, RouterModule.forChild(routes), ComponentModule],
 })
 export class SearchResultModule {}

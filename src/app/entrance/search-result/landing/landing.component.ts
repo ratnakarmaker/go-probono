@@ -73,9 +73,39 @@ export class LandingComponent implements OnInit {
             };
           }),
           lawyers: [],
-          events: [],
-          teams: [],
+          events: response?.events?.map((tada: any) => {
+            return {
+              ...tada,
+              image_src: tada?.thumbnail,
+              title: tada?.name,
+              description: tada?.brief_description,
+            };
+          }),
+          teams: response?.teams?.map((tada: any) => {
+            return {
+              ...tada,
+              image_src: tada?.thumbnail,
+              title: tada?.name,
+              text_position: 'outside',
+            };
+          }),
         };
       });
+  }
+
+  goTo({ action, data }: { action: any; data: any }) {
+    switch (this.current_tab_id) {
+      case 'laws':
+        this.router.navigate([`lady-justice/main-laws/${data?.slug}`]);
+        break;
+      case 'events':
+        this.router.navigate([`events/${data?.slug}`]);
+        break;
+      case 'teams':
+        this.router.navigate([`team-members/${data?.slug}`]);
+        break;
+      default:
+        break;
+    }
   }
 }
