@@ -16,8 +16,8 @@ import { Subject } from 'rxjs';
 export class NavsComponent implements OnChanges {
   @Input() items: any[] = [];
 
-  @Input() key: number | null = null;
-  @Output() keyChange: EventEmitter<number> = new EventEmitter<number>();
+  @Input() key: any = null;
+  @Output() keyChange: EventEmitter<any> = new EventEmitter<any>();
 
   @Input() reset: Subject<any> = new Subject<any>();
   @Output() search: EventEmitter<any> = new EventEmitter<any>();

@@ -23,8 +23,8 @@ body {
   margin: 2em;
 }
 
-body,
-input[type="text"],
+// body,
+// input[type="text"],
 // button {
 //   color: #333;
 //   font-family: Cambria, Georgia, serif;
@@ -43,16 +43,16 @@ input[type="text"],
 //   margin-top: 1rem;
 // }
 
-button:hover {
-  /* background-color: black; */
-  color: white;
-}
+// button:hover {
+//   /* background-color: black; */
+//   color: white;
+// }
 
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
-}
+// button:disabled {
+//   background-color: #eee;
+//   color: #aaa;
+//   cursor: auto;
+// }
 
 html,
 body {

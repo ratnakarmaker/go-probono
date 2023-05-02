@@ -11,7 +11,8 @@
       <div class="actions d-flex justify-content-around align-items-center ps-4 pe-4 pb-2 mt-3">
         <button *ngFor="let btn of buttons; let j=index;" class="btn" [ngClass]="btn?.class" [ngbTooltip]="btn?.tooltip"
           (click)="selected.emit(btn)">
-          <fa-icon [icon]="btn?.icon"></fa-icon>
+          <fa-icon *ngIf="btn?.icon" [icon]="btn?.icon"></fa-icon>
+          {{btn?.text ?? ''}}
         </button>
       </div>
     </div>

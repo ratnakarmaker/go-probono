@@ -6,5 +6,6 @@ export const api_collection: any = {
   LAW_LIST_API: 'law/',
   SLIDER_API: 'home/slider/',
   HELP_CENTER_RULES_API: 'help-center/',
-  KNOW_YOUR_LAW_API: 'kyl',
+  KNOW_YOUR_LAW_API: 'kyl/',
+  GLOBAL_SEARCH_API: 'global-search/',
 };

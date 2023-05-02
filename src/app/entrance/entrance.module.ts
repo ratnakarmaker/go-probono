@@ -46,6 +46,14 @@ const routes: Routes = [
           ),
         title: 'Profile',
       },
+      {
+        path: 'search-result',
+        loadChildren: () =>
+          import('./search-result/search-result.module').then(
+            (m) => m.SearchResultModule
+          ),
+        title: 'Search Result',
+      },
     ],
   },
 ];

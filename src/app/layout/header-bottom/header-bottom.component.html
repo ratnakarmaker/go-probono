@@ -6,10 +6,7 @@
       </a>
     </div>
     <div class="navbar-right">
-      <div class="navbar-search">
-        <input class="border-0" type="text" name="search">
-        <img src="assets/icon/search.svg" alt="search">
-      </div>
+      <app-search-box [(key)]="search_text" (search)="search()"></app-search-box>
       <button class="btn appointment-btn">My Appointment </button>
       <fa-icon class="notification" icon="bell" size="xl"></fa-icon>
       <app-menu-holder>

@@ -19,6 +19,8 @@ export class HeaderBottomComponent {
     },
   ];
 
+  protected search_text: string = '';
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -33,5 +35,11 @@ export class HeaderBottomComponent {
 
   login() {
     this.router.navigate(['login'], { relativeTo: this.route });
+  }
+
+  search() {
+    this.router.navigate(['/search-result'], {
+      queryParams: { text: this.search_text },
+    });
   }
 }

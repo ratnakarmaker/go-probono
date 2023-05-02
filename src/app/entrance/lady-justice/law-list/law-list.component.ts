@@ -51,7 +51,7 @@ export class LawListComponent {
   getAllLaws() {
     this.api
       .list('KNOW_YOUR_LAW_API', {
-        search: this.text_search,
+        text: this.text_search,
         slug: this.law_search,
       })
       .subscribe((response: any) => {
