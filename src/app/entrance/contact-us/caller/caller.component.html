@@ -1,6 +1,6 @@
 <div class="container page-container">
   <div class="row">
-    <div class="col-12 d-flex justify-content-center">
+    <div class="col-12 d-flex justify-content-center pb-2">
       <div class="call-text">
         <div class="title">
           Welcome to Go Probono
@@ -8,12 +8,15 @@
         <div class="title">
           {{help_center_data?.image_text}}
         </div>
-        <div class="subtitle" [innerHTML]="help_center_data?.rules">
-
-        </div>
       </div>
     </div>
-    <div class="col-12 d-flex justify-content-center p-3">
+    <div class="col-md-2 col-sm-12"></div>
+    <div class="col-md-4 col-sm-12">
+      <div class="subtitle" [innerHTML]="help_center_data?.rules">
+
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 d-flex justify-content-center p-3">
       <div class="call-card p-2">
         <img class="call-image" [src]="api.imagePath(help_center_data?.thumbnail)" alt="">
         <button class="btn call-btn m-0" (click)="call()">
@@ -22,5 +25,6 @@
         </button>
       </div>
     </div>
+    <div class="col-md-2 col-sm-12"></div>
   </div>
 </div>

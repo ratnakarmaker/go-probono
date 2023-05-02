@@ -2,8 +2,8 @@
   <div class="grid-card" [ngStyle]="{'background-image': 'url('+api.imagePath(item?.image_src)+')'}">
     <div class="grid-spacer"></div>
     <div class="grid-content pt-3 pb-3">
-      <div class="title h4 text-center">{{item?.title}}</div>
-      <div class="subtitle h6 text-center mt-3">{{item?.subtitle}}</div>
+      <div class="title text-center">{{item?.title}}</div>
+      <div class="subtitle text-center mt-3">{{item?.subtitle}}</div>
       <div class="description text-center mt-3">
         <span class="content" [innerHTML]="item?.description"></span>
         <p>Read More</p>
