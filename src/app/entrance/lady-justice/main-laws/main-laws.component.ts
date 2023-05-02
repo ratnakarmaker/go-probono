@@ -49,7 +49,6 @@ export class MainLawsComponent {
   }
 
   lawDescription(law: any) {
-    console.log(law);
     this.router.navigate([`../main-laws/${law?.slug}`], {
       relativeTo: this.route,
     });

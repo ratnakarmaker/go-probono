@@ -1,0 +1,40 @@
+.details-page {
+
+  .ash {
+    padding: 0 22px;
+    margin-bottom: 12px;
+
+    .head,
+    .ing {
+      font-size: 18px;
+      background-color: #5e5e5e;
+      color: #ffffff;
+      padding: 30px 27px;
+    }
+
+    .head {
+      font-weight: bold;
+    }
+  }
+
+  .details-img {
+    width: 100%;
+    height: auto;
+    box-shadow: 10px -10px 0 0 black;
+    border-radius: 6px;
+  }
+
+  .details-content {
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6F2FA1;
+    }
+
+    .details-btn {
+      background-color: #6F2FA1;
+      color: #ffffff;
+      padding: 12px 24px;
+    }
+  }
+}

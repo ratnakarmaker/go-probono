@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
@@ -8,7 +9,11 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class LawsComponent implements OnInit {
   lawList: any[] = [];
-  constructor(private api: ApiService) {}
+  constructor(
+    private api: ApiService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
   ngOnInit(): void {
     this.getLaws();
   }
@@ -22,6 +27,13 @@ export class LawsComponent implements OnInit {
           id: tada?.slug,
         };
       });
+    });
+  }
+
+  goTo(law: any) {
+    this.router.navigate(['../law-list'], {
+      queryParams: { law: law?.id },
+      relativeTo: this.route,
     });
   }
 }

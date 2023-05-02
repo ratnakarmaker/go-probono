@@ -1,4 +1,4 @@
-<div [ngClass]="c_class" style="width: 100% !important">
+<div [ngClass]="c_class" style="width: 100% !important" (click)="!buttons.length ? selected.emit({}) : ''">
   <div class="grid-card" [ngStyle]="{'background-image': 'url('+api.imagePath(item?.image_src)+')'}">
     <ng-container *ngIf="text_position === 'inside'">
       <div class="grid-spacer"></div>

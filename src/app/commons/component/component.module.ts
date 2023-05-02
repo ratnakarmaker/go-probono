@@ -49,6 +49,7 @@ import { CustomCardComponent } from './custom-card/custom-card.component';
     PageContainerComponent,
     GridCardsComponent,
     MenuHolderComponent,
+    CustomCardComponent,
   ],
 })
 export class ComponentModule {}

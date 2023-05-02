@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
@@ -9,7 +10,11 @@ import { ApiService } from 'src/app/services/api/api.service';
 export class ListComponent implements OnInit {
   protected members: any[] = [];
 
-  constructor(private api: ApiService) {}
+  constructor(
+    private api: ApiService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.getTeamMembers();
@@ -27,5 +32,9 @@ export class ListComponent implements OnInit {
         };
       });
     });
+  }
+
+  goTo({ action, data }: { action: any; data: any }) {
+    this.router.navigate([`./${data?.slug}`], { relativeTo: this.route });
   }
 }
