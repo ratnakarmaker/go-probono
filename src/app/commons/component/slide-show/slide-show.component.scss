@@ -11,7 +11,9 @@
     position: relative;
 
     .slide-card {
-      height: 300px;
+      .grid-card {
+        height: 300px;
+      }
     }
   }
 }

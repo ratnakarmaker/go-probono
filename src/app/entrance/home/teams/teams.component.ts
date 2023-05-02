@@ -25,6 +25,7 @@ export class TeamsComponent implements OnInit {
           image_src: tada?.thumbnail,
           title: tada?.name,
           subtitles: [tada?.designation],
+          text_position: 'outside',
         };
       });
     });
