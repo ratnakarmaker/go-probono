@@ -56,8 +56,9 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
       this.slideList = JSON.parse(JSON.stringify(this.data));
       this.currentIndex = 0;
     }
-    let element: any =
-      window.document.getElementsByClassName('custom-slide')[0];
+    let element: any = window.document.getElementsByClassName(
+      `${this.c_id}`
+    )[0];
     let style: any = window.getComputedStyle(element);
     element.style.marginLeft = `${
       Number(style?.['margin-left']?.slice(0, -2)) -
