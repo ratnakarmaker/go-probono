@@ -21,6 +21,8 @@ export class HeaderBottomComponent {
 
   protected search_text: string = '';
 
+  bios_state: boolean = false;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -48,5 +50,10 @@ export class HeaderBottomComponent {
 
   appointment() {
     this.router.navigate(['profile/appointments']);
+  }
+
+  sideRoutes(path: string) {
+    this.bios_state = false;
+    this.router.navigate([path]);
   }
 }

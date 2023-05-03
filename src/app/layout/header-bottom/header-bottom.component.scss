@@ -49,3 +49,41 @@
 .notification {
   color: #6F2FA1ff;
 }
+
+.bioscope {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.6666666667);
+  z-index: 3;
+  top: 0px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  .toggler {
+    margin-bottom: -30px;
+    z-index: 4;
+  }
+
+  .list-holder {
+    width: 400px;
+    float: right;
+    height: 100vh;
+    background-color: #000000ff;
+    padding: 70px 0 0 40px;
+
+    table {
+      width: 100%;
+
+      td {
+        border-bottom: 1px solid white;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
+  }
+}
