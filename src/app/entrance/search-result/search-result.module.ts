@@ -8,6 +8,7 @@ import { KylComponent } from './kyl/kyl.component';
 import { LawyerComponent } from './lawyer/lawyer.component';
 import { EventComponent } from './event/event.component';
 import { TeamComponent } from './team/team.component';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -18,7 +19,19 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [LandingComponent, LawsComponent, KylComponent, LawyerComponent, EventComponent, TeamComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), ComponentModule],
+  declarations: [
+    LandingComponent,
+    LawsComponent,
+    KylComponent,
+    LawyerComponent,
+    EventComponent,
+    TeamComponent,
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    ComponentModule,
+    NgbAccordionModule,
+  ],
 })
 export class SearchResultModule {}
