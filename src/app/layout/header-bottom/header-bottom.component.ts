@@ -31,7 +31,8 @@ export class HeaderBottomComponent {
     if (data?.id === 1) {
       this.router.navigate(['profile']);
     } else if (data?.id === 2) {
-      console.log('logout');
+      this.storage.clearToken();
+      this.router.navigate(['']);
     }
   }
 

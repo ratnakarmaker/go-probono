@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StorageService } from 'src/app/services/storage/storage.service';
 
 @Component({
   selector: 'app-landing',
@@ -28,7 +29,11 @@ export class LandingComponent {
 
   protected current_nav_id: number = 1;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private storage: StorageService
+  ) {}
 
   routeChange() {
     switch (this.current_nav_id) {
@@ -42,6 +47,8 @@ export class LandingComponent {
         this.router.navigate(['call-history'], { relativeTo: this.route });
         break;
       case 4:
+        this.storage.clearToken();
+        this.router.navigate(['']);
         break;
       default:
         break;
