@@ -19,6 +19,7 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
   @Input() data: any[] = [];
   @Input() options: any;
   @Input() c_id: string = '';
+  @Input() animate: boolean = true;
 
   @Output() slide_clicked: EventEmitter<any> = new EventEmitter<any>();
 
@@ -44,7 +45,7 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   startAnimation() {
-    if (this.data?.length > this.options?.show_count) {
+    if (this.data?.length > this.options?.show_count && this.animate) {
       this.interval[this.c_id] = window.setInterval(() => {
         this.animator();
       }, this.options?.duration ?? 2000);

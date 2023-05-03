@@ -1,7 +1,10 @@
-<div class="container-fluid pb-2">
+<div class="container-fluid">
   <div class="row">
+    <div class="col-12 text-center header">
+      Team Members
+    </div>
     <app-slide-show #teams_slide id="teams_slide" [c_id]="'teams_slide'" class="col-12" [data]="teams"
-      [options]="options">
+      [options]="options" [animate]="false">
     </app-slide-show>
     <div class="col-12 d-flex justify-content-center align-items-center">
       <a class="btn btn-primary" (click)="membersList()">All Team Members</a>
