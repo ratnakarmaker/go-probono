@@ -8,7 +8,7 @@
         [items]="search_result?.[current_tab_id]" [c_class]="'col-xl-4 col-md-6 col-sm-12 p-3 law'"
         (state_change)="goTo($event)">
       </app-grid-cards>
-      <ngb-accordion #lawListAcc="ngbAccordion" [closeOthers]="true">
+      <ngb-accordion *ngIf="current_tab_id === 'kyls'" #lawListAcc="ngbAccordion" [closeOthers]="true">
         <ng-container *ngFor="let act of search_result?.[current_tab_id]; let i=index;">
           <ngb-panel>
             <ng-template ngbPanelTitle>
