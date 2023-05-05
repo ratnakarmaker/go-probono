@@ -9,6 +9,8 @@ import { PowerOfLawComponent } from './power-of-law/power-of-law.component';
 import { LandingComponent } from './landing/landing.component';
 import { Routes, RouterModule } from '@angular/router';
 import { TeamsComponent } from './teams/teams.component';
+import { AppointmentSummaryComponent } from './laweyar/appointment-summary/appointment-summary.component';
+import { SubscriptionPackageComponent } from './laweyar/subscription-package/subscription-package.component';
 
 const routes: Routes = [
   {
@@ -27,6 +29,8 @@ const routes: Routes = [
     PowerOfLawComponent,
     LandingComponent,
     TeamsComponent,
+    AppointmentSummaryComponent,
+    SubscriptionPackageComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes), ComponentModule],
 })

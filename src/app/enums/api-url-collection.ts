@@ -1,6 +1,6 @@
 export const api_collection: any = {
-  REGISTER_API: 'users/register/',
-  LOGIN_API: 'users/login/',
+  REGISTER_API: 'auth/register/',
+  LOGIN_API: 'auth/login/',
   PROFILE_API: 'users/profile/',
   PROFILE_UPDATE_API: 'users/update/profile/',
   LAW_LIST_API: 'law/',

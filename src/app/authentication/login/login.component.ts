@@ -30,6 +30,7 @@ export class LoginComponent {
       .subscribe((responseLog: any) => {
         if (responseLog?.success) {
           this.storage.setToken(responseLog?.token);
+          this.storage.setUser({ type: responseLog?.type });
           this.router.navigate(['/']);
         }
       });
