@@ -47,7 +47,7 @@ export class LandingComponent {
         this.router.navigate(['call-history'], { relativeTo: this.route });
         break;
       case 4:
-        this.storage.clearToken();
+        this.storage.clearStorage();
         this.router.navigate(['']);
         break;
       default:
