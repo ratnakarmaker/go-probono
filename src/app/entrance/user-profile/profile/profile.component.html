@@ -1,0 +1,4 @@
+<app-edit-profile *ngIf="profile_state === 'edit'" [profile]="profile" (c_change)="swapState('view')">
+</app-edit-profile>
+<app-view-profile *ngIf="profile_state === 'view'" [profile]="profile" (c_change)="swapState('edit')">
+</app-view-profile>

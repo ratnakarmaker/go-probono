@@ -1,0 +1,8 @@
+<div class="container page-container">
+  <div class="row">
+    <div class="col-12 team-members">
+      <app-grid-cards [items]="members" [c_class]="'col-xl-4 col-md-6 col-sm-12 p-3 members'"
+        (state_change)="goTo($event)"></app-grid-cards>
+    </div>
+  </div>
+</div>

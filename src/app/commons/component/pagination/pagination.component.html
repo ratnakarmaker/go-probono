@@ -1,0 +1,37 @@
+<div class="container-fluid p-0" [ngClass]="pagination_class_names">
+  <div class="row">
+    <div class="pagination-page" *ngIf="pageOptions?.show" [ngClass]="sizeOptions.show ? 'col-md-10':'col-md-12'">
+      <ng-container *ngIf="pageOptions?.display === 'drop'; else pageElse;">
+        <select class="pagination-select">
+          <option class="pagination-options" *ngFor="let pageBox of i_page_collection; let p_i=index;"
+            [disabled]="pageBox?.disabled" [value]="pageBox.view" (click)="jumpToPage(pageBox.view)">
+            {{pageBox?.view}}
+          </option>
+        </select>
+      </ng-container>
+      <ng-template #pageElse>
+        <button class="pagination-nav" (click)="jumpToPage('-')">
+          <fa-icon icon="angle-double-left"></fa-icon>
+        </button>
+        <button class="pagination-nav" (click)="jumpToPage('-1')">
+          <fa-icon icon="chevron-left"></fa-icon>
+        </button>
+        <ng-container *ngFor="let pageBox of i_page_collection; let p_i=index;">
+          <button class="pagination-numbers" [disabled]="pageBox?.disabled"
+            [ngClass]="{'active': (pageBox?.view) == (page | json)}" (click)="jumpToPage(pageBox.view)">
+            {{pageBox?.view}}
+          </button>
+        </ng-container>
+        <button class="pagination-nav" (click)="jumpToPage('+1')">
+          <fa-icon icon="chevron-right"></fa-icon>
+        </button>
+        <button class="pagination-nav" (click)="jumpToPage('+')">
+          <fa-icon icon="angle-double-right"></fa-icon>
+        </button>
+      </ng-template>
+    </div>
+    <div class="pagination-size" *ngIf="sizeOptions?.show" [ngClass]="pageOptions.show ? 'col-md-2':'col-md-12'">
+
+    </div>
+  </div>
+</div>

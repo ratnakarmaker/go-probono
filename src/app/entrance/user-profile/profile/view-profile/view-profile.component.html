@@ -1,0 +1,52 @@
+<div class="container-fluid p-0 profile-view">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center align-items-center mb-4">
+      <span class="header">Account Information</span>
+    </div>
+    <div class="col-md-4 col-sm-12 img-section">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <img src="assets/avatar.png" class="profile-pic">
+        </div>
+        <div class="col-12 name mt-5">
+          {{profile?.name}}
+        </div>
+        <div class="col-12 phone mt-2">
+          {{profile?.mobile}}
+        </div>
+        <div class="col-12 mt-2">
+          <button class="btn update-btn" (click)="c_change.emit()">
+            Edit Profile
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-sm-12"></div>
+    <div class="col-md-7 col-sm-12 data-section">
+      <div class="row">
+        <table>
+          <tr>
+            <th>Name:</th>
+            <td>{{profile?.name}}</td>
+          </tr>
+          <tr>
+            <th>Email:</th>
+            <td>{{profile?.email}}</td>
+          </tr>
+          <tr>
+            <th>Contact Number:</th>
+            <td>{{profile?.mobile}}</td>
+          </tr>
+          <tr>
+            <th>Address:</th>
+            <td>{{profile?.street_address}}</td>
+          </tr>
+          <tr>
+            <th>Gender:</th>
+            <td>{{profile?.gender}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

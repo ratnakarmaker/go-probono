@@ -1,0 +1,28 @@
+.carousel-slider {
+  .picsum-img-wrapper {
+    height: 550px;
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  .carousel-caption {
+    bottom: 13.25rem;
+    left: 12%;
+    text-align: start;
+
+    h3 {
+      color: white;
+    }
+
+    .btn {
+      background: #fff;
+      color: #A184D5;
+      border-radius: 13px;
+      padding: 16px;
+      margin-top: 45px;
+    }
+  }
+}

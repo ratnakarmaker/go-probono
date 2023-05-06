@@ -1,0 +1,19 @@
+<div class="container page-container details-page">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <img class="details-img" [src]="api.imagePath(details?.thumbnail)">
+    </div>
+    <div class="col-lg-8 col-md-6 col-sm-12 details-content">
+      <div class="row">
+        <div class="col-12 title mb-4">{{details?.name}}</div>
+        <div class="col-12 description" [innerHTML]="details?.description">
+        </div>
+        <div class="col-12">
+          <button class="btn details-btn">
+            Know this law with lady justice
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

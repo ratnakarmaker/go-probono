@@ -3,38 +3,39 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderNavbarComponent } from './components/header-navbar/header-navbar.component';
-import { HeaderTopComponent } from './components/header-top/header-top.component';
-import { CarouselSliderComponent } from './features/components/home/carousel-slider/carousel-slider.component';
-import { HomeComponent } from './features/components/home/home.component';
-import { MatCarouselModule } from '@ngbmodule/material-carousel';
-import { HelpSectionComponent } from './features/components/home/help-section/help-section.component';
-import { MakeAppointmentComponent } from './features/components/home/make-appointment/make-appointment.component';
-import { PowerOfLawComponent } from './features/components/home/power-of-law/power-of-law.component';
-// import { CarouselModule } from 'ngx-owl-carousel-o';
+import { LoginComponent } from './authentication/login/login.component';
+import { RegistrationComponent } from './authentication/registration/registration.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    // CarouselSliderComponent,
-    // HomeComponent,
-    // HelpSectionComponent,
-    // PowerOfLawComponent,
-    // MakeAppointmentComponent,
-    // LoginComponent,
-    // RegistrationComponent,
-    // ProfileComponent,
-  ],
+  declarations: [AppComponent, LoginComponent, RegistrationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCarouselModule.forRoot(),
-    // CarouselModule,
+    NgbModule,
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private library: FaIconLibrary) {
+    this.library.addIconPacks(
+      fas,
+      far
+      // fab
+    );
+  }
+}

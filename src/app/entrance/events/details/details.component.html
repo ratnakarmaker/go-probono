@@ -1,0 +1,22 @@
+<div class="container page-container details-page">
+  <div class="row">
+    <div class="col-12 ash">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 head">Location</div>
+        <div class="col-lg-3 col-md-6 col-sm-12 ing">{{details?.location}}</div>
+        <div class="col-lg-3 col-md-6 col-sm-12 head">Time</div>
+        <div class="col-lg-3 col-md-6 col-sm-12 ing">{{details?.time}}</div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-6 col-sm-12 details-content">
+      <div class="row">
+        <div class="col-12 title mb-4">{{details?.name}}</div>
+        <div class="col-12 description" [innerHTML]="details?.description">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+      <img class="details-img" [src]="api.imagePath(details?.thumbnail)">
+    </div>
+  </div>
+</div>

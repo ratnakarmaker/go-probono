@@ -1,0 +1,39 @@
+<div class="container-fluid p-0 profile-edit">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-between align-items-center ps-2 pe-2">
+      <span class="header">Edit Profile</span>
+      <img src="assets/avatar.png" class="profile-pic">
+    </div>
+    <div class="col-12">
+      <form class="row" [formGroup]="dataForm" (submit)="save()">
+        <div class="col-md-6">
+          <app-input [control]="dataForm.get('name')" [label]="'Name'" [c_id]="'name'" [placeholder]="'Enter Name'">
+          </app-input>
+        </div>
+        <div class="col-md-6">
+          <app-select [control]="dataForm.get('gender')" [label]="'Gender'" [c_id]="'gender'"
+            [placeholder]="'Select Gender'" [items]="genderList">
+          </app-select>
+        </div>
+        <div class="col-md-12">
+          <app-input [control]="dataForm.get('street_address')" [label]="'Address'" [c_id]="'street_address'"
+            [placeholder]="'Enter Address'">
+          </app-input>
+        </div>
+        <div class="col-md-6">
+          <app-input [control]="dataForm.get('email')" [label]="'Email'" [c_id]="'email'" [placeholder]="'Enter Email'">
+          </app-input>
+        </div>
+        <div class="col-md-6">
+          <app-input [control]="dataForm.get('mobile')" [label]="'Contact Number'" [c_id]="'mobile'"
+            [placeholder]="'Enter Contact Number'">
+          </app-input>
+        </div>
+        <div class="col-12 d-flex justify-content-end align-items-center">
+          <button class="btn cancel me-2">Cancel</button>
+          <button class="btn save" type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

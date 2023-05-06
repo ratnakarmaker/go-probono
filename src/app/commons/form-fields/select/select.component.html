@@ -1,0 +1,7 @@
+<div class="form-group">
+  <label [for]="c_id" class="select-label">{{label}}</label>
+  <select [id]="c_id" class="form-select select-field" [(ngModel)]="sel_val" (change)="changeVal($event)">
+    <option value="">{{placeholder}}</option>
+    <option *ngFor="let item of items; let i=index;" [value]="item?.opt_key">{{item?.opt_text}}</option>
+  </select>
+</div>

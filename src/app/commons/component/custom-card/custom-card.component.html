@@ -1,0 +1,28 @@
+<div [ngClass]="c_class" style="width: 100% !important" (click)="!buttons.length ? selected.emit({}) : ''">
+  <div class="grid-card" [ngStyle]="{'background-image': 'url('+api.imagePath(item?.image_src)+')'}">
+    <ng-container *ngIf="text_position === 'inside'">
+      <div class="grid-spacer"></div>
+      <div class="grid-content pt-3 pb-3">
+        <div class="title text-center">{{item?.title}}</div>
+        <div class="subtitle text-center mt-3">{{item?.subtitle}}</div>
+        <div class="description text-center mt-3">
+          <span class="content" [innerHTML]="item?.description"></span>
+          <!-- <p>Read More</p> -->
+        </div>
+        <div class="actions d-flex justify-content-around align-items-center ps-4 pe-4 pb-2 mt-3">
+          <button *ngFor="let btn of buttons; let j=index;" class="btn" [ngClass]="btn?.class"
+            [ngbTooltip]="btn?.tooltip" (click)="selected.emit(btn)">
+            <fa-icon *ngIf="btn?.icon" [icon]="btn?.icon"></fa-icon>
+            {{btn?.text ?? ''}}
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="card-additional" *ngIf="text_position === 'outside'">
+    <span class="title">{{item?.title}}</span>
+    <span class="subtitle" *ngFor="let subtitle of item?.subtitles">
+      {{subtitle}}
+    </span>
+  </div>
+</div>

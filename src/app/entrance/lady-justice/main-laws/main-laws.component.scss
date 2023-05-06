@@ -1,0 +1,17 @@
+::ng-deep .main-laws {
+  .law {
+    height: 350px;
+
+    .grid-content {
+      z-index: 1;
+
+      .title {}
+
+      .subtitle {}
+
+      .description {}
+
+      .actions {}
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.pagination-page{
+    .pagination-numbers, .pagination-nav{
+        font-size: 12px;
+        padding: 0px;
+        margin: 4px;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        color: #000000ff;
+        &:hover{
+            background-color: violet;
+        }
+        &:disabled{
+            background-color: #ffffffff;
+        }
+        + .active{
+            color: #ffffffff;
+            background-color: #6f2fa1ff;
+        }
+    }
+}

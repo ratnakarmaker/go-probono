@@ -1,0 +1,40 @@
+.call-text {
+  width: 300px;
+  text-align: center;
+  color: black;
+
+  .title {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6F2FA1ff;
+}
+
+.call-card {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 5px #bfb7c5;
+
+  .call-image {
+    width: 50%;
+  }
+
+  .call-btn {
+    background-color: #6F2FA1;
+    color: #ffffff;
+
+    .call-btn-image {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

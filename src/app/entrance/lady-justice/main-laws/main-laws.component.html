@@ -1,0 +1,9 @@
+<div class="container page-container">
+  <div class="row">
+    <div class="col-12 main-laws">
+      <app-grid-cards [items]="lawList" [c_class]="'col-xl-4 col-md-6 col-sm-12 p-3 law animation'" [buttons]="buttons"
+        (state_change)="buttonClicked($event)">
+      </app-grid-cards>
+    </div>
+  </div>
+</div>

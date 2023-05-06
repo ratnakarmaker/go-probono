@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label [for]="c_id" class="input-label">{{label}}</label>
+  <input [type]="type" class="form-control input-field" [id]="c_id" [(ngModel)]="inp_val" (input)="changeVal($event)"
+    [placeholder]="placeholder">
+  <div></div>
+</div>

@@ -1,0 +1,19 @@
+::ng-deep .slide-container {
+  display: -webkit-box;
+  width: auto;
+  overflow-x: hidden;
+  position: relative;
+
+  .custom-slide {
+    float: left;
+    transition-duration: 2s;
+    padding: 12px;
+    position: relative;
+
+    .slide-card {
+      .grid-card {
+        height: 300px;
+      }
+    }
+  }
+}

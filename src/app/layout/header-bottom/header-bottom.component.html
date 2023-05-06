@@ -1,0 +1,52 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div>
+      <a class="navbar-brand" href="#">
+        <img class="img-fluid" src="assets/logo.jpeg" alt="logo" loading="lazy">
+      </a>
+    </div>
+    <div class="navbar-right">
+      <app-search-box [(key)]="search_text" (search)="search()"></app-search-box>
+      <!-- <button class="btn appointment-btn" (click)="appointment()">My Appointment </button> -->
+      <fa-icon class="notification" icon="bell" size="xl"></fa-icon>
+      <app-menu-holder>
+        <div menu_opener>
+          <img *ngIf="storage?.getToken()" class="navbar-avatar" src="assets/icon/plus-chara.jpg" alt="">
+          <a (click)="login()" *ngIf="!storage?.getToken()">
+            <!-- <fa-icon class="notification" icon="user" size="xl"></fa-icon> -->
+            <img class="navbar-avatar" src="assets/icon/plus-shoho.jpg" alt="">
+          </a>
+        </div>
+        <app-navs *ngIf="storage?.getToken()" menu_content [items]="nav_list" (search)="changePath($event)"></app-navs>
+      </app-menu-holder>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+        (click)="bios_state = !bios_state" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="bioscope" *ngIf="bios_state">
+  <button class="toggler" (click)="bios_state = !bios_state">
+    <fa-icon icon="bars" size="xl"></fa-icon>
+  </button>
+  <div class="list-holder">
+    <table>
+      <tr>
+        <td>Make Appointments</td>
+      </tr>
+      <tr>
+        <td (click)="sideRoutes('lady-justice/laws')">Know Your Law</td>
+      </tr>
+      <tr>
+        <td (click)="sideRoutes('contact-us')">Help Center</td>
+      </tr>
+      <tr>
+        <td (click)="sideRoutes('events')">Events</td>
+      </tr>
+      <tr>
+        <td (click)="sideRoutes('team-members')">Our Team</td>
+      </tr>
+    </table>
+  </div>
+</div>

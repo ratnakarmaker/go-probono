@@ -1,0 +1,95 @@
+::ng-deep .law-list-accordion {
+  .q-a-text {
+    padding-top: 16px;
+
+    .q-a-btn {
+      width: fit-content;
+      padding: 8px 32px 8px 32px;
+      color: #ffffffff;
+      background-color: green;
+      border-radius: 5px;
+    }
+  }
+
+  .accordion-item {
+    border: none;
+    padding: 8px 0;
+
+    &:last-child {
+      padding: 8px 0 0 0;
+    }
+
+    .question {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .answer {
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    .q-a-header {
+      width: 10%;
+    }
+
+    .q-a-content {
+      width: 90%
+    }
+  }
+
+  .accordion-button {
+    background-color: #ffffffff;
+    color: #6f2fa1ff;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: none;
+    margin-bottom: 0px;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .collapsed {
+    background-color: #6f2fa1ff;
+    color: #ffffffff;
+    border: 1px solid #6f2fa1ff;
+  }
+
+  .accordion-body {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: black;
+  }
+}
+
+::ng-deep .law-list-pagination {
+  .holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pagination {
+      .active {
+        background-color: #6f2fa1ff;
+        color: #ffffffff;
+      }
+
+      .page-link {
+        color: #6f2fa1ff;
+        background-color: #ffffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}

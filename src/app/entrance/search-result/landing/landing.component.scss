@@ -1,0 +1,19 @@
+::ng-deep .law {
+  height: 250px;
+
+  .grid-content {
+    z-index: 1;
+
+    .title {}
+
+    .subtitle {}
+
+    .description {}
+
+    .actions {}
+  }
+}
+
+.result-container {
+  margin-top: -30px;
+}

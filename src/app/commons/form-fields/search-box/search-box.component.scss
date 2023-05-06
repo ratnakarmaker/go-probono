@@ -1,0 +1,23 @@
+.search-box {
+  .input-group {
+    
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #6f2fa1ff;
+    .form-control {
+      border: none;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .input-group-append {
+      &.btn {
+        box-shadow: none;
+        margin: 0px;
+        border: none;
+      }
+    }
+  }
+}

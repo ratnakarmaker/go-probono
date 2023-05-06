@@ -1,0 +1,10 @@
+<div class="container-fluid p-0">
+  <div class="row">
+    <div [ngClass]="{'selected': true}" class="{{c_class}}" *ngFor="let item of items; let i=index;">
+      <app-custom-card [item]="item" [buttons]="buttons" [c_class]="c_class"
+        (selected)="state_change.emit({action: $event?.action, data: item});"
+        [text_position]="item?.text_position ?? 'inside'">
+      </app-custom-card>
+    </div>
+  </div>
+</div>

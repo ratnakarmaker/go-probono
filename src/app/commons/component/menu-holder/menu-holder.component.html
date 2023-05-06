@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div #menu_switch>
+        <ng-content select="[menu_opener]"></ng-content>
+      </div>
+      <div #menu_content *ngIf="menu_shower" class="content-menu p-2 mt-1">
+        <ng-content select="[menu_content]"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
