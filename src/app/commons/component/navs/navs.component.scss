@@ -1,6 +1,5 @@
 .item-container {
   background-color: #6F2FA1;
-  border-radius: 4px;
 
   .item {
     width: 100%;
@@ -14,5 +13,6 @@
 
   .selected {
     background-color: #3a0464;
+    border-radius: 0;
   }
 }
