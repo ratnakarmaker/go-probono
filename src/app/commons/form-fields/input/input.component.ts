@@ -17,7 +17,7 @@ export class InputComponent implements OnChanges {
   @Input() c_id: string = '';
   @Input() label: string = '';
   @Input() placeholder: string = '';
-  @Input() type: string = 'text';
+  @Input() type: string = '';
 
   @Input() control: AbstractControl<any, any> | any;
 

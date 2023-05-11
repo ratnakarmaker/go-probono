@@ -30,7 +30,7 @@ export class LandingComponent {
   protected current_nav_id: number = 1;
 
   constructor(
-    private router: Router,
+    public router: Router,
     private route: ActivatedRoute,
     private storage: StorageService
   ) {}

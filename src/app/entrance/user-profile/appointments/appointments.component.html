@@ -1,1 +1,38 @@
-<p>appointments works!</p>
+<div class="container">
+    <h2 class="header">Make An Appointment </h2>
+    <div class="col-12">
+        <form class="row" [formGroup]="dataForm">
+            <div class="col-md-6">
+                <app-select [control]="dataForm.get('lawer')" [c_id]="'lawer'"
+                    [placeholder]="'Select Lawer'">
+                </app-select>
+            </div>
+            <div class="col-md-6">
+                <app-select [control]="dataForm.get('location')" [c_id]="'location'"
+                    [placeholder]="'Select Location'">
+                </app-select>
+            </div>
+            <div class="col-md-3">
+                <app-input [control]="dataForm.get('first_name')" [type]="'text'" [c_id]="'first_name'"
+                    [placeholder]="'Enter First name'">
+                </app-input>
+            </div>
+            <div class="col-md-3">
+                <app-input [control]="dataForm.get('last_name')" [type]="'text'" [c_id]="'last_name'"
+                    [placeholder]="'Enter Last Name'">
+                </app-input>
+            </div>
+            <div class="col-md-6">
+                <app-select [control]="dataForm.get('law_type')" [c_id]="'law_type'"
+                    [placeholder]="'Enter Type of Law'">
+                </app-select>
+            </div>
+            <div class="col-md-12">
+                <textarea rows="4" class="form-control input-field" placeholder="Message"></textarea>
+            </div>
+            <div class="col-6 mt-5" style="margin: 0 auto;">
+                <button class="get-appoinment-btn">Get Appointment </button>
+            </div>
+        </form>
+    </div>
+</div>

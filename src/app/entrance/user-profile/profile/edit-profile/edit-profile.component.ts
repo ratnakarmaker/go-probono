@@ -46,6 +46,8 @@ export class EditProfileComponent implements OnInit, OnChanges {
       apartment: [''],
       city: [''],
       country: [''],
+      dob: [''],
+      password: [''],
       latitude: [''],
       longitude: [''],
     });

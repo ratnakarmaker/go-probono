@@ -3,7 +3,7 @@
     <div class="col-lg-3 col-md-4 col-sm-12">
       <app-navs [items]="navs" [(key)]="current_nav_id" (search)="routeChange()"></app-navs>
     </div>
-    <div class="col-lg-9 col-md-8 col-sm-12 result-container">
+    <div class="col-lg-9 col-md-8 col-sm-12 result-container" [ngClass]="{'bg': router.url == '/profile/appointments'}" >
       <div><router-outlet></router-outlet></div>
     </div>
   </div>
