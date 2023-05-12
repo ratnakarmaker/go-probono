@@ -15,9 +15,12 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserComponent } from './authentication/registration/user/user.component';
+import { LawyerComponent } from './authentication/registration/lawyer/lawyer.component';
+import { LawfirmComponent } from './authentication/registration/lawfirm/lawfirm.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegistrationComponent],
+  declarations: [AppComponent, LoginComponent, RegistrationComponent, UserComponent, LawyerComponent, LawfirmComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

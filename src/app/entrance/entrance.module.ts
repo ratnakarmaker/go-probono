@@ -39,7 +39,7 @@ const routes: Routes = [
         title: 'Advocates',
       },
       {
-        path: 'profile',
+        path: 'user',
         loadChildren: () =>
           import('./user-profile/user-profile.module').then(
             (m) => m.UserProfileModule
