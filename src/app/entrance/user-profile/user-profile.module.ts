@@ -10,6 +10,7 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { CallHistoryComponent } from './call-history/call-history.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
+import { MakeAppointmentComponent } from './make-appointment/make-appointment.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,11 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'make-appointment',
+    component: MakeAppointmentComponent,
+    title: 'Make Appointment',
+  },
 ];
 
 @NgModule({
@@ -44,6 +50,7 @@ const routes: Routes = [
     ViewProfileComponent,
     AppointmentsComponent,
     CallHistoryComponent,
+    MakeAppointmentComponent,
   ],
   imports: [
     CommonModule,

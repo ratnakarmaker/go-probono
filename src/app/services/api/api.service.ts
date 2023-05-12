@@ -50,7 +50,6 @@ export class ApiService {
   }
 
   private _get(route: string, params?: any): Observable<any> {
-    console.log(this.getHeader());
     return this.http.get<any>(`${this.apiUrl}/${route}`, {
       ...this.getHeader(),
       params,
@@ -178,9 +177,10 @@ export class ApiService {
     listKey: string,
     data: any = {},
     parameters?: any,
+    routeAddons?: string | number,
     selfShowMessage?: boolean
   ): Observable<any> {
-    let route: string = `${this.apiList[listKey]}`;
+    let route: string = `${this.apiList[listKey]}${routeAddons ?? ''}`;
     let params: any = { ...this.getLeanParams(parameters) };
     return new Observable((subscriber: Subscriber<any>) => {
       let tempSubs: Subscription = this._post(

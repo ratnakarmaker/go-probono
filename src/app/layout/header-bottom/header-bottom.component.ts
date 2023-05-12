@@ -31,7 +31,7 @@ export class HeaderBottomComponent {
 
   changePath(data: any) {
     if (data?.id === 1) {
-      this.router.navigate(['profile']);
+      this.router.navigate(['user']);
     } else if (data?.id === 2) {
       this.storage.clearStorage();
       this.router.navigate(['']);
@@ -49,7 +49,7 @@ export class HeaderBottomComponent {
   }
 
   appointment() {
-    this.router.navigate(['profile/appointments']);
+    this.router.navigate(['user/appointments']);
   }
 
   sideRoutes(path: string) {

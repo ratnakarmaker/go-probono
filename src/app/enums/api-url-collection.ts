@@ -10,4 +10,9 @@ export const api_collection: any = {
   GLOBAL_SEARCH_API: 'global-search/',
   TEAM_API: 'team/',
   EVENT_API: 'event/',
+  ZONE_API: 'address/',
+  PAYMENT_PLANS_API: 'payment/plans/',
+  PAYMENT_METHOD_API: 'payment/methods/',
+  APPOINTMENT_API: 'appointment/',
+  LAWYER_LIST_API: 'lawyer/',
 };
