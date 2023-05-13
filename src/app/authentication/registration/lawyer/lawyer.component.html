@@ -109,12 +109,13 @@
           <label for="lawyer_category" class="fw-bold">Specilized Category</label>
           <select name="lawyer_category" id="lawyer_category" class="form-select group-holder"
             formControlName="lawyer_category" required="required" multiple>
-            <option [value]="data?.slug" *ngFor="let data of lawTypes">
+            <option [value]="data?.id" *ngFor="let data of lawTypes">
               {{data?.name}}
             </option>
           </select>
         </div>
       </div>
+      <h4 style="color: green;">{{msg}}</h4>
       <input type="submit" class="btn btn-primary btn-block btn-lg" value="Register Now" />
     </form>
   </div>

@@ -47,6 +47,14 @@ const routes: Routes = [
         title: '',
       },
       {
+        path: 'lawyer',
+        loadChildren: () =>
+          import('./lawyer-profile/lawyer-profile.module').then(
+            (m) => m.LawyerProfileModule
+          ),
+        title: '',
+      },
+      {
         path: 'search-result',
         loadChildren: () =>
           import('./search-result/search-result.module').then(

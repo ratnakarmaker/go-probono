@@ -32,6 +32,8 @@ export class LawyerComponent {
   protected paymentPlans: any[] = [];
   protected lawTypes: any[] = [];
 
+  protected msg: string = '';
+
   private subscriptions: Subscription[] = [];
 
   constructor(
@@ -122,9 +124,11 @@ export class LawyerComponent {
   }
 
   getLawCategories() {
-    let tempSubs = this.api.list('LAW_LIST_API').subscribe((response: any) => {
-      this.lawTypes = response;
-    });
+    let tempSubs = this.api
+      .list('LAWYER_LIST_API', {}, 'categories/')
+      .subscribe((response: any) => {
+        this.lawTypes = response;
+      });
     this.subscriptions.push(tempSubs);
   }
 
@@ -133,17 +137,7 @@ export class LawyerComponent {
       .post('REGISTER_API', this.dataForm.value, {}, 'lawyer/')
       .subscribe((responseReg: any) => {
         if (responseReg?.success) {
-          this.api
-            .post('LOGIN_API', {
-              password: this.dataForm.value?.password,
-              mobile: this.dataForm.value?.mobile,
-            })
-            .subscribe((responseLog: any) => {
-              if (responseLog?.success) {
-                this.storage.setToken(responseLog?.token);
-                this.router.navigate(['/']);
-              }
-            });
+          this.msg = 'Succesfully Applied. Please wait for confirmation';
         }
       });
     this.subscriptions.push(tempSubs);
