@@ -15,4 +15,5 @@ export const api_collection: any = {
   PAYMENT_METHOD_API: 'payment/methods/',
   APPOINTMENT_API: 'appointment/',
   LAWYER_LIST_API: 'lawyer/',
+  APPOINTMENT_LIST_API: 'lawyer-panel/appointments/',
 };
