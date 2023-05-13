@@ -182,9 +182,112 @@
 
         <div class="p-0 appointmentBootom d-flex justify-content-start gap-4 align-items-center mt-5">
             <input class="form-control input-field" type="date" name="" id="">
-            <button class="bg-success">Approve</button>
-            <button class="bg-danger">Reject</button>
+            <button class="bg-success text-white">Approve</button>
+            <button class="bg-danger text-white">Reject</button>
         </div>
     </div>
 </div>
   
+<!-- Appointment List -->
+<div class="container appointmentListTable">
+    <div class="row mainBody p-5">
+        <h2 class="text-white text-center">Appointment List</h2>
+        <div class="dataTable">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Profile</th>
+                        <th>Username</th>
+                        <th>Phone no</th>
+                        <th>Lawyer Category</th>
+                        <th class="text-center">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img class="userAvatar" src="assets/avatar.png" alt=""></td>
+                        <td class="dataItem">Michael Demo</td>
+                        <td class="dataItem">+98124568</td>
+                        <td class="dataItem">Family Lawyer</td>
+                        <td class="dataItem"><button class="bg-white">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="userAvatar" src="assets/avatar.png" alt=""></td>
+                        <td class="dataItem">Michael Demo</td>
+                        <td class="dataItem">+98124568</td>
+                        <td class="dataItem">Family Lawyer</td>
+                        <td class="dataItem"><button class="bg-white">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="userAvatar" src="assets/avatar.png" alt=""></td>
+                        <td class="dataItem">Michael Demo</td>
+                        <td class="dataItem">+98124568</td>
+                        <td class="dataItem">Family Lawyer</td>
+                        <td class="dataItem"><button class="bg-white">View Details</button></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>
+  
+<!-- Payment History -->
+<div class="container paymentHistoryTable">
+    <div class="row mainBody p-5">
+        <div class="heading">
+            <h2 class="text-white text-center">Payment History</h2>
+            <p class="summary text-white text-center">For a recurring payment, the final payment amount will be the ballance due at the 
+                time the payment is processed </p>
+        </div>
+        <div class="dataTable">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Confirmation Number</th>
+                        <th>Created On</th>
+                        <th>Payment Amount</th>
+                        <th>Payment Account</th>
+                        <th>Payment Status</th>
+                        <th>Status Date</th>
+                        <th>Recurring Payment</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HDDJKSKDNSDKJS</td>
+                        <td>03/05/2023</td>
+                        <td>5000 BDT</td>
+                        <td>*****09345</td>
+                        <td><span class="badge rounded-pill text-bg-warning">Pending</span></td>
+                        <td>03/05/2023</td>
+                        <td><span class="badge rounded-pill text-bg-success">Yes</span></td>
+                        <td>Processing</td>
+                    </tr>
+                    <tr>
+                        <td>HDDJKSKDNSDKJS</td>
+                        <td>03/05/2023</td>
+                        <td>5000 BDT</td>
+                        <td>*****09345</td>
+                        <td><span class="badge rounded-pill text-bg-success">Paid</span></td>
+                        <td>03/05/2023</td>
+                        <td><span class="badge rounded-pill text-bg-dark">No</span></td>
+                        <td>Processing</td>
+                    </tr>
+                    <tr>
+                        <td>HDDJKSKDNSDKJS</td>
+                        <td>03/05/2023</td>
+                        <td>5000 BDT</td>
+                        <td>*****09345</td>
+                        <td><span class="badge rounded-pill text-bg-danger">Failed</span></td>
+                        <td>03/05/2023</td>
+                        <td><span class="badge rounded-pill text-bg-success">Yes</span></td>
+                        <td>Processing</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>
