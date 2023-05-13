@@ -27,7 +27,8 @@
             </ng-container>
           </div>
         </div>
-        <button class="text-white" *ngIf="pendingAppointments?.length">
+        <button class="text-white" *ngIf="pendingAppointments?.length" [routerLink]="['/lawyer/appointments']"
+          [queryParams]="{status: 'pending'}">
           View All
         </button>
       </div>
@@ -48,7 +49,8 @@
             </ng-container>
           </div>
         </div>
-        <button class="text-white" *ngIf="approvedAppointments?.length">
+        <button class="text-white" *ngIf="approvedAppointments?.length" [routerLink]="['/lawyer/appointments']"
+          [queryParams]="{status: 'pending'}">
           View All
         </button>
       </div>

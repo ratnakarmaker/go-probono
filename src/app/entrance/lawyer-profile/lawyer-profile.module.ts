@@ -7,8 +7,48 @@ import { PaymentHistoryComponent } from './payment-history/payment-history.compo
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LandingComponent } from './landing/landing.component';
+import { MakePaymentComponent } from './make-payment/make-payment.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: LandingComponent,
+    title: '',
+    children: [
+      {
+        path: 'appointments',
+        component: AppointmentListComponent,
+        title: 'Appointments',
+      },
+      {
+        path: 'appointment/:id',
+        component: AppointmentDetailsComponent,
+        title: 'Appointment',
+      },
+      {
+        path: 'payment-history',
+        component: PaymentHistoryComponent,
+        title: 'Payment History',
+      },
+      {
+        path: 'change-plan',
+        component: PaymentPlanListComponent,
+        title: 'Change Payment Plan',
+      },
+      {
+        path: 'payment-process',
+        component: PaymentProcessComponent,
+        title: 'Payment Process',
+      },
+      {
+        path: 'make-payment',
+        component: MakePaymentComponent,
+        title: 'Make Payment',
+      },
+    ],
+  },
+];
 
 @NgModule({
   declarations: [
@@ -17,6 +57,8 @@ const routes: Routes = [];
     PaymentProcessComponent,
     PaymentHistoryComponent,
     AppointmentDetailsComponent,
+    LandingComponent,
+    MakePaymentComponent,
   ],
   imports: [
     CommonModule,

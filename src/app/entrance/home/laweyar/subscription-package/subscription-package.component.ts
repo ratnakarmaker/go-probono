@@ -11,9 +11,13 @@ export class SubscriptionPackageComponent implements OnInit {
 
   constructor(private api: ApiService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getPackageDetails();
+  }
 
   getPackageDetails() {
-    // this.api.list()
+    this.api.list('CURRENT_PAYMENT_PLAN_API').subscribe((response: any) => {
+      this.package = response;
+    });
   }
 }
