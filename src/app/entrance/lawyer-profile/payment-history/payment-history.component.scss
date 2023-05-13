@@ -1,110 +1,60 @@
-// Appointment List
-.appointmentListTable{
-    margin-top: 28px;
-
-    .mainBody{
-        box-shadow: 0px 0px 10px 4px #D6D6D6;
-        background-color: #A184D5;
-        border-radius: 10px;
-        padding: 57px 150px;
-        
-        h2{
-            font-size: 40px;
-            font-weight: 500;
-            text-decoration: underline;
-            text-underline-offset: 20px;
-        }
-
-        .dataTable{
-            margin-top: 62px;
-            
-            table{
-                color: white;
-    
-                .userAvatar{
-                    height: 55px;
-                    width: 55px;
-                    border-radius: 100px;
-                    display: block;
-                    margin: 0 auto;
-                }
-                .dataItem{
-                    vertical-align: middle;
-                }
-                button{
-                    font-size: 16px;
-                    font-weight: 500;
-                    border-radius: 6px; 
-                    border: none;
-                    padding: 6px 14px;
-                    color: #A184D5;
-                    display: block;
-                    margin: 0 auto;
-                }
-            }
-        }
-        
-    }
-
-}
-
 // Payment History
-.paymentHistoryTable{
-    margin-top: 28px;
+.paymentHistoryTable {
+  margin-top: 28px;
 
-    .mainBody{
-        box-shadow: 0px 0px 10px 4px #D6D6D6;
-        background-color: #A184D5;
-        border-radius: 10px;
-        padding: 57px 150px;
-        display: flex;
-        justify-content: center;
+  .mainBody {
+    box-shadow: 0px 0px 10px 4px #D6D6D6;
+    background-color: #A184D5;
+    border-radius: 10px;
+    padding: 57px 150px;
+    display: flex;
+    justify-content: center;
 
-        .heading{
-            width: 70%;
-            text-align: center;
-            
-            h2{
-                font-size: 40px;
-                font-weight: 500;
-                text-decoration: underline;
-                text-underline-offset: 20px;
-            }
-    
-            .summary{
-                margin-top: 30px;
-                font-size: 24px;
-                font-weight: 400;
-            }
-        }
+    .heading {
+      width: 70%;
+      text-align: center;
 
-        .dataTable{
-            margin-top: 31px;
-            
-            table{
-                color: white;
-    
-                .userAvatar{
-                    height: 55px;
-                    width: 55px;
-                    border-radius: 100px;
-                    display: block;
-                    margin: 0 auto;
-                }
+      h2 {
+        font-size: 40px;
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 20px;
+      }
 
-                button{
-                    font-size: 16px;
-                    font-weight: 500;
-                    border-radius: 6px; 
-                    border: none;
-                    padding: 6px 14px;
-                    color: #A184D5;
-                    display: block;
-                    margin: 0 auto;
-                }
-            }
-        }
-        
+      .summary {
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: 400;
+      }
     }
+
+    .dataTable {
+      margin-top: 31px;
+
+      table {
+        color: white;
+
+        .userAvatar {
+          height: 55px;
+          width: 55px;
+          border-radius: 100px;
+          display: block;
+          margin: 0 auto;
+        }
+
+        button {
+          font-size: 16px;
+          font-weight: 500;
+          border-radius: 6px;
+          border: none;
+          padding: 6px 14px;
+          color: #A184D5;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+  }
 
 }
