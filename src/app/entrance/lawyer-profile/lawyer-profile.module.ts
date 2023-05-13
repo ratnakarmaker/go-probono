@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { MakePaymentComponent } from './make-payment/make-payment.component';
+import { ComponentModule } from 'src/app/commons/component/component.module';
+import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
 
 const routes: Routes = [
   {
@@ -58,6 +60,8 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
+    ComponentModule,
+    FormFieldsModule,
   ],
 })
 export class LawyerProfileModule {}

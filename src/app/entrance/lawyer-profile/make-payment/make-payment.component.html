@@ -1,3 +1,202 @@
-<div class="container page-container">
-
+<div class="container page-container make-payment">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">Payable Amount</h1>
+    </div>
+    <div class="col-12">
+      <table class="table color-table">
+        <tr>
+          <th>
+            Current Plan:
+          </th>
+          <td>
+            {{paymentData?.current_payment_plan}}
+          </td>
+          <th>
+            Due Amount:
+          </th>
+          <td>
+            {{paymentData?.current_due}}
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">1</div>
+            <div class="content">
+              <span class="command-text big-text">*247#</span>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Dial <span class="command-text">*247#</span> to go to mobile menu
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">2</div>
+            <div class="content">
+              <table class="table">
+                <tr>
+                  <td colspan="2">bKash</td>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>Send Money</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Buy Airtime</td>
+                </tr>
+                <tr>
+                  <td class="selected-text">3.</td>
+                  <td class="selected-text">Payment</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>Cash Out</td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>Pay Bill</td>
+                </tr>
+              </table>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Select <span class="command-text">Payment</span>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">3</div>
+            <div class="content">
+              <span>Enter Merchant bKash Account No:</span>
+              <span class="command-text">xxxxxxxxxxx</span>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Enter receipent bKash account number
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">4</div>
+            <div class="content">
+              <span>Enter Amount:</span>
+              <span class="command-text">xxx</span>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Enter amount
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">5</div>
+            <div class="content">
+              <span>Enter Reference:</span>
+              <span class="command-text">xxxxx</span>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Enter reference
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">6</div>
+            <div class="content">
+              <span>Enter Counter No:</span>
+              <span class="command-text">x</span>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Enter counter no.
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">7</div>
+            <div class="content">
+              <div class="w-100">Payment to: xxxxxxxxxxx</div>
+              <div class="w-100">Amount: xxx.xx</div>
+              <div class="w-100">Reference: xxxxx</div>
+              <div class="w-100">Enter Menu PIN to Confirm:</div>
+              <span class="command-text">xxxx</span>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Enter PIN number to confirm
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 process-single">
+          <div class="process-card">
+            <div class="step">8</div>
+            <div class="content">
+              <div class="w-100" style="height: 100%">Payment Tk xxx to xxxxxxxxxxx is succesfull</div>
+            </div>
+            <div class="buttons">
+              <span>Send</span>
+              <span>Exit</span>
+            </div>
+          </div>
+          <div class="outer-text">
+            Successful payment SMS from bKash
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 pt-3">
+      <form class="row" [formGroup]="dataForm" (submit)="sendMoney()">
+        <div class="col-md-6 col-sm-12">
+          <div class="form-group">
+            <label for="transaction_number">Transaction Number</label>
+            <input placeholder="Enter Transaction Number" id="transaction_number" type="text" class="form-control"
+              formControlName="transaction_number">
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input placeholder="Enter Paid Amount" id="amount" type="text" class="form-control"
+              formControlName="amount">
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 pt-4">
+          <button class="btn btn-primary" type="submit">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
