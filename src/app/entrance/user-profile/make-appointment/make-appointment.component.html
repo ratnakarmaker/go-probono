@@ -4,6 +4,44 @@
       Make an Appointment
     </h1>
   </div>
+  <form class="row" [formGroup]="searchForm">
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <label for="division">Division</label>
+        <select id="division" class="form-select" formControlName="division">
+          <option value="">Select Division</option>
+          <option *ngFor="let data of divisionList;" [value]="data?.slug">{{data?.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <label for="district">District</label>
+        <select id="district" class="form-select" formControlName="district">
+          <option value="">Select District</option>
+          <option *ngFor="let data of districtList;" [value]="data?.slug">{{data?.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <label for="thana">Thana</label>
+        <select id="thana" class="form-select" formControlName="thana">
+          <option value="">Select Thana</option>
+          <option *ngFor="let data of thanaList;" [value]="data?.slug">{{data?.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <label for="lawyer_type">Lawyer Type</label>
+        <select id="lawyer_type" class="form-select" formControlName="lawyer_type" multiple>
+          <option value="">Select Lawyer Type</option>
+          <option *ngFor="let data of lawyerTypeList;" [value]="data?.id">{{data?.name}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
   <form class="row" (submit)="makeAppointment()" [formGroup]="dataForm">
     <div class="col-md-6 col-12 pb-2">
       <div class="form-group">

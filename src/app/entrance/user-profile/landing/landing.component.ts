@@ -38,7 +38,7 @@ export class LandingComponent {
   routeChange() {
     switch (this.current_nav_id) {
       case 1:
-        this.router.navigate(['profile']);
+        this.router.navigate(['user']);
         break;
       case 2:
         this.router.navigate(['appointments'], { relativeTo: this.route });

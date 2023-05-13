@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ApiService } from 'src/app/services/api/api.service';
 import { StorageService } from 'src/app/services/storage/storage.service';
@@ -20,7 +21,8 @@ export class UserComponent {
   constructor(
     private api: ApiService,
     private storage: StorageService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
     this.dataForm = fb.group({
       email: [''],
@@ -51,7 +53,7 @@ export class UserComponent {
             .subscribe((responseLog: any) => {
               if (responseLog?.success) {
                 this.storage.setToken(responseLog?.token);
-                // this.router.navigate(['/']);
+                this.router.navigate(['/']);
               }
             });
         }

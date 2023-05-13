@@ -32,6 +32,8 @@ export class LawfirmComponent {
   protected paymentPlans: any[] = [];
   protected lawTypes: any[] = [];
 
+  protected msg: string = '';
+
   private subscriptions: Subscription[] = [];
 
   constructor(
@@ -55,6 +57,8 @@ export class LawfirmComponent {
       lawyer_category: [''],
       division: [''],
       district: new FormControl({ value: '', disabled: true }),
+      gender: [''],
+      bar_council_number: [''],
     });
   }
   ngOnDestroy(): void {
@@ -120,9 +124,11 @@ export class LawfirmComponent {
   }
 
   getLawCategories() {
-    let tempSubs = this.api.list('LAW_LIST_API').subscribe((response: any) => {
-      this.lawTypes = response;
-    });
+    let tempSubs = this.api
+      .list('LAWYER_LIST_API', {}, 'categories/')
+      .subscribe((response: any) => {
+        this.lawTypes = response;
+      });
     this.subscriptions.push(tempSubs);
   }
 
@@ -131,17 +137,7 @@ export class LawfirmComponent {
       .post('REGISTER_API', this.dataForm.value, {}, 'lawfirm/')
       .subscribe((responseReg: any) => {
         if (responseReg?.success) {
-          this.api
-            .post('LOGIN_API', {
-              password: this.dataForm.value?.password,
-              mobile: this.dataForm.value?.mobile,
-            })
-            .subscribe((responseLog: any) => {
-              if (responseLog?.success) {
-                this.storage.setToken(responseLog?.token);
-                this.router.navigate(['/']);
-              }
-            });
+          this.msg = 'Succesfully Applied. Please wait for confirmation';
         }
       });
     this.subscriptions.push(tempSubs);
