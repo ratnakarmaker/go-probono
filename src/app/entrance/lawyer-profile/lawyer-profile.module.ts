@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 import { PaymentPlanListComponent } from './payment-plan-list/payment-plan-list.component';
-import { PaymentProcessComponent } from './payment-process/payment-process.component';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -37,11 +36,6 @@ const routes: Routes = [
         title: 'Change Payment Plan',
       },
       {
-        path: 'payment-process',
-        component: PaymentProcessComponent,
-        title: 'Payment Process',
-      },
-      {
         path: 'make-payment',
         component: MakePaymentComponent,
         title: 'Make Payment',
@@ -54,7 +48,6 @@ const routes: Routes = [
   declarations: [
     AppointmentListComponent,
     PaymentPlanListComponent,
-    PaymentProcessComponent,
     PaymentHistoryComponent,
     AppointmentDetailsComponent,
     LandingComponent,
