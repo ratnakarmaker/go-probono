@@ -12,37 +12,38 @@ import { ComponentModule } from 'src/app/commons/component/component.module';
 import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   component: LandingComponent,
+  //   title: '',
+  //   children: [
+
+  //   ],
+  // },
   {
-    path: '',
-    component: LandingComponent,
-    title: '',
-    children: [
-      {
-        path: 'appointments',
-        component: AppointmentListComponent,
-        title: 'Appointments',
-      },
-      {
-        path: 'appointment/:id',
-        component: AppointmentDetailsComponent,
-        title: 'Appointment',
-      },
-      {
-        path: 'payment-history',
-        component: PaymentHistoryComponent,
-        title: 'Payment History',
-      },
-      {
-        path: 'change-plan',
-        component: PaymentPlanListComponent,
-        title: 'Change Payment Plan',
-      },
-      {
-        path: 'make-payment',
-        component: MakePaymentComponent,
-        title: 'Make Payment',
-      },
-    ],
+    path: 'appointments',
+    component: AppointmentListComponent,
+    title: 'Appointments',
+  },
+  {
+    path: 'appointment/:id',
+    component: AppointmentDetailsComponent,
+    title: 'Appointment',
+  },
+  {
+    path: 'payment-history',
+    component: PaymentHistoryComponent,
+    title: 'Payment History',
+  },
+  {
+    path: 'change-plan',
+    component: PaymentPlanListComponent,
+    title: 'Change Payment Plan',
+  },
+  {
+    path: 'make-payment',
+    component: MakePaymentComponent,
+    title: 'Make Payment',
   },
 ];
 

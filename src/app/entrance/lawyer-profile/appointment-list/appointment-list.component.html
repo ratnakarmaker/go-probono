@@ -1,42 +1,38 @@
 <div class="container appointmentListTable page-container">
   <div class="row mainBody p-5">
-    <h2 class="text-white text-center">Appointment List</h2>
-    <div class="dataTable">
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="text-center">Profile</th>
-            <th>Username</th>
-            <th>Phone no</th>
-            <th>Lawyer Category</th>
-            <th class="text-center">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><img class="userAvatar" src="assets/avatar.png" alt=""></td>
-            <td class="dataItem">Michael Demo</td>
-            <td class="dataItem">+98124568</td>
-            <td class="dataItem">Family Lawyer</td>
-            <td class="dataItem"><button class="bg-white">View Details</button></td>
-          </tr>
-          <tr>
-            <td><img class="userAvatar" src="assets/avatar.png" alt=""></td>
-            <td class="dataItem">Michael Demo</td>
-            <td class="dataItem">+98124568</td>
-            <td class="dataItem">Family Lawyer</td>
-            <td class="dataItem"><button class="bg-white">View Details</button></td>
-          </tr>
-          <tr>
-            <td><img class="userAvatar" src="assets/avatar.png" alt=""></td>
-            <td class="dataItem">Michael Demo</td>
-            <td class="dataItem">+98124568</td>
-            <td class="dataItem">Family Lawyer</td>
-            <td class="dataItem"><button class="bg-white">View Details</button></td>
-          </tr>
-        </tbody>
-
-      </table>
+    <div class="col-3">
+      <app-navs [items]="navs" [(key)]="current_nav_id" (search)="routeChange($event)"></app-navs>
+    </div>
+    <div class="col-9">
+      <div class="row">
+        <h2 class="text-white text-center">{{header}} Appointment List</h2>
+        <div class="dataTable">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Sl</th>
+                <th class="text-center">Profile</th>
+                <th>Customer</th>
+                <th>Phone no</th>
+                <th>Status</th>
+                <!-- <th>{{header === 'Pending' ? 'Available Dates' : 'Chosen Date'}}</th> -->
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let appoint of appointmentList; let i=index;">
+                <td>{{i+1}}</td>
+                <td><img class="userAvatar" [src]="api.imagePath(appoint?.customer?.customer_pic)" alt=""></td>
+                <td class="dataItem">{{appoint?.customer?.name}}</td>
+                <td class="dataItem">{{appoint?.customer?.mobile}}</td>
+                <td class="dataItem">{{header}}</td>
+                <!-- <td class="dataItem">{{header?.}}</td> -->
+                <td class="dataItem"><button class="bg-white">View Details</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
