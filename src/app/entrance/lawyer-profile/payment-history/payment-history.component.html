@@ -12,32 +12,34 @@
         <thead>
           <tr>
             <th>Confirmation Number</th>
-            <th>Created On</th>
+            <!-- <th>Payment Date</th> -->
             <th>Payment Amount</th>
-            <th>Payment Account</th>
+            <th>Payment Method</th>
             <th>Payment Status</th>
-            <th>Status Date</th>
+            <!-- <th>Status Date</th>
             <th>Recurring Payment</th>
-            <th>Action</th>
+            <th>Action</th> -->
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>HDDJKSKDNSDKJS</td>
-            <td>03/05/2023</td>
-            <td>5000 BDT</td>
-            <td>*****09345</td>
-            <td><span class="badge rounded-pill text-bg-warning">Pending</span></td>
-            <td>03/05/2023</td>
+          <tr *ngFor="let history of paymentHistory;">
+            <td>{{history?.transaction_number}}</td>
+            <!-- <td>{{history?.transaction_date}}</td> -->
+            <td>{{history?.amount}} BDT</td>
+            <td>{{history?.payment_method}} </td>
+            <td><span class="badge rounded-pill" [ngClass]="{'text-bg-warning': history?.status == 'pending', 'text-bg-success': history?.status ==
+                'success',
+                'text-bg-danger': history?.status == 'failed'}">{{history?.status}}</span></td>
+            <!-- <td>03/05/2023</td>
             <td><span class="badge rounded-pill text-bg-success">Yes</span></td>
-            <td>Processing</td>
+            <td>Processing</td> -->
           </tr>
-          <tr>
+          <!-- <tr>
             <td>HDDJKSKDNSDKJS</td>
             <td>03/05/2023</td>
             <td>5000 BDT</td>
             <td>*****09345</td>
-            <td><span class="badge rounded-pill text-bg-success">Paid</span></td>
+            <td><span class="badge rounded-pill ">Paid</span></td>
             <td>03/05/2023</td>
             <td><span class="badge rounded-pill text-bg-dark">No</span></td>
             <td>Processing</td>
@@ -47,11 +49,11 @@
             <td>03/05/2023</td>
             <td>5000 BDT</td>
             <td>*****09345</td>
-            <td><span class="badge rounded-pill text-bg-danger">Failed</span></td>
+            <td><span class="badge rounded-pill ">Failed</span></td>
             <td>03/05/2023</td>
             <td><span class="badge rounded-pill text-bg-success">Yes</span></td>
             <td>Processing</td>
-          </tr>
+          </tr> -->
         </tbody>
 
       </table>

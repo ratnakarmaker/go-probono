@@ -15,6 +15,7 @@ export const api_collection: any = {
   PAYMENT_METHOD_API: 'payment/methods/',
   CURRENT_PAYMENT_PLAN_API: 'payment/summary/',
   PAYMENT_SUBMIT_API: 'payment/add/',
+  PAYMENT_HISTORY_API: 'payment/list/',
   APPOINTMENT_API: 'appointment/',
   LAWYER_LIST_API: 'lawyer/',
   APPOINTMENT_LIST_API: 'lawyer-panel/appointments/',
