@@ -31,7 +31,11 @@ export class LoginComponent {
         if (responseLog?.success) {
           this.storage.setToken(responseLog?.token);
           this.storage.setUser({ type: responseLog?.type });
-          this.router.navigate(['/']);
+          if (responseLog?.msg === 'Payment is required') {
+            this.router.navigate(['lawyer/make-payment']);
+          } else {
+            this.router.navigate(['/']);
+          }
         }
       });
   }
