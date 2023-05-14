@@ -1,12 +1,12 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-12 col-md-12" (click)="type = 'user'">
+  <div class="d-flex flex-column justify-content-around align-items-center" style="min-height: 100vh">
+    <div class="w-100 d-flex justify-content-center align-items-center" (click)="type = 'user'">
       <app-user [open]="type === 'user'"></app-user>
     </div>
-    <div class="col-12 col-md-12" (click)="type = 'lawyer'">
+    <div class="w-100 d-flex justify-content-center align-items-center" (click)="type = 'lawyer'">
       <app-lawyer [open]="type === 'lawyer'"></app-lawyer>
     </div>
-    <div class="col-12 col-md-12" (click)="type = 'lawfirm'">
+    <div class="w-100 d-flex justify-content-center align-items-center" (click)="type = 'lawfirm'">
       <app-lawfirm [open]="type === 'lawfirm'"></app-lawfirm>
     </div>
   </div>

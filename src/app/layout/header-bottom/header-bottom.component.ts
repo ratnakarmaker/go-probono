@@ -19,6 +19,48 @@ export class HeaderBottomComponent {
     },
   ];
 
+  protected menu_lists_user: any[] = [
+    {
+      name: 'Make Appointments',
+      route: 'user/make-appointment',
+    },
+    {
+      route: 'lady-justice/laws',
+      name: 'Know Your Law',
+    },
+    {
+      route: 'contact-us',
+      name: 'Help Center',
+    },
+    {
+      route: 'events',
+      name: 'Events',
+    },
+    {
+      route: 'team-members',
+      name: 'Our Team',
+    },
+  ];
+
+  protected menu_lists_lawyer: any[] = [
+    {
+      name: 'Appointments',
+      route: 'lawyer/appointments?status=approved',
+    },
+    {
+      route: 'lawyer/change-plan',
+      name: 'Payment Plan',
+    },
+    {
+      route: 'lawyer/payment-history',
+      name: 'Payment History',
+    },
+    {
+      route: 'lawyer/make-payment',
+      name: 'Make Payment',
+    },
+  ];
+
   protected search_text: string = '';
 
   bios_state: boolean = false;
@@ -31,7 +73,7 @@ export class HeaderBottomComponent {
 
   changePath(data: any) {
     if (data?.id === 1) {
-      if (this.storage?.getUser()?.['type'] !== 'Lawyer') {
+      if (this.storage?.getUser()?.['type'] === 'User') {
         this.router.navigate(['user']);
       } else {
         this.router.navigate(['lawyer']);

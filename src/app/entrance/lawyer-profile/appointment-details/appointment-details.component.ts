@@ -10,6 +10,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 export class AppointmentDetailsComponent implements OnInit {
   protected appointment: any;
   protected chosenDate: string = '';
+  protected msg: any = {};
 
   constructor(
     protected api: ApiService,
@@ -39,7 +40,7 @@ export class AppointmentDetailsComponent implements OnInit {
         chosen_date: this.chosenDate,
       })
       .subscribe((response: any) => {
-        console.log(response);
+        this.msg = response;
       });
   }
 }

@@ -18,6 +18,8 @@ export class MakeAppointmentComponent implements OnInit {
   protected lawyerTypeList: any[] = [];
   protected lawyerList: any[] = [];
 
+  protected msg: any = {};
+
   private subscriptions: Subscription[] = [];
 
   constructor(private api: ApiService, private fb: FormBuilder) {
@@ -141,6 +143,8 @@ export class MakeAppointmentComponent implements OnInit {
   makeAppointment() {
     this.api
       .post('APPOINTMENT_API', this.dataForm.value, {}, 'add/')
-      .subscribe((response: any) => {});
+      .subscribe((response: any) => {
+        this.msg = response;
+      });
   }
 }

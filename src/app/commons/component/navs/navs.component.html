@@ -1,4 +1,4 @@
-<div class="fluid p-0 item-container">
+<div class="fluid p-0 item-container nav-container">
   <div class="row">
     <div class="col-12" *ngFor="let item of items; let i = index;">
       <button class="btn item text-start" [ngClass]="{'selected': item?.id == key}" (click)="navSelected(item)">

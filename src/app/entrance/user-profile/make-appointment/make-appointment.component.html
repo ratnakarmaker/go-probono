@@ -72,6 +72,9 @@
         <input id="end_date" type="date" class="form-control" formControlName="end_date">
       </div>
     </div>
+    <div class="col-12">
+      <span [ngStyle]="{color: msg?.success ? 'green': 'red'}">{{msg?.message}}</span>
+    </div>
     <div class="col-12 pb-2">
       <button class="btn btn-primary" type="submit">
         Confirm

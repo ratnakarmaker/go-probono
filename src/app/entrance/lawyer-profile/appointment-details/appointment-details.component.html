@@ -48,6 +48,9 @@
     <div class="msgCard bg-white" [innerHTML]="appointment?.message">
 
     </div>
+    <div class="col-12">
+      <span [ngStyle]="{color: msg?.success ? 'green': 'red'}">{{msg?.message}}</span>
+    </div>
     <div class="p-0 appointmentBootom d-flex justify-content-start gap-4 align-items-center mt-5">
       <input [disabled]="appointment?.status !== 'pending'" class="form-control input-field" type="date" id="chosenDate"
         [(ngModel)]="chosenDate">

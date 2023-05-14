@@ -32,21 +32,16 @@
   </button>
   <div class="list-holder">
     <table>
-      <tr>
-        <td>Make Appointments</td>
-      </tr>
-      <tr>
-        <td (click)="sideRoutes('lady-justice/laws')">Know Your Law</td>
-      </tr>
-      <tr>
-        <td (click)="sideRoutes('contact-us')">Help Center</td>
-      </tr>
-      <tr>
-        <td (click)="sideRoutes('events')">Events</td>
-      </tr>
-      <tr>
-        <td (click)="sideRoutes('team-members')">Our Team</td>
-      </tr>
+      <ng-container *ngIf="storage?.getUser()?.['type'] === 'User'">
+        <tr *ngFor="let men of menu_lists_user">
+          <td (click)="sideRoutes(men?.route)">{{men?.name}}</td>
+        </tr>
+      </ng-container>
+      <ng-container *ngIf="storage?.getUser()?.['type'] !== 'User'">
+        <tr *ngFor="let men of menu_lists_lawyer">
+          <td (click)="sideRoutes(men?.route)">{{men?.name}}</td>
+        </tr>
+      </ng-container>
     </table>
   </div>
 </div>

@@ -4,8 +4,6 @@
   <!-- Appointment Summary -->
   <div class="summaryHeading">
     <h2 class="heading">Appointments Summary</h2>
-    <h5 class="summary">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet. consectetur adipisicing elit. Nam rem,
-      porro omnis a delectus sed explicabo quae saepe ea ex.</h5>
   </div>
 
   <div class="container">
@@ -20,7 +18,7 @@
                   <img class="userAvatar" [src]="api.imagePath(pend?.customer_pic)">
                   <h5 class="text-white">{{pend?.customer?.name}}</h5>
                 </div>
-                <button class="px-4 py-2 bg-white">
+                <button class="px-4 py-2 bg-white" [routerLink]="['/lawyer/appointments/'+pend?.id]">
                   View Details
                 </button>
               </div>
@@ -42,7 +40,7 @@
                   <img class="userAvatar" [src]="api.imagePath(appr?.customer_pic)">
                   <h5 class="text-white">{{appr?.customer?.name}}</h5>
                 </div>
-                <button class="px-4 py-2 bg-white">
+                <button class="px-4 py-2 bg-white" [routerLink]="['/lawyer/appointments/'+appr?.id]">
                   View Details
                 </button>
               </div>

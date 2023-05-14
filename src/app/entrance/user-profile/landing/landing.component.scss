@@ -1,6 +1,11 @@
 .result-container {
-    padding: 40px;
+  padding: 40px;
 }
+
 .bg {
-    background-color: #F1F2FA;
+  background-color: #F1F2FA;
+}
+
+::ng-deep .nav-container {
+  height: 100%;
 }
