@@ -26,10 +26,17 @@ export class AppointmentListComponent implements OnInit, OnDestroy {
   }
   ngOnInit(): void {
     let tempSubs = this.route.queryParams.subscribe((rou) => {
-      this.current_nav_id = rou?.['status'];
-      this.getAppointmentList(rou);
-      this.header =
-        rou?.['status']?.[0].toUpperCase() + rou?.['status'].slice(1);
+      if (!rou?.['status']) {
+        this.router.navigate([], {
+          relativeTo: this.route,
+          queryParams: { status: 'approved' },
+        });
+      } else {
+        this.current_nav_id = rou?.['status'];
+        this.getAppointmentList(rou);
+        this.header =
+          rou?.['status']?.[0].toUpperCase() + rou?.['status'].slice(1);
+      }
     });
     this.subscriptions.push(tempSubs);
   }

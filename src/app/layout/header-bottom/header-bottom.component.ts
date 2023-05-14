@@ -45,7 +45,7 @@ export class HeaderBottomComponent {
   protected menu_lists_lawyer: any[] = [
     {
       name: 'Appointments',
-      route: 'lawyer/appointments?status=approved',
+      route: 'lawyer/appointments',
     },
     {
       route: 'lawyer/change-plan',
