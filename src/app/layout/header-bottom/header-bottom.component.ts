@@ -73,7 +73,10 @@ export class HeaderBottomComponent {
 
   changePath(data: any) {
     if (data?.id === 1) {
-      if (this.storage?.getUser()?.['type'] === 'User') {
+      if (
+        this.storage?.getUser()?.['type'] !== 'Lawyer' &&
+        this.storage?.getUser()?.['type'] !== 'Lawfirm'
+      ) {
         this.router.navigate(['user']);
       } else {
         this.router.navigate(['lawyer']);

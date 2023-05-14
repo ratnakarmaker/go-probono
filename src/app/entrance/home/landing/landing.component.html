@@ -1,11 +1,10 @@
 <app-slider></app-slider>
-<ng-container *ngIf="storage?.getUser()?.['type'] === 'User'">
+<ng-container *ngIf="storage?.getUser()?.['type'] === 'Lawyer' || storage?.getUser()?.['type'] === 'Lawfirm'">
+  <app-appointment-summary></app-appointment-summary>
+  <app-subscription-package></app-subscription-package>
+</ng-container>
+<ng-container *ngIf="storage?.getUser()?.['type'] !== 'Lawyer' && storage?.getUser()?.['type'] !== 'Lawfirm'">
   <app-help-section></app-help-section>
   <app-factorial-law></app-factorial-law>
   <app-teams></app-teams>
-  <!-- <app-make-appointment></app-make-appointment> -->
-</ng-container>
-<ng-container *ngIf="storage?.getUser()?.['type'] !== 'User'">
-  <app-appointment-summary></app-appointment-summary>
-  <app-subscription-package></app-subscription-package>
 </ng-container>

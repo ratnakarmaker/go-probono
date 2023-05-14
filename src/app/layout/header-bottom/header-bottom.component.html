@@ -32,12 +32,12 @@
   </button>
   <div class="list-holder">
     <table>
-      <ng-container *ngIf="storage?.getUser()?.['type'] === 'User'">
+      <ng-container *ngIf="storage?.getUser()?.['type'] !== 'Lawyer' && storage?.getUser()?.['type'] !== 'Lawfirm'">
         <tr *ngFor="let men of menu_lists_user">
           <td (click)="sideRoutes(men?.route)">{{men?.name}}</td>
         </tr>
       </ng-container>
-      <ng-container *ngIf="storage?.getUser()?.['type'] !== 'User'">
+      <ng-container *ngIf="storage?.getUser()?.['type'] === 'Lawyer' || storage?.getUser()?.['type'] === 'Lawfirm'">
         <tr *ngFor="let men of menu_lists_lawyer">
           <td (click)="sideRoutes(men?.route)">{{men?.name}}</td>
         </tr>
