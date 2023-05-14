@@ -50,7 +50,7 @@
           </div>
         </div>
         <button class="text-white" *ngIf="approvedAppointments?.length" [routerLink]="['/lawyer/appointments']"
-          [queryParams]="{status: 'pending'}">
+          [queryParams]="{status: 'approved'}">
           View All
         </button>
       </div>

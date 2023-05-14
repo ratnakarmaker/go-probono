@@ -66,4 +66,7 @@ export class AppointmentListComponent implements OnInit, OnDestroy {
       });
     this.subscriptions.push(tempSub);
   }
+  details(appointment: any) {
+    this.router.navigate([`${appointment?.id}`], { relativeTo: this.route });
+  }
 }

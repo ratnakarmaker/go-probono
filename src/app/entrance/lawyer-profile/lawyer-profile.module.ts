@@ -12,21 +12,13 @@ import { ComponentModule } from 'src/app/commons/component/component.module';
 import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: LandingComponent,
-  //   title: '',
-  //   children: [
-
-  //   ],
-  // },
   {
     path: 'appointments',
     component: AppointmentListComponent,
     title: 'Appointments',
   },
   {
-    path: 'appointment/:id',
+    path: 'appointments/:id',
     component: AppointmentDetailsComponent,
     title: 'Appointment',
   },

@@ -18,4 +18,5 @@ export const api_collection: any = {
   APPOINTMENT_API: 'appointment/',
   LAWYER_LIST_API: 'lawyer/',
   APPOINTMENT_LIST_API: 'lawyer-panel/appointments/',
+  APPOINTMENT_STATUS_CHANGE_API: 'lawyer-panel/appointment-status-change/',
 };

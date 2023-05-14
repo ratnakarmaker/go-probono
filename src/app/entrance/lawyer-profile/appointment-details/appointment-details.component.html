@@ -1,61 +1,60 @@
-<div class="container mt-5 profile-view text-white">
+<div class="container mt-5 profile-view text-white page-container mb-4">
   <div class="row w-100 pt-3 pb-5">
     <div class="col-md-3 col-sm-12 mt-5 img-section">
-      <img src="assets/avatar.png" class="profile-pic">
-      <h2 class="text-white"> Michael Demo</h2>
+      <img [src]="api.imagePath(appointment?.customer?.customer_pic)" class="profile-pic">
+      <h2 class="text-white">{{appointment?.customer?.name}}</h2>
     </div>
     <div class="col-md-9 col-sm-12 data-section">
       <div class="row">
         <table class="text-white">
           <tr>
             <th>Full Name:</th>
-            <td>Afnaul Hsan</td>
+            <td>{{appointment?.customer?.name}}</td>
           </tr>
           <tr>
             <th>Email:</th>
-            <td>mehrab@gmail.com</td>
+            <td>{{appointment?.customer?.email}}</td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th>Address:</th>
             <td>Mirpur 10</td>
-          </tr>
+          </tr> -->
           <tr>
             <th>Contact Number:</th>
-            <td>0171000000</td>
+            <td>{{appointment?.customer?.mobile}}</td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th>District:</th>
             <td>Dhaka</td>
-          </tr>
-          <tr>
+          </tr> -->
+          <!-- <tr>
             <th>Type of Law :</th>
             <td>Company Law</td>
-          </tr>
+          </tr> -->
           <tr>
-            <th>Date Range : :</th>
-            <td>10-52023 to 15-102021</td>
+            <th>Date Range :</th>
+            <td>{{appointment?.start_date | date: 'd MMMM y'}} to {{appointment?.end_date | date: 'd MMMM y'}}</td>
+          </tr>
+          <tr *ngIf="appointment?.status !== 'approved' || appointment?.status !== 'due'">
+            <th>Chosen Date:</th>
+            <td>{{appointment?.chosen_date | date: 'd MMMM y'}}</td>
           </tr>
         </table>
       </div>
     </div>
   </div>
   <div class="row appointmentMessage">
-    <p class="ps-0 text-white">Michel Demo Massege:</p>
-    <div class="msgCard bg-white">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, architecto molestias facere deserunt incidunt
-        aliquam. Omnis quas culpa quia dignissimos? Molestiae dolorem fugiat minima delectus velit quod labore, iure
-        voluptate natus ullam ducimus illo dolores saepe? Consequatur ipsum modi laboriosam dolorem, magnam facilis
-        voluptas vel. Eum quia perferendis eos nesciunt?</p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, architecto molestias facere deserunt incidunt
-        aliquam. Omnis quas culpa quia dignissimos? Molestiae dolorem fugiat minima delectus velit quod labore, iure
-        voluptate natus ullam ducimus illo dolores saepe? Consequatur ipsum modi laboriosam dolorem, magnam facilis
-        voluptas vel. Eum quia perferendis eos nesciunt?</p>
-    </div>
+    <p class="ps-0 text-white">Massege:</p>
+    <div class="msgCard bg-white" [innerHTML]="appointment?.message">
 
+    </div>
     <div class="p-0 appointmentBootom d-flex justify-content-start gap-4 align-items-center mt-5">
-      <input class="form-control input-field" type="date" name="" id="">
-      <button class="bg-success">Approve</button>
-      <button class="bg-danger">Reject</button>
+      <input [disabled]="appointment?.status !== 'pending'" class="form-control input-field" type="date" id="chosenDate"
+        [(ngModel)]="chosenDate">
+      <button [disabled]="appointment?.status !== 'pending'" class="bg-success"
+        (click)="changeStatus('approved')">Approve</button>
+      <button [disabled]="appointment?.status !== 'pending'" class="bg-danger"
+        (click)="changeStatus('rejected')">Reject</button>
     </div>
   </div>
 </div>
