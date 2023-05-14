@@ -16,8 +16,11 @@ export const api_collection: any = {
   CURRENT_PAYMENT_PLAN_API: 'payment/summary/',
   PAYMENT_SUBMIT_API: 'payment/add/',
   PAYMENT_HISTORY_API: 'payment/list/',
+  PAYMENT_PLAN_CHANGE_API: 'payment/plan-change/',
   APPOINTMENT_API: 'appointment/',
   LAWYER_LIST_API: 'lawyer/',
   APPOINTMENT_LIST_API: 'lawyer-panel/appointments/',
   APPOINTMENT_STATUS_CHANGE_API: 'lawyer-panel/appointment-status-change/',
+  USER_APPOINTMENT_API: 'appointment/my-appointments/',
+  CALL_HISTORY_API: 'help-center/call-history/',
 };

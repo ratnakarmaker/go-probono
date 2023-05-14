@@ -1,38 +1,33 @@
-<div class="container">
-    <h2 class="header">Make An Appointment </h2>
-    <div class="col-12">
-        <form class="row" [formGroup]="dataForm">
-            <div class="col-md-6">
-                <app-select [control]="dataForm.get('lawer')" [c_id]="'lawer'"
-                    [placeholder]="'Select Lawer'">
-                </app-select>
-            </div>
-            <div class="col-md-6">
-                <app-select [control]="dataForm.get('location')" [c_id]="'location'"
-                    [placeholder]="'Select Location'">
-                </app-select>
-            </div>
-            <div class="col-md-3">
-                <app-input [control]="dataForm.get('first_name')" [type]="'text'" [c_id]="'first_name'"
-                    [placeholder]="'Enter First name'">
-                </app-input>
-            </div>
-            <div class="col-md-3">
-                <app-input [control]="dataForm.get('last_name')" [type]="'text'" [c_id]="'last_name'"
-                    [placeholder]="'Enter Last Name'">
-                </app-input>
-            </div>
-            <div class="col-md-6">
-                <app-select [control]="dataForm.get('law_type')" [c_id]="'law_type'"
-                    [placeholder]="'Enter Type of Law'">
-                </app-select>
-            </div>
-            <div class="col-md-12">
-                <textarea rows="4" class="form-control input-field" placeholder="Message"></textarea>
-            </div>
-            <div class="col-6 mt-5" style="margin: 0 auto;">
-                <button class="get-appoinment-btn">Get Appointment </button>
-            </div>
-        </form>
+<div class="container page-container my-appointment">
+  <div class="row">
+    <h2 class="text-white text-center">Appointment List</h2>
+    <div class="dataTable">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Sl</th>
+            <th class="text-center">Profile</th>
+            <th>Lawyer</th>
+            <th>Phone no</th>
+            <th>Chosen Date</th>
+            <th>Status</th>
+            <!-- <th class="text-center">Actions</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let appoint of appointmentList; let i=index;">
+            <td>{{i+1}}</td>
+            <td><img class="userAvatar" [src]="api.imagePath(appoint?.lawyer?.image)" alt=""></td>
+            <td class="dataItem">{{appoint?.lawyer?.name}}</td>
+            <td class="dataItem">{{appoint?.lawyer?.mobile}}</td>
+            <td class="dataItem">{{appoint?.chosen_date}}</td>
+            <td class="dataItem">{{appoint?.status}}</td>
+            <!-- <td class="dataItem">{{header?.}}</td> -->
+            <!-- <td class="dataItem"><button class="bg-white" (click)="details(appoint)">View Details</button>
+            </td> -->
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>

@@ -1,0 +1,63 @@
+<div class="container-fluid p-0 profile-view">
+  <div class="row pt-3 pb-5">
+    <div class="col-12 d-flex justify-content-center align-items-center mb-5">
+      <span class="header">Account Information</span>
+    </div>
+    <div class="col-md-4 col-sm-12 img-section">
+      <div class="row">
+        <div class="profile-basic-info">
+          <img src="assets/avatar.png" class="profile-pic">
+          <div class="img-upload">
+            <label for="imgUpload"><img src="assets/img/img-upload.png" alt=""></label>
+            <input id="imgUpload" class="d-none" type="file">
+          </div>
+        </div>
+        <div class="col-12 name mt-3">
+          <h2> {{profile?.name || 'Full Name'}}</h2>
+        </div>
+        <div class="col-12 phone mt-2">
+          <p>{{profile?.mobile || "01XXXXXXXXX"}}</p>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <button class="btn update-btn" (click)="c_change.emit()">
+            Edit Profile
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12 data-section">
+      <div class="row">
+        <table>
+          <tr>
+            <th>Full Name:</th>
+            <td>{{profile?.name}}</td>
+          </tr>
+          <tr>
+            <th>Email:</th>
+            <td>{{profile?.email}}</td>
+          </tr>
+          <tr>
+            <th>Address:</th>
+            <td>{{profile?.street_address}}</td>
+          </tr>
+          <tr>
+            <th>Contact Number:</th>
+            <td>{{profile?.mobile}}</td>
+          </tr>
+          <tr>
+            <th>Gender:</th>
+            <td>{{profile?.gender}}</td>
+          </tr>
+          <tr>
+            <th>District :</th>
+            <td>Gazipur</td>
+          </tr>
+          <tr>
+            <th>Date of Birth : :</th>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

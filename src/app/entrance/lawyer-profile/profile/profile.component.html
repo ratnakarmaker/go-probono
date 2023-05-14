@@ -1,0 +1,11 @@
+<div class="container page-container">
+  <div class="row">
+    <div class="col-12 pt-4">
+      <app-edit *ngIf="profile_state === 'edit'" [profile]="profile" (c_change)="swapState('view')">
+      </app-edit>
+      <app-view *ngIf="profile_state === 'view'" [profile]="profile" (c_change)="swapState('edit')">
+      </app-view>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.profile-edit {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+
+  .header {
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 16px solid #0601b426;
+  }
+
+  .profile-basic-info {
+    position: relative;
+    width: auto;
+  }
+
+  .img-upload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #702FA0;
+    border-radius: 50%;
+    padding: 9px;
+    border: 1px solid white;
+  }
+
+  .imgUpload img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .save {
+    background-color: #A184D5;
+    color: #ffffffff;
+  }
+
+  .cancel {
+    border: 1px solid #A184D5;
+    color: #A184D5;
+  }
+}

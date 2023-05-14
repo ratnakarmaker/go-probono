@@ -1,43 +1,44 @@
-.container {
-    .header {
-        font-weight: 700;
-        font-size: 48px;
-        color: #702FA0;
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    .input-field {
-        border: 2px solid #858585;
-        border-radius: 5px;
-        padding: 20px;
-    
-        &:focus {
-          box-shadow: none;
-          border: 1px solid #A184D5;
-    
-          .input-label {
-            color: #A184D5;
-          }
-        }
-    
-        &:focus-visible {
-          box-shadow: none;
-          border: 1px solid #A184D5;
-    
-          .input-label {
-            color: #A184D5;
-          }
-        }
-    }
+.my-appointment {
+  box-shadow: 0px 0px 10px 4px #D6D6D6;
+  background-color: #A184D5;
+  border-radius: 10px;
+  padding: 57px 150px;
 
-    .get-appoinment-btn {
-        background: #6F2FA1;
-        border-radius: 15px;
-        font-weight: 400;
-        font-size: 25px;
-        color: #fff;
-        padding: 0.5rem 4rem;
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+  }
+
+  .dataTable {
+    margin-top: 62px;
+
+    table {
+      color: white;
+
+      .userAvatar {
+        height: 55px;
+        width: 55px;
+        border-radius: 100px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .dataItem {
+        vertical-align: middle;
+      }
+
+      button {
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 6px;
         border: none;
-        width: 100%;
+        padding: 6px 14px;
+        color: #A184D5;
+        display: block;
+        margin: 0 auto;
+      }
     }
+  }
 }

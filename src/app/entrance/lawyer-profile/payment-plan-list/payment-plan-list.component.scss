@@ -1,76 +1,104 @@
 .changePaymentTable {
 
-    h2 {
-        font-size: 60px;
-        font-weight: 600;
-        color: #A184D5;
-        text-decoration: underline;
-        text-underline-offset: 20px;
+  h2 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #A184D5;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+  }
+
+  .changePaymentCard {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: background-color .7s ease-out;
+
+    h3 {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 25px;
     }
 
-    .changePaymentCard {
-        background: #FFFFFF;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        transition: background-color .7s ease-out;
+    ul {
+      list-style: disc;
+      margin-top: 50px;
 
-        h3 {
-            font-size: 22px;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 25px;
-        }
-        ul {
-            list-style: disc;
-            color: #A184D5;
-            margin-top: 50px;
-    
-            li {
-                margin-bottom: 26px;
-                text-align: justify;
-            }
-        }
-    
-        button {
-            background-color: #A184D5;
-            padding: 10px 65px;
-            border: none;
-            margin: 0 auto;
-            display: block;
-            border-radius: 10px;
-            margin-top: 60px;
-            color: #fff;
-        }
-
-        &:hover{
-            background-color: #A184D5;
-            cursor: pointer;
-
-            h3{
-                color: #fff;
-            }
-
-            li{
-                color: #fff;
-            }
-
-            button{
-                background-color: #fff;
-                color: #A184D5;
-            }
-
-        }
+      li {
+        margin-bottom: 26px;
+        text-align: justify;
+      }
     }
 
-    .submitBtn {
-        background-color: #A184D5;
-        padding: 10px 65px;
-        border: none;
-        margin: 0 auto;
-        display: block;
-        border-radius: 10px;
-        margin-top: 60px;
+    button {
+      padding: 10px 65px;
+      border: none;
+      margin: 0 auto;
+      display: block;
+      border-radius: 10px;
+      margin-top: 60px;
+    }
+  }
+
+  .basicCard {
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+    ul {
+      color: #A184D5;
     }
 
-    
+    button {
+      background-color: #A184D5;
+      color: #FFFFFF;
+    }
+  }
+
+  .selectedCard {
+    background-color: #A184D5;
+    cursor: pointer;
+
+    h3 {
+      color: #fff;
+    }
+
+    li {
+      color: #fff;
+    }
+
+    button {
+      background-color: #fff;
+      color: #A184D5;
+    }
+  }
+
+  .activeCard {
+    background-color: #3c1d77;
+    cursor: pointer;
+
+    h3 {
+      color: #fff;
+    }
+
+    li {
+      color: #fff;
+    }
+
+    button {
+      background-color: #fff;
+      color: #A184D5;
+    }
+  }
+
+  .submitBtn {
+    background-color: #A184D5;
+    padding: 10px 65px;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    margin-top: 60px;
+  }
+
+
 }

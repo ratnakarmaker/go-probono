@@ -10,8 +10,16 @@ import { LandingComponent } from './landing/landing.component';
 import { MakePaymentComponent } from './make-payment/make-payment.component';
 import { ComponentModule } from 'src/app/commons/component/component.module';
 import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
+import { ProfileComponent } from './profile/profile.component';
+import { ViewComponent } from './profile/view/view.component';
+import { EditComponent } from './profile/edit/edit.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: ProfileComponent,
+    title: 'Profile',
+  },
   {
     path: 'appointments',
     component: AppointmentListComponent,
@@ -47,6 +55,9 @@ const routes: Routes = [
     AppointmentDetailsComponent,
     LandingComponent,
     MakePaymentComponent,
+    ProfileComponent,
+    ViewComponent,
+    EditComponent,
   ],
   imports: [
     CommonModule,

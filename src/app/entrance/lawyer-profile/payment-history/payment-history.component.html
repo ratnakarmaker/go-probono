@@ -12,13 +12,9 @@
         <thead>
           <tr>
             <th>Confirmation Number</th>
-            <!-- <th>Payment Date</th> -->
             <th>Payment Amount</th>
             <th>Payment Method</th>
             <th>Payment Status</th>
-            <!-- <th>Status Date</th>
-            <th>Recurring Payment</th>
-            <th>Action</th> -->
           </tr>
         </thead>
         <tbody>
@@ -30,30 +26,7 @@
             <td><span class="badge rounded-pill" [ngClass]="{'text-bg-warning': history?.status == 'pending', 'text-bg-success': history?.status ==
                 'success',
                 'text-bg-danger': history?.status == 'failed'}">{{history?.status}}</span></td>
-            <!-- <td>03/05/2023</td>
-            <td><span class="badge rounded-pill text-bg-success">Yes</span></td>
-            <td>Processing</td> -->
           </tr>
-          <!-- <tr>
-            <td>HDDJKSKDNSDKJS</td>
-            <td>03/05/2023</td>
-            <td>5000 BDT</td>
-            <td>*****09345</td>
-            <td><span class="badge rounded-pill ">Paid</span></td>
-            <td>03/05/2023</td>
-            <td><span class="badge rounded-pill text-bg-dark">No</span></td>
-            <td>Processing</td>
-          </tr>
-          <tr>
-            <td>HDDJKSKDNSDKJS</td>
-            <td>03/05/2023</td>
-            <td>5000 BDT</td>
-            <td>*****09345</td>
-            <td><span class="badge rounded-pill ">Failed</span></td>
-            <td>03/05/2023</td>
-            <td><span class="badge rounded-pill text-bg-success">Yes</span></td>
-            <td>Processing</td>
-          </tr> -->
         </tbody>
 
       </table>

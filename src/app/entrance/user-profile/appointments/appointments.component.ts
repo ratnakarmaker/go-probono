@@ -1,22 +1,30 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api/api.service';
 @Component({
   selector: 'app-appointments',
   templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.scss']
+  styleUrls: ['./appointments.component.scss'],
 })
-export class AppointmentsComponent {
-  protected dataForm: FormGroup;
+export class AppointmentsComponent implements OnInit {
+  protected appointmentList: any[] = [];
 
-  constructor(private fb: FormBuilder) {
-    this.dataForm = fb.group({
-      first_name: [''],
-      last_name: [''],
-      lawer: [''],
-      location: [''],
-      law_type: [''],
-      message: [''],
+  constructor(
+    protected api: ApiService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+  ngOnInit(): void {
+    this.getAppointmentList();
+  }
+
+  getAppointmentList() {
+    this.api.list('USER_APPOINTMENT_API').subscribe((response: any) => {
+      this.appointmentList = response;
     });
   }
 
+  details(data: any) {
+    this.router.navigate([`${data?.id}`], { relativeTo: this.route });
+  }
 }
