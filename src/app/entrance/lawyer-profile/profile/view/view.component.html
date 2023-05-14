@@ -6,7 +6,7 @@
     <div class="col-md-4 col-sm-12 img-section">
       <div class="row">
         <div class="profile-basic-info">
-          <img src="assets/avatar.png" class="profile-pic">
+          <img [src]="api.imagePath(profile?.image)" class="profile-pic">
           <div class="img-upload">
             <label for="imgUpload"><img src="assets/img/img-upload.png" alt=""></label>
             <input id="imgUpload" class="d-none" type="file">
@@ -38,24 +38,32 @@
           </tr>
           <tr>
             <th>Address:</th>
-            <td>{{profile?.street_address}}</td>
+            <td>{{profile?.address?.full_address}}</td>
           </tr>
           <tr>
             <th>Contact Number:</th>
             <td>{{profile?.mobile}}</td>
           </tr>
-          <tr>
-            <th>Gender:</th>
-            <td>{{profile?.gender}}</td>
-          </tr>
-          <tr>
-            <th>District :</th>
-            <td>Gazipur</td>
-          </tr>
-          <tr>
-            <th>Date of Birth : :</th>
-            <td></td>
-          </tr>
+          <ng-container *ngIf="profile?.lawyer_type === 'lawyer'; else lawfirm;">
+            <tr>
+              <th>Gender:</th>
+              <td>{{profile?.gender}}</td>
+            </tr>
+            <tr>
+              <th>NID:</th>
+              <td>{{profile?.nid}}</td>
+            </tr>
+            <tr>
+              <th>Bar Council Number:</th>
+              <td>{{profile?.bar_council_number}}</td>
+            </tr>
+          </ng-container>
+          <ng-template #lawfirm>
+            <tr>
+              <th>Trade License:</th>
+              <td>{{profile?.tradelicense}}</td>
+            </tr>
+          </ng-template>
         </table>
       </div>
     </div>
