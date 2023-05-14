@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between align-items-center ps-2 pe-2">
     <span class="header">Edit Profile</span>
     <div class="profile-basic-info">
-      <img src="assets/avatar.png" class="profile-pic">
+      <img [src]="api.imagePath(profile?.image)" class="profile-pic">
       <div class="img-upload">
         <label for="imgUpload"><img src="assets/img/img-upload.png" alt=""></label>
         <input id="imgUpload" class="d-none" type="file">
@@ -25,7 +25,7 @@
             required="required" />
         </div>
       </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4" *ngIf="profile?.lawyer_type === 'lawyer';">
         <div class="form-group">
           <label for="gender" class="fw-bold">Gender</label>
           <div class="d-flex gap-2">
@@ -56,12 +56,14 @@
       </div>
       <div class="col-12 col-md-6">
         <div class="form-group">
-          <label for="nid_or_tradelicense" class="fw-bold">NID</label>
+          <label *ngIf="profile?.lawyer_type === 'lawyer';" for="nid_or_tradelicense" class="fw-bold">NID</label>
+          <label *ngIf="profile?.lawyer_type === 'lawfirm';" for="nid_or_tradelicense"
+            class="fw-bold">Tradelicense</label>
           <input id="nid_or_tradelicense" formControlName="nid_or_tradelicense" type="text" class="form-control"
             placeholder="NID number" required="required" />
         </div>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6" *ngIf="profile?.lawyer_type === 'lawyer';">
         <div class="form-group">
           <label for="bar_council_number" class="fw-bold">Bar Council Number</label>
           <input id="bar_council_number" formControlName="bar_council_number" type="text" class="form-control"

@@ -312,6 +312,8 @@ export class ApiService {
   }
 
   public imagePath(url: string): string {
-    return `${this.baseUrl}${url?.startsWith('/') ? url : '/' + url}`;
+    return url
+      ? `${this.baseUrl}${url?.startsWith('/') ? url : '/' + url}`
+      : 'assets/icon/plus-chara.jpg';
   }
 }

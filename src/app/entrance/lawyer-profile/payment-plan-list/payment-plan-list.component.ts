@@ -26,8 +26,7 @@ export class PaymentPlanListComponent implements OnInit {
 
   getCurrentPlan() {
     this.api.list('CURRENT_PAYMENT_PLAN_API').subscribe((response: any) => {
-      this.current_plan_id =
-        response?.last_payment_history?.chosen_payment_plan?.id;
+      this.current_plan_id = response?.current_payment_plan_id;
     });
   }
 

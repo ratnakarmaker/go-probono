@@ -52,7 +52,7 @@ export class EditComponent implements OnInit, OnChanges, OnDestroy {
 
   private subscriptions: Subscription[] = [];
 
-  constructor(private fb: FormBuilder, private api: ApiService) {
+  constructor(private fb: FormBuilder, protected api: ApiService) {
     this.dataForm = fb.group({
       email: [''],
       name: [''],
