@@ -1,12 +1,12 @@
 <nav class="navbar">
   <div class="container-fluid">
-    <div>
+    <div class="mx-auto mx-sm-0">
       <a class="navbar-brand" href="#">
         <img class="img-fluid" src="assets/logo.jpeg" alt="logo" loading="lazy">
       </a>
     </div>
-    <div class="navbar-right">
-      <app-search-box [(key)]="search_text" (search)="search()"></app-search-box>
+    <div class="navbar-right mx-auto mx-sm-0">
+      <!-- <app-search-box [(key)]="search_text" (search)="search()"></app-search-box> -->
       <!-- <button class="btn appointment-btn" (click)="appointment()">My Appointment </button> -->
       <fa-icon class="notification" icon="bell" size="xl"></fa-icon>
       <app-menu-holder>

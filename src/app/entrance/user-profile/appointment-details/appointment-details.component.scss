@@ -74,3 +74,14 @@
   }
 
 }
+
+@media screen and (max-width: 1199px) {
+  .profile-view {
+    .img-section {
+      .profile-pic {
+        width: 100PX;
+        height: 100PX;
+      }
+    }
+  }
+}

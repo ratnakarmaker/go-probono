@@ -90,3 +90,12 @@
     }
   }
 }
+
+@media screen and (max-width: 575px) {
+  .navbar-right {
+    gap: 0px;
+  }
+  .navbar-avatar {
+    width: 45px;
+  }
+}
