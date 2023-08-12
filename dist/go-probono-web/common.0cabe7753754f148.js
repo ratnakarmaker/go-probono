@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgo_probono_web=self.webpackChunkgo_probono_web||[]).push([[592],{1570:(l,s,o)=>{o.d(s,{D:()=>r});var E=o(6895),n=o(9837),a=o(433),u=o(2216),t=o(4650);let r=(()=>{class _{}return _.\u0275fac=function(e){return new(e||_)},_.\u0275mod=t.oAB({type:_}),_.\u0275inj=t.cJS({imports:[E.ez,n.mH,n.Gs,n.jF,n.HK,a.u5,a.UX,u.uH]}),_})()}}]);
