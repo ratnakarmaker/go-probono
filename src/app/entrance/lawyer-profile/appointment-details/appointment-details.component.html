@@ -52,12 +52,12 @@
       <div class="col-12">
         <span [ngStyle]="{color: msg?.success ? 'green': 'red'}">{{msg?.message}}</span>
       </div>
-      <div class="p-0 appointmentBootom d-flex justify-content-start gap-4 align-items-center mt-5">
+      <div class="p-0 appointmentBootom d-block d-sm-flex justify-content-start gap-2 gap-sm-4 align-items-center mt-5">
         <input [disabled]="appointment?.status !== 'pending'" class="form-control input-field" type="date" id="chosenDate"
           [(ngModel)]="chosenDate">
-        <button [disabled]="appointment?.status !== 'pending'" class="bg-success"
+        <button [disabled]="appointment?.status !== 'pending'" class="btn bg-success me-3 me-sm-0 mt-3 mt-sm-0"
           (click)="changeStatus('approved')">Approve</button>
-        <button [disabled]="appointment?.status !== 'pending'" class="bg-danger"
+        <button [disabled]="appointment?.status !== 'pending'" class="btn bg-danger mt-3 mt-sm-0"
           (click)="changeStatus('rejected')">Reject</button>
       </div>
     </div>

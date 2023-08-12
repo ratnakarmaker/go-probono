@@ -14,17 +14,34 @@
       width: 70%;
       text-align: center;
 
+      @media only screen and (max-width:767px) {
+        width: 100%;
+      }
+
       h2 {
         font-size: 40px;
         font-weight: 500;
         text-decoration: underline;
         text-underline-offset: 20px;
+        
+        @media only screen and (max-width:991px) {
+          font-size: 40px;
+        }
+        @media only screen and (max-width:575px) {
+          font-size: 24px;
+          font-weight: 600;
+          margin-top: 2rem;
+        }
       }
 
       .summary {
         margin-top: 30px;
         font-size: 24px;
         font-weight: 400;
+
+        @media only screen and (max-width:767x) {
+          font-size: 20px;
+        }
       }
     }
 
