@@ -1,12 +1,12 @@
 <div class="container appointmentListTable page-container">
   <div class="row mainBody p-5">
-    <div class="col-3">
+    <div class="col-12 col-lg-3 mt-5 mt-lg-0">
       <app-navs [items]="navs" [(key)]="current_nav_id" (search)="routeChange($event)"></app-navs>
     </div>
-    <div class="col-9">
+    <div class="col-12 col-lg-9 mt-5 mt-lg-0">
       <div class="row">
         <h2 class="text-white text-center">{{header}} Appointment List</h2>
-        <div class="dataTable">
+        <div class="dataTable table-responsive">
           <table class="table">
             <thead>
               <tr>
@@ -21,7 +21,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let appoint of appointmentList; let i=index;">
-                <td>{{i+1}}</td>
+                <td class="dataItem">{{i+1}}</td>
                 <td><img class="userAvatar" [src]="api.imagePath(appoint?.customer?.customer_pic)" alt=""></td>
                 <td class="dataItem">{{appoint?.customer?.name}}</td>
                 <td class="dataItem">{{appoint?.customer?.mobile}}</td>
