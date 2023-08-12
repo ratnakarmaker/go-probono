@@ -1,13 +1,29 @@
 <div class="container-fluid">
-  <div class="d-flex flex-column justify-content-around align-items-center" style="min-height: 100vh">
-    <div class="w-100 d-flex justify-content-center align-items-center" (click)="type = 'user'">
-      <app-user [open]="type === 'user'"></app-user>
+  <div class="d-flex flex-column justify-content-center gap-3" style="min-height: 100vh">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="card" style="min-width: 200px" (click)="type = 'user'">
+        <img src="assets/img/user.png" class="card-img-top w-50 d-block mx-auto" alt="user">
+        <div class="card-footer">
+          <app-user [open]="type === 'user'"></app-user>
+        </div>
+      </div>
     </div>
-    <div class="w-100 d-flex justify-content-center align-items-center" (click)="type = 'lawyer'">
-      <app-lawyer [open]="type === 'lawyer'"></app-lawyer>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="card" style="min-width: 200px" (click)="type = 'lawyer'">
+        <img src="assets/img/lawyer.png" class="card-img-top w-50 d-block mx-auto" alt="lawyer">
+        <div class="card-footer">
+          <app-lawyer [open]="type === 'lawyer'"></app-lawyer>
+        </div>
+      </div>
     </div>
-    <div class="w-100 d-flex justify-content-center align-items-center" (click)="type = 'lawfirm'">
-      <app-lawfirm [open]="type === 'lawfirm'"></app-lawfirm>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="card" style="min-width: 200px" (click)="type = 'lawfirm'">
+        <img src="assets/img/law-firm.png" class="card-img-top w-50 d-block mx-auto" alt="law-firm">
+        <div class="card-footer">
+          <app-lawfirm [open]="type === 'lawfirm'"></app-lawfirm>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

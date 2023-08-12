@@ -1,5 +1,5 @@
 <div class="reg-section" *ngIf="open; else other_btn;">
-  <div class="reg-form col-12 col-xl-6">
+  <div class="reg-form col-12">
     <form [formGroup]="dataForm" (submit)="register()">
       <div class="avatar d-flex justify-content-center align-items-center">
         <fa-icon icon="user" size="3x"></fa-icon>
@@ -49,5 +49,5 @@
   </div>
 </div>
 <ng-template #other_btn>
-  <button class="btn btn-primary" (click)="openChange.emit(!this.open)">USER</button>
+  <p class="mb-0" (click)="openChange.emit(!this.open)">USER</p>
 </ng-template>
