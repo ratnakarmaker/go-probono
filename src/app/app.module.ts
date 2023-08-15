@@ -18,9 +18,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './authentication/registration/user/user.component';
 import { LawyerComponent } from './authentication/registration/lawyer/lawyer.component';
 import { LawfirmComponent } from './authentication/registration/lawfirm/lawfirm.component';
+import { ComponentModule } from './commons/component/component.module';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegistrationComponent, UserComponent, LawyerComponent, LawfirmComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegistrationComponent,
+    UserComponent,
+    LawyerComponent,
+    LawfirmComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +37,7 @@ import { LawfirmComponent } from './authentication/registration/lawfirm/lawfirm.
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

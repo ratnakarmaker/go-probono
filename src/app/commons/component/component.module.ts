@@ -6,6 +6,7 @@ import {
   NgbAccordionModule,
   NgbCarouselModule,
   NgbPaginationModule,
+  NgbToastModule,
   NgbTooltipModule,
 } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionComponent } from './accordion/accordion.component';
@@ -17,6 +18,7 @@ import { PageContainerComponent } from './page-container/page-container.componen
 import { GridCardsComponent } from './grid-cards/grid-cards.component';
 import { MenuHolderComponent } from './menu-holder/menu-holder.component';
 import { CustomCardComponent } from './custom-card/custom-card.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { CustomCardComponent } from './custom-card/custom-card.component';
     GridCardsComponent,
     MenuHolderComponent,
     CustomCardComponent,
+    SnackbarComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,7 @@ import { CustomCardComponent } from './custom-card/custom-card.component';
     NgbAccordionModule,
     NgbPaginationModule,
     NgbTooltipModule,
+    NgbToastModule,
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
@@ -50,6 +54,7 @@ import { CustomCardComponent } from './custom-card/custom-card.component';
     GridCardsComponent,
     MenuHolderComponent,
     CustomCardComponent,
+    SnackbarComponent,
   ],
 })
 export class ComponentModule {}

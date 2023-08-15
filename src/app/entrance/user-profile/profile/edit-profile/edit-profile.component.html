@@ -1,18 +1,19 @@
 <div class="container-fluid p-5 profile-edit">
-  <div class="d-flex justify-content-between align-items-center ps-2 pe-2">
+  <div class="d-flex justify-content-between align-items-center">
     <span class="header">Edit Profile</span>
     <div class="profile-basic-info">
-      <img src="assets/avatar.png" class="profile-pic">
-      <div class="img-upload">
+      <!-- <img src="assets/avatar.png" class="profile-pic"> -->
+      <!-- <div class="img-upload">
         <label for="imgUpload"><img src="assets/img/img-upload.png" alt=""></label>
         <input id="imgUpload" class="d-none" type="file">
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="col-12">
     <form class="row" [formGroup]="dataForm" (submit)="save()">
       <div class="col-md-6">
-        <app-input [control]="dataForm.get('name')" [type]="'text'" [label]="'Name'" [c_id]="'name'" [placeholder]="'Enter Name'">
+        <app-input [control]="dataForm.get('name')" [type]="'text'" [label]="'Name'" [c_id]="'name'"
+          [placeholder]="'Enter Name'">
         </app-input>
       </div>
       <div class="col-md-6">
@@ -21,12 +22,13 @@
         </app-select>
       </div>
       <div class="col-md-12">
-        <app-input [control]="dataForm.get('email')" [type]="'text'" [label]="'Email'" [c_id]="'email'" [placeholder]="'Enter Email'">
+        <app-input [control]="dataForm.get('email')" [type]="'text'" [label]="'Email'" [c_id]="'email'"
+          [placeholder]="'Enter Email'">
         </app-input>
       </div>
       <div class="col-md-12">
-        <app-input [control]="dataForm.get('street_address')" [type]="'text'" [label]="'Address'" [c_id]="'street_address'"
-          [placeholder]="'Enter Address'">
+        <app-input [control]="dataForm.get('street_address')" [type]="'text'" [label]="'Address'"
+          [c_id]="'street_address'" [placeholder]="'Enter Address'">
         </app-input>
       </div>
       <div class="col-md-12">
@@ -35,8 +37,7 @@
         </app-input>
       </div>
       <div class="col-md-6">
-        <app-select [control]="dataForm.get('city')" [label]="'City'" [c_id]="'city'"
-         [placeholder]="'Select City'">
+        <app-select [control]="dataForm.get('city')" [label]="'City'" [c_id]="'city'" [placeholder]="'Select City'">
         </app-select>
       </div>
       <div class="col-md-6">

@@ -10,4 +10,6 @@ export class ViewProfileComponent {
   @Input() profile: any;
 
   @Output() c_change: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(protected api: ApiService) {}
 }

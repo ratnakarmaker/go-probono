@@ -5,6 +5,7 @@ import { StorageService } from '../storage/storage.service';
 import { environment } from 'src/environments/environment';
 import { api_collection } from 'src/app/enums/api-url-collection';
 import { Observable, Subscriber, Subscription } from 'rxjs';
+import { ToastrService } from '../toastr/toastr.service';
 
 @Injectable({
   providedIn: 'root',
@@ -42,7 +43,8 @@ export class ApiService {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private storage: StorageService
+    private storage: StorageService,
+    private toastr: ToastrService
   ) {
     this.baseUrl = `${environment.base_url}`;
     this.apiUrl = `${environment.base_url}/api`;
@@ -111,11 +113,9 @@ export class ApiService {
     return new Observable((subscriber: Subscriber<any>) => {
       let tempSubs: Subscription = this._get(route, params).subscribe({
         next: (response: any) => {
-          // // this.toastr.showSuccess(response);
           subscriber.next(response);
         },
         error: (error: any) => {
-          // // this.toastr.showDanger(error?.error);
           subscriber.error(error);
         },
         complete: () => {
@@ -144,7 +144,6 @@ export class ApiService {
         },
         error: (error: any) => {
           subscriber.error(error);
-          // this.toastr.showDanger(error?.error);
         },
         complete: () => {
           subscriber.complete();
@@ -189,15 +188,11 @@ export class ApiService {
         params
       ).subscribe({
         next: (response: any) => {
-          if (response?.code === 201 && !selfShowMessage) {
-            // this.toastr.showSuccess(response);
-          }
+          this.toastr.showSuccess(response?.msg);
           subscriber.next(response);
         },
         error: (error: any) => {
-          if (!selfShowMessage) {
-            // this.toastr.showDanger(error?.error);
-          }
+          this.toastr.showDanger(error?.error?.msg);
           subscriber.error(error);
         },
         complete: () => {
@@ -224,14 +219,12 @@ export class ApiService {
         params
       ).subscribe({
         next: (response: any) => {
+          this.toastr.showSuccess(response?.msg);
           subscriber.next(response);
-          if (response?.code === 200) {
-            // this.toastr.showSuccess(response);
-          }
         },
         error: (error: any) => {
+          this.toastr.showDanger(error?.error?.msg);
           subscriber.error(error);
-          // this.toastr.showDanger(error?.error);
         },
         complete: () => {
           subscriber.complete();

@@ -6,11 +6,12 @@
     <div class="col-md-4 col-sm-12 img-section">
       <div class="row">
         <div class="profile-basic-info">
-          <img src="assets/avatar.png" class="profile-pic">
-          <!-- <div class="img-upload">
-            <label for="imgUpload"><img src="assets/img/img-upload.png" alt=""></label>
-            <input id="imgUpload" class="d-none" type="file">
-          </div> -->
+          <ng-container *ngIf="profile?.image; else noImage;">
+            <img [src]="api.imagePath(profile?.image)" class="profile-pic">
+          </ng-container>
+          <ng-template #noImage>
+            <img src="assets/icon/plus-chara.jpg" class="profile-pic">
+          </ng-template>
         </div>
         <div class="col-12 name mt-3">
           <h2> {{profile?.name || 'Full Name'}}</h2>
@@ -53,7 +54,7 @@
             <td>Gazipur</td>
           </tr>
           <tr>
-            <th>Date of Birth : :</th>
+            <th>Date of Birth :</th>
             <td></td>
           </tr>
         </table>
