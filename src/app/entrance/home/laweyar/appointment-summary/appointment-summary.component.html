@@ -32,9 +32,9 @@
       </div>
       <div class="col-12 col-md-6">
         <div class="appointmentCard">
-          <h2 class="text-white text-center">Approved Appointment</h2>
+          <h2 class="text-white text-center">Due Appointment</h2>
           <div class="appointmentList">
-            <ng-container *ngFor="let appr of approvedAppointments">
+            <ng-container *ngFor="let appr of dueAppointments">
               <div class="singleAppointment d-flex justify-content-between align-items-center">
                 <div class="d-flex justify-content-start align-items-center gap-4">
                   <img class="userAvatar" [src]="api.imagePath(appr?.customer_pic)">
@@ -47,8 +47,8 @@
             </ng-container>
           </div>
         </div>
-        <button class="text-white" *ngIf="approvedAppointments?.length" [routerLink]="['/lawyer/appointments']"
-          [queryParams]="{status: 'approved'}">
+        <button class="text-white" *ngIf="dueAppointments?.length" [routerLink]="['/lawyer/appointments']"
+          [queryParams]="{status: 'due'}">
           View All
         </button>
       </div>

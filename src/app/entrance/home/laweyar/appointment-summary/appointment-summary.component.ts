@@ -8,16 +8,16 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class AppointmentSummaryComponent implements OnInit {
   protected pendingAppointments: any[] = [];
-  protected approvedAppointments: any[] = [];
+  protected dueAppointments: any[] = [];
 
   constructor(protected api: ApiService) {}
 
   ngOnInit(): void {
     this.getAppointments('pending');
-    this.getAppointments('approved');
+    this.getAppointments('due');
   }
 
-  getAppointments(status: 'pending' | 'approved') {
+  getAppointments(status: 'pending' | 'due') {
     this.api
       .list('APPOINTMENT_LIST_API', { status })
       .subscribe((response: any) => {
@@ -25,8 +25,8 @@ export class AppointmentSummaryComponent implements OnInit {
           case 'pending':
             this.pendingAppointments = response;
             break;
-          case 'approved':
-            this.approvedAppointments = response;
+          case 'due':
+            this.dueAppointments = response;
             break;
           default:
             break;
