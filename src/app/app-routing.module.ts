@@ -9,6 +9,7 @@ import {
   TitleStrategy,
 } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { AuthGuardGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -21,11 +22,23 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     title: 'Login',
+    canActivate: [AuthGuardGuard],
+    data: {
+      guard_data: {
+        have_token: false,
+      },
+    },
   },
   {
     path: 'registration',
     component: RegistrationComponent,
     title: 'Registration',
+    canActivate: [AuthGuardGuard],
+    data: {
+      guard_data: {
+        have_token: false,
+      },
+    },
   },
 ];
 

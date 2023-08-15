@@ -9,7 +9,7 @@
         <div class="col-12 description" [innerHTML]="details?.description">
         </div>
         <div class="col-12">
-          <button class="btn details-btn">
+          <button class="btn details-btn" [routerLink]="'../../law-list'" [queryParams]="{law: details?.slug}">
             Know this law with lady justice
           </button>
         </div>

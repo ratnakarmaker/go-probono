@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormFieldsModule } from 'src/app/commons/form-fields/form-fields.module';
 import { MakeAppointmentComponent } from './make-appointment/make-appointment.component';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
+import { TypeGuardGuard } from 'src/app/guards/type-guard.guard';
 
 const routes: Routes = [
   {

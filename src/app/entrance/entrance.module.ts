@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { ComponentModule } from '../commons/component/component.module';
+import { AuthGuardGuard } from '../guards/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -31,6 +32,12 @@ const routes: Routes = [
             (m) => m.ContactUsModule
           ),
         title: 'Contact Us',
+        canActivate: [AuthGuardGuard],
+        data: {
+          guard_data: {
+            have_token: true,
+          },
+        },
       },
       {
         path: 'advocates',
@@ -45,6 +52,12 @@ const routes: Routes = [
             (m) => m.UserProfileModule
           ),
         title: '',
+        canActivate: [AuthGuardGuard],
+        data: {
+          guard_data: {
+            have_token: true,
+          },
+        },
       },
       {
         path: 'lawyer',

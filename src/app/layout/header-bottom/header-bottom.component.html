@@ -8,7 +8,7 @@
     <div class="navbar-right">
       <app-search-box [(key)]="search_text" (search)="search()"></app-search-box>
       <!-- <button class="btn appointment-btn" (click)="appointment()">My Appointment </button> -->
-      <fa-icon class="notification" icon="bell" size="xl"></fa-icon>
+      <!-- <fa-icon class="notification" icon="bell" size="xl"></fa-icon> -->
       <app-menu-holder>
         <div menu_opener>
           <img *ngIf="storage?.getToken()" class="navbar-avatar" src="assets/icon/plus-chara.jpg" alt="">
