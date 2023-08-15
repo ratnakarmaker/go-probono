@@ -67,3 +67,10 @@ body {
 .page-container {
   padding: 0 92px 20px 92px;
 }
+
+@media screen and (max-width: 991px) {
+  .page-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}

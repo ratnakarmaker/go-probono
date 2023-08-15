@@ -63,7 +63,6 @@
 
   .data-section {
     border-left: 3px solid #702FA0;
-    ;
     padding: 0 0 0 10%;
 
     table {
@@ -80,8 +79,38 @@
 
       td {
         color: #858585;
-        ;
+        text-wrap: balance;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .profile-view {
+    .header {
+      font-size: 20px;
+    }
+    .header::after {
+      width: 250px;
+      margin-left: -35px;
+    }
+    .img-section {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+      .img-upload {
+        padding: 10px;
+      }
+      .name h2, .phone {
+        font-size: 16px;
+      }
+      .update-btn {
+        padding: 10px 25px;
+      }
+    }
+    .data-section {
+      border-left: none;
     }
   }
 }

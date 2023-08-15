@@ -8,7 +8,7 @@
 
   <div class="container">
     <div class="row w-100">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6">
         <div class="appointmentCard">
           <h2 class="text-white text-center">Pending Appointment</h2>
           <div class="appointmentList">
@@ -30,7 +30,7 @@
           View All
         </button>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6 mt-3 mt-lg-0">
         <div class="appointmentCard">
           <h2 class="text-white text-center">Due Appointment</h2>
           <div class="appointmentList">
@@ -40,7 +40,7 @@
                   <img class="userAvatar" [src]="api.imagePath(appr?.customer_pic)">
                   <h5 class="text-white">{{appr?.customer?.name}}</h5>
                 </div>
-                <button class="px-4 py-2 bg-white" [routerLink]="['/lawyer/appointments/'+appr?.id]">
+                <button class="px-4 py-2 m-0 bg-white" [routerLink]="['/lawyer/appointments/'+appr?.id]">
                   View Details
                 </button>
               </div>

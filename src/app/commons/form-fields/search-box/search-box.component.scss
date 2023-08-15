@@ -1,9 +1,12 @@
 .search-box {
   .input-group {
-    
-        border-width: 1px 1px 1px 1px;
-        border-style: solid;
-        border-color: #A184D5ff;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #A184D5ff;
+
+    @media only screen and (max-width:450px){
+      width: 85%;
+    }
     .form-control {
       border: none;
 

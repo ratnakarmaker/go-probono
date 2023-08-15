@@ -9,6 +9,12 @@
       width: 143px;
       height: 143px;
       border-radius: 50%;
+
+      @media only screen and (max-width:767px) {
+        width: 100px;
+        height: 100px;
+        display: none;
+      }
     }
 
     h2 {

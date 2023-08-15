@@ -14,3 +14,10 @@
     color: #000000;
     text-decoration: none;
 }
+
+@media screen and (max-width: 767px) {
+    .footer-bottom {
+        display: block;
+        text-align: center;
+    }
+}

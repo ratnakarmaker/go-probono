@@ -100,3 +100,25 @@
   }
 
 }
+
+@media screen and (max-width: 991px) {
+  .appointmentsSummary {
+    .packageCard {
+      padding: 30px;
+      h2 {
+        font-size: 40px;
+        text-decoration: none;
+      }
+      .packageDetails {
+        p {
+          font-size: 25px;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    button {
+      padding: .75rem 1rem;
+      margin-top: 1rem;
+    }
+  } 
+}

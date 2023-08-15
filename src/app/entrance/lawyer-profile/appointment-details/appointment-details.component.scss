@@ -4,23 +4,42 @@
   border-radius: 10px;
   padding: 57px 150px;
 
+  @media only screen and (max-width:991px) {
+    padding: 60px;
+  }
+  @media only screen and (min-width:992px) and (max-width:1099px) {
+    padding: 57px 100px;
+  }
+
   .img-section {
+    @media only screen and (max-width:767px) {
+      display: none;
+    }
     .profile-pic {
       width: 143px;
       height: 143px;
       border-radius: 50%;
+
+      @media only screen and (max-width:1199px) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     h2 {
-      font-size: 26px;
+      font-size: 20px;
+      margin-top: 10px;
       font-weight: 700;
     }
   }
 
   .data-section {
     border-left: 3px solid #fff;
-    ;
     padding: 0 0 0 10%;
+
+    @media only screen and (max-width:767px) {
+      border-left: 0;
+    }
 
     table {
 
@@ -53,6 +72,11 @@
         border: 2px solid #858585;
         border-radius: 5px;
         padding: 20px;
+        width: 180px;
+
+        @media only screen and (max-width:767px) {
+          width: 100%;
+        }
 
         &:focus {
           box-shadow: none;
@@ -69,6 +93,13 @@
         border: none;
         font-size: 24px;
         padding: 15px 90px;
+
+        @media only screen and (min-width:992px) and (max-width:1199px) {
+          padding: 15px 60px;
+        }
+        @media only screen and (max-width:991px) {
+          padding: 15px 30px;
+        }
       }
     }
   }
