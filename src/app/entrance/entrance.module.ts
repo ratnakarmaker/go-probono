@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { ComponentModule } from '../commons/component/component.module';
 import { AuthGuardGuard } from '../guards/auth-guard.guard';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 const routes: Routes = [
   {
@@ -94,7 +96,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [LandingComponent],
+  declarations: [LandingComponent, AboutUsComponent, TermsConditionsComponent],
   imports: [CommonModule, RouterModule.forChild(routes), LayoutModule],
 })
 export class EntranceModule {}

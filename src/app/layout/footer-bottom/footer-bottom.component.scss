@@ -1,18 +1,7 @@
 .footer-bottom {
-    display: flex;
     background-color: #fff;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
     padding: 23px 63px;
-}
-
-.footer-bottom a {
-    padding-right: 40px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-    text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
