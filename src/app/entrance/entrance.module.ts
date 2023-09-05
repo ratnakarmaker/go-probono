@@ -91,6 +91,16 @@ const routes: Routes = [
           import('./events/events.module').then((m) => m.EventsModule),
         title: 'Events',
       },
+      {
+        path: 'terms-conditions',
+        component: TermsConditionsComponent,
+        title: 'Terms & Conditions',
+      },
+      {
+        path: 'about-us',
+        component: AboutUsComponent,
+        title: 'About Us',
+      },
     ],
   },
 ];

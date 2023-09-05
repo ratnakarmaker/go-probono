@@ -40,6 +40,14 @@ export class HeaderBottomComponent {
       route: 'team-members',
       name: 'Our Team',
     },
+    {
+      route: 'terms-conditions',
+      name: 'Terms & Conditions',
+    },
+    {
+      route: 'about-us',
+      name: 'About Us',
+    },
   ];
 
   protected menu_lists_lawyer: any[] = [
@@ -58,6 +66,14 @@ export class HeaderBottomComponent {
     {
       route: 'lawyer/make-payment',
       name: 'Make Payment',
+    },
+    {
+      route: 'terms-conditions',
+      name: 'Terms & Conditions',
+    },
+    {
+      route: 'about-us',
+      name: 'About Us',
     },
   ];
 
