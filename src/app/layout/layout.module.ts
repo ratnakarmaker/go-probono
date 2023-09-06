@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderTopComponent } from './header-top/header-top.component';
@@ -15,7 +16,13 @@ import { FormFieldsModule } from '../commons/form-fields/form-fields.module';
     FooterTopComponent,
     FooterBottomComponent,
   ],
-  imports: [CommonModule, FontAwesomeModule, ComponentModule, FormFieldsModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    ComponentModule,
+    FormFieldsModule,
+    RouterModule,
+  ],
   exports: [
     HeaderTopComponent,
     HeaderBottomComponent,
