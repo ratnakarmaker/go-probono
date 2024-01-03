@@ -1,20 +1,24 @@
 .top-help-section {
-    background: #A184D5;
-    height: 72px;
+    background: #4D2772;
+    height: 27px;
+}
+
+.help-section-container {
+    background-color: #E7E5D8;
+    padding: 3rem;
 }
 
 .help-section-container h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #6F2FA1;
     text-align: center;
-    font-weight: 500;
-    font-size: 60px;
-    line-height: 70px;
-    color: #A184D5;
-    margin-top: 19px;
+    text-transform: capitalize;
 }
 
 .help-content {
     width: 1076px;
-    margin: 16px auto 0;
+    margin: 1rem auto 1.5rem;
     display: flex;
 }
 
@@ -22,69 +26,51 @@
     font-size: 22px;
 }
 
-.help-section-card {
-    margin-top: 36px;
-    margin-bottom: 85px;
-}
-
 .details-module {
-    background: #A184D5;
-    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    background: #686195;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    padding: 84px 0;
+    padding: 3rem 0;
 }
 
 .details-module-img {
-    border: 2px solid #578032;
+    border: 2px solid #A184D6;
     background: #fff;
     border-radius: 50%;
-    padding: 36px;
-    width: 134px;
-    height: 134px;
+    width: 103px;
+    height: 103px;
     margin: 0 auto;
-    margin-bottom: 53px;
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .details-module-img img {
-    width: 63px;
+    width: 48px;
 }
 
 .details-module h5 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
-    line-height: 26px;
     color: #FFFFFF;
 }
 
 @media screen and (max-width: 991px) {
     .help-section-container h1 {
-        font-size: 40px;
-    }
-    .help-section-card {
-        margin: 0;
-    }
-    .details-module {
-        padding: 45px 0;
-    }
-}
-
-@media screen and (min-width: 768) and (max-width: 991px) {
-    .details-module {
-        padding: 45px 0;
+        font-size: 30px;
     }
 }
 
 @media screen and (max-width: 1100px) {
     .details-module-img {
-        padding: 21px;
-        width: 90px;
-        height: 90px;
-        margin-bottom: 30px;
+        width:80px;
+        height:80px;
     }
     .details-module-img img {
-        width: 45px;
+        width: 40px;
     }
     .details-module h5 {
-        font-size: 20px;
+        font-size: 16px;
     }
 }

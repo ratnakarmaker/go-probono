@@ -1,12 +1,12 @@
-<div class="container-fluid pb-2">
+<div class="container-fluid law-section-container pb-2">
   <div class="row">
-    <div class="col-12 text-center header">
+    <h1 class="header">
       Factorial of Laws
-    </div>
+    </h1>
     <app-slide-show #laws_slide id="laws_slide" [c_id]="'laws_slide'" class="col-12" [data]="slideData"
       [options]="options"></app-slide-show>
     <div class="col-12 d-flex justify-content-center align-items-center">
-      <a class="btn btn-primary" [routerLink]="'./lady-justice/main-laws'">View All Law</a>
+      <a class="btn btn-view" [routerLink]="'./lady-justice/main-laws'">View All Law</a>
     </div>
   </div>
 </div>

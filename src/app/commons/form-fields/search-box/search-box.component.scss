@@ -1,8 +1,8 @@
 .search-box {
   .input-group {
-    border-width: 1px 1px 1px 1px;
-    border-style: solid;
-    border-color: #A184D5ff;
+    overflow: hidden;
+    border-radius: 23px;
+    border: 1px solid #4D2772;
 
     @media only screen and (max-width:450px){
       width: 85%;

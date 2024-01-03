@@ -1,8 +1,22 @@
-.header {
-  font-size: 40px;
-  font-weight: bold;
-  color: #A184D5;
-  margin: 1rem 0;
+.law-section-container {
+  background-color: #E7E5D875;
+  padding: 3rem;
+
+  .header {
+    font-size: 40px;
+    font-weight: bold;
+    color: #6F2FA1;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .btn-view {
+    background-color: #686195;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    padding: 0.5rem 2rem;
+  }
 }
 
 @media screen and (max-width: 991px) {

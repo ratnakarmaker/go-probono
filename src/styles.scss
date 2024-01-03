@@ -5,22 +5,32 @@
 
 /* Application-wide Styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+  font-family: AceSans;
+  src:local("../src/assets/font/AceSans.otf");
+}
+@font-face {
+  font-family: Noirden;
+  src:local("../src/assets/font/Noirden-Regular.ttf");
+}
+
 
 h1 {
   color: #369;
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
 
 h2,
 h3 {
   color: #444;
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
 
 body {
-  margin: 2em;
+  margin: 0;
+  font-family: AceSans;
 }
 
 // body,
@@ -59,9 +69,8 @@ body {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
+.btn {
+  font-family: Noirden;
 }
 
 .page-container {
