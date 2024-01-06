@@ -141,8 +141,24 @@ export class MakeAppointmentComponent implements OnInit {
   }
 
   makeAppointment() {
+    let types: any = this.searchForm.value?.lawyer_type;
     this.api
-      .post('APPOINTMENT_API', this.dataForm.value, {}, 'add/')
+      .post(
+        'APPOINTMENT_API',
+        {
+          ...this.dataForm.value,
+          ...(types?.length
+            ? {
+                expertise: types?.reduce(
+                  (pV: string, cV: any) => `${pV ? pV + ',' : pV}${cV}`,
+                  ''
+                ),
+              }
+            : {}),
+        },
+        {},
+        'add/'
+      )
       .subscribe((response: any) => {
         this.msg = response;
       });
