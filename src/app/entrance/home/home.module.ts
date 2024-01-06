@@ -11,6 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TeamsComponent } from './teams/teams.component';
 import { AppointmentSummaryComponent } from './laweyar/appointment-summary/appointment-summary.component';
 import { SubscriptionPackageComponent } from './laweyar/subscription-package/subscription-package.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -32,6 +33,11 @@ const routes: Routes = [
     AppointmentSummaryComponent,
     SubscriptionPackageComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes), ComponentModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    ComponentModule,
+    ReactiveFormsModule,
+  ],
 })
 export class HomeModule {}

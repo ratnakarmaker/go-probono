@@ -9,7 +9,53 @@
         </div>
       </div>
       <div class="col-6 make-appointment-form">
-        <form>
+        <form class="row" (submit)="makeAppointment()" [formGroup]="dataForm">
+          <div class="col-12 mb-4">
+            <select id="lawyer" formControlName="lawyer">
+              <option value="">Select Lawyer</option>
+              <option *ngFor="let lawyer of lawyerList" [value]="lawyer?.id">
+                {{lawyer?.name}}
+              </option>
+            </select>
+          </div>
+          <!-- <div class="col-md-6 col-12 pb-2">
+            <div class="form-group">
+              <label for="lawyer">Lawyer</label>
+              <select id="lawyer" class="form-select" formControlName="lawyer">
+                <option value="">Select Lawyer</option>
+                <option *ngFor="let lawyer of lawyerList" [value]="lawyer?.id">
+                  {{lawyer?.name}}
+                </option>
+              </select>
+            </div>
+          </div> -->
+          <div class="col-12 mb-4">
+            <textarea cols="30" rows="4" id="message" formControlName="message" placeholder="Message"></textarea>
+          </div>
+          <!-- <div class="col-md-12 col-12 pb-2">
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" formControlName="message" class="form-control"></textarea>
+            </div>
+          </div> -->
+          <div class="col-12 col-md-6 mb-4">
+            <div class="form-group">
+              <input id="start_date" type="date" class="form-control" formControlName="start_date">
+            </div>
+          </div>
+          <div class="col-12 col-md-6 mb-4">
+            <div class="form-group">
+              <input id="end_date" type="date" class="form-control" formControlName="end_date">
+            </div>
+          </div>
+          <div class="col-12">
+            <span [ngStyle]="{color: msg?.success ? 'green': 'red'}">{{msg?.message}}</span>
+          </div>
+          <div class="col-12 pb-2">
+            <button type="submit" class="requestBtn btn-primary">Request For Appointment </button>
+          </div>
+        </form>
+        <!-- <form>
           <div class="row">
             <div class="col-12 mb-4">
               <select>
@@ -49,7 +95,7 @@
               <button type="submit" class="requestBtn">Request For Appointment </button>
             </div>
           </div>
-        </form>
+        </form> -->
       </div>
     </div>
   </div>
