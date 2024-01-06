@@ -13,11 +13,11 @@ export class ToastrService {
   constructor() {}
 
   showSuccess(message: string) {
-    this.show(message, { classname: 'bg-success text-light', delay: 5000000 });
+    this.show(message, { classname: 'bg-success text-light', delay: 5000 });
   }
 
   showDanger(message: any) {
-    this.show(message, { classname: 'bg-danger text-light', delay: 5000000 });
+    this.show(message, { classname: 'bg-danger text-light', delay: 5000 });
   }
 
   remove(toast?: any) {
