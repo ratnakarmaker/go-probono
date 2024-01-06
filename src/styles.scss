@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: AceSans;
-  src: local("../src/assets/font/AceSans.otf");
+  src: url('./assets/font/AceSans.otf') format('opentype');
 }
 
 @font-face {
   font-family: Noirden;
-  src: local("../src/assets/font/Noirden-Regular.ttf");
+  src: url('./assets/font/Noirden-Regular.ttf');
 }
 
 
@@ -32,7 +32,7 @@ h3 {
 
 body {
   margin: 0;
-  font-family: AceSans;
+  font-family: AceSans, sans-serif;
 }
 
 // body,
