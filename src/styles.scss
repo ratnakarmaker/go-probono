@@ -5,13 +5,15 @@
 
 /* Application-wide Styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @font-face {
   font-family: AceSans;
-  src:local("../src/assets/font/AceSans.otf");
+  src: local("../src/assets/font/AceSans.otf");
 }
+
 @font-face {
   font-family: Noirden;
-  src:local("../src/assets/font/Noirden-Regular.ttf");
+  src: local("../src/assets/font/Noirden-Regular.ttf");
 }
 
 
@@ -71,6 +73,11 @@ body {
 
 .btn {
   font-family: Noirden;
+}
+
+.btn-primary {
+  background-color: #686195 !important;
+  color: white !important;
 }
 
 .page-container {
