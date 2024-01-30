@@ -20,6 +20,8 @@
         box-shadow: none;
         margin: 0px;
         border: none;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
       }
     }
   }

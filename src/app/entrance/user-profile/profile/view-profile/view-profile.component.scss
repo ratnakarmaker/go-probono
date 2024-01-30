@@ -4,11 +4,12 @@
   .header {
     font-size: 24px;
     font-weight: bold;
+    color: #6F2FA1;
   }
 
   .header::after {
     content: "";
-    background-color: #702FA0;
+    background-color: #686195;
     display: flex;
     width: 300px;
     height: 2px;
@@ -21,7 +22,7 @@
       width: 143px;
       height: 143px;
       border-radius: 50%;
-      border: 16px solid #0601b426;
+      border: 16px solid #686195;
     }
   
   .profile-basic-info {
@@ -34,7 +35,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: #702FA0;
+    background-color: #686195;
     border-radius: 50%;
     padding: 13px;
     border: 1px solid white;
@@ -56,13 +57,11 @@
 
     .update-btn {
       padding: 10px 69px;
-      background-color: #A184D5;
-      color: #ffffff;
     }
   }
 
   .data-section {
-    border-left: 3px solid #702FA0;
+    border-left: 3px solid #686195;
     padding: 0 0 0 10%;
 
     table {

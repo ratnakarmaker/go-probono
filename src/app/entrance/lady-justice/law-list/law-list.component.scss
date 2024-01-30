@@ -36,7 +36,7 @@
 
   .accordion-button {
     background-color: #ffffffff;
-    color: #A184D5ff;
+    color: #6F2FA1;
     border-width: 1px 1px 0 1px;
     border-style: solid;
     border-color: black;
@@ -57,9 +57,9 @@
   }
 
   .collapsed {
-    background-color: #A184D5ff;
+    background-color: #686195;
     color: #ffffffff;
-    border: 1px solid #A184D5ff;
+    border: 1px solid #686195;
   }
 
   .accordion-body {
@@ -77,12 +77,12 @@
 
     .pagination {
       .active {
-        background-color: #A184D5ff;
+        background-color: #686195;
         color: #ffffffff;
       }
 
       .page-link {
-        color: #A184D5ff;
+        color: #686195;
         background-color: #ffffffff;
         cursor: pointer;
       }

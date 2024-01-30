@@ -6,7 +6,7 @@
       </div>
       <div class="carousel-caption">
         <h3>{{image?.slider_text}}</h3>
-        <button *ngIf="image?.button_text" class="btn btn-primary" (click)="goTo(image?.button_url)">
+        <button *ngIf="image?.button_text" class="btn" (click)="goTo(image?.button_url)">
           {{image?.button_text}}
         </button>
       </div>

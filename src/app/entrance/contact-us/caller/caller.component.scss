@@ -11,7 +11,7 @@
 
 .subtitle {
   font-size: 16px;
-  color: #A184D5ff;
+  color: #6F2FA1;
 }
 
 .call-card {
@@ -21,7 +21,7 @@
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 5px;
   box-shadow: 0 0 5px 5px #bfb7c5;
 
   .call-image {
@@ -29,8 +29,6 @@
   }
 
   .call-btn {
-    background-color: #A184D5;
-    color: #ffffff;
 
     .call-btn-image {
       width: 20px;
