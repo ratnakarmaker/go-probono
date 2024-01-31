@@ -14,7 +14,6 @@ export class TermsConditionsComponent implements OnInit {
   ngOnInit(): void {
     this.api.list('REGULAR_PAGE_API').subscribe((response: any) => {
       this.termsData = response[1];
-      console.log(this.termsData);
     });
   }
 }
