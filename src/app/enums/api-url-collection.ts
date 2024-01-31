@@ -23,4 +23,5 @@ export const api_collection: any = {
   APPOINTMENT_STATUS_CHANGE_API: 'lawyer-panel/appointment-status-change/',
   USER_APPOINTMENT_API: 'appointment/my-appointments/',
   CALL_HISTORY_API: 'help-center/call-history/',
+  REGULAR_PAGE_API: 'regular-pages/',
 };

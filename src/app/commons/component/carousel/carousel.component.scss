@@ -11,7 +11,11 @@
   .carousel-caption {
     bottom: 13.25rem;
     left: 12%;
+    width: 40%;
     text-align: start;
+    @media screen and (max-width: 767px) {
+      width: 80%;
+    }
 
     h3 {
       color: white;

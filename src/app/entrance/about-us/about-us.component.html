@@ -1,7 +1,7 @@
-<div class="row w-100">
+<div class="row">
     <div class="col-12">
         <div class="aboutUs-bg">
-            <h1>About Us</h1>
+            <h1>a{{aboutData?.page_name}}</h1>
         </div>
     </div>
 </div>
@@ -9,7 +9,11 @@
     <div class="row">
         <div class="col-12">
             <div class="content-card">
-                <p>Go Probono is a free legal support application by Bangladesh Forum for Legal and Humanitarian Affairs. It is free for the people seeking help through the platform. It was put together to fight the problem of access to justice in Bangladesh and to promote rule of law. </p>
+                <!-- <p>Go Probono is a free legal support application by Bangladesh Forum for Legal and Humanitarian
+                    Affairs. It is free for the people seeking help through the platform. It was put together to fight
+                    the problem of access to justice in Bangladesh and to promote rule of law. 
+                </p> -->
+                <p [innerHTML]="aboutData?.page_view"></p>
             </div>
         </div>
     </div>
