@@ -2,10 +2,10 @@
   <div class="grid-card" [ngStyle]="{'background-image': 'url('+api.imagePath(item?.image_src)+')'}">
     <ng-container *ngIf="text_position === 'inside'">
       <div class="grid-spacer"></div>
-      <div class="grid-content pt-3 pb-3">
+      <div class="grid-content pt-3 pb-lg-3 pb-md-1 pb-sm-0">
         <div class="title text-center">{{item?.title}}</div>
-        <div class="subtitle text-center mt-3">{{item?.subtitle}}</div>
-        <div class="description text-center mt-3">
+        <div class="subtitle text-center mt-lg-3 mt-md-1 mt-sm-0">{{item?.subtitle}}</div>
+        <div class="description text-center mt-lg-3 mt-md-1 mt-sm-0">
           <span class="content" [innerHTML]="item?.description"></span>
           <!-- <p>Read More</p> -->
         </div>

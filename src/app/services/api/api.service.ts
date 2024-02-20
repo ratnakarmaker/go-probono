@@ -188,11 +188,11 @@ export class ApiService {
         params
       ).subscribe({
         next: (response: any) => {
-          this.toastr.showSuccess(response?.msg);
+          this.toastr.showSuccess(response?.message);
           subscriber.next(response);
         },
         error: (error: any) => {
-          this.toastr.showDanger(error?.error?.msg);
+          this.toastr.showDanger(error?.error?.message);
           subscriber.error(error);
         },
         complete: () => {
@@ -219,11 +219,11 @@ export class ApiService {
         params
       ).subscribe({
         next: (response: any) => {
-          this.toastr.showSuccess(response?.msg);
+          this.toastr.showSuccess(response?.message);
           subscriber.next(response);
         },
         error: (error: any) => {
-          this.toastr.showDanger(error?.error?.msg);
+          this.toastr.showDanger(error?.error?.message);
           subscriber.error(error);
         },
         complete: () => {

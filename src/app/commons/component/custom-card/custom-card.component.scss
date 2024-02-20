@@ -44,6 +44,10 @@
       height: 45%;
       padding: 4px;
 
+      @media screen and (max-width: 767px) {
+        height: 100%;
+      }
+
       .content {
         height: 80%;
         overflow: hidden;

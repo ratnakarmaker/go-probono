@@ -13,6 +13,10 @@
     .slide-card {
       .grid-card {
         height: 300px;
+
+        @media screen and (max-width: 767px) {
+          height: 200px;
+        }
       }
     }
   }

@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
 import { PasswordComponent } from './password/password.component';
+import { MultiSelectComponent } from './multi-select/multi-select.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PasswordComponent } from './password/password.component';
     InputComponent,
     SelectComponent,
     PasswordComponent,
+    MultiSelectComponent,
   ],
   imports: [CommonModule, FontAwesomeModule, FormsModule, ReactiveFormsModule],
   exports: [
@@ -20,6 +22,7 @@ import { PasswordComponent } from './password/password.component';
     InputComponent,
     SelectComponent,
     PasswordComponent,
+    MultiSelectComponent
   ],
 })
 export class FormFieldsModule {}

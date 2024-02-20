@@ -39,7 +39,7 @@ export class SlideShowComponent implements OnInit, OnChanges, OnDestroy {
     if (changes?.['data']?.currentValue?.length) {
       this.slideList = JSON.parse(JSON.stringify(this.data));
       if (this.data?.length > this.options?.show_count) {
-        this.startAnimation();
+        // this.startAnimation();
       }
     }
   }
