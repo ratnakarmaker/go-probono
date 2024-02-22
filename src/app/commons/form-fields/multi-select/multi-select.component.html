@@ -1,18 +1,31 @@
 <div class="form-group autocomplete-form">
   <label [for]="id">{{ label }}</label>
-  <div class="multi-select" (click)="input_field?.nativeElement.focus()" #autocomplete_input>
-    <div class="single-select" *ngFor="let selected of selectedList()" (click)="setValue(selected)">
-      {{ selected?.[view_control] }}
-      <fa-icon icon="xmark"></fa-icon>
+  <div class="full-box">
+    <div
+      class="multi-select"
+      (click)="input_field?.nativeElement.focus()"
+      #autocomplete_input
+    >
+      <div
+        class="single-select"
+        *ngFor="let selected of selected_list"
+        (click)="setValue(selected)"
+      >
+        {{ selected?.[view_control] }}
+        <fa-icon icon="xmark"></fa-icon>
+      </div>
+      <input
+        [(ngModel)]="search_text"
+        [id]="'custom-autocomplete-input' + id"
+        type="text"
+        class="search-field"
+        placeholder="Enter search text"
+        autocomplete="off"
+      />
     </div>
-    <input
-      [(ngModel)]="search_text"
-      [id]="'custom-autocomplete-input' + id"
-      type="text"
-      class="search-field"
-      placeholder="Enter search text"
-      autocomplete="off"
-    />
+    <div class="clear-field">
+      <fa-icon (click)="clearAll()" icon="xmark"></fa-icon>
+    </div>
   </div>
   <div
     [id]="'custom-autocomplete-options' + id"
@@ -22,9 +35,15 @@
   >
     <ng-container *ngFor="let option of dataList; let opt_i = index">
       <ng-container *ngIf="optionShower(option)">
-        <label [for]="opt_i+'_option'" class="single-option">
-          <input class="me-2" [id]="opt_i+'_option'" (input)="setValue(option)" type="checkbox" [checked]="input_values[option?.[value_control] ?? '']">
-          <span > {{option?.[view_control]}} </span>
+        <label [for]="opt_i + '_option'" class="single-option">
+          <input
+            class="me-2"
+            [id]="opt_i + '_option'"
+            (input)="setValue(option)"
+            type="checkbox"
+            [checked]="!!input_values.has(option?.[value_control]+'')"
+          />
+          <span> {{option?.[view_control]}} </span>
         </label>
       </ng-container>
     </ng-container>

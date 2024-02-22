@@ -33,13 +33,14 @@
       </div>
     </div>
     <div class="col-md-6 col-sm-12">
-      <div class="form-group">
+      
+      <!-- <div class="form-group">
         <label for="lawyer_type">Lawyer Type</label>
         <select id="lawyer_type" class="form-select" formControlName="lawyer_type" multiple>
-          <!-- <option value="">Select Lawyer Type</option> -->
+          <option value="">Select Lawyer Type</option>
           <option *ngFor="let data of lawyerTypeList;" [value]="data?.id">{{data?.name}}</option>
         </select>
-      </div>
+      </div> -->
     </div>
   </form>
   <form class="row" (submit)="makeAppointment()" [formGroup]="dataForm">
