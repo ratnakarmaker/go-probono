@@ -1,1 +1,33 @@
-<p>multi-select works!</p>
+<div class="form-group autocomplete-form">
+  <label [for]="id">{{ label }}</label>
+  <div class="multi-select">
+    <div class="single-select" *ngFor="let selected of selectedList()">
+      {{ selected?.[view_control] }}
+      <fa-icon (click)="setValue(selected)" icon="xmark"></fa-icon>
+    </div>
+    <input
+      [(ngModel)]="search_text"
+      [id]="'custom-autocomplete-input' + id"
+      type="text"
+      class="form-control"
+      [placeholder]="'Enter ' + label"
+      autocomplete="off"
+      #autocomplete_input
+    />
+  </div>
+  <div
+    [id]="'custom-autocomplete-options' + id"
+    class="option-holder"
+    #autocomplete_options
+    [ngClass]="option_class"
+  >
+    <ng-container *ngFor="let option of dataList; let opt_i = index">
+      <ng-container *ngIf="optionShower(option)">
+        <label [for]="opt_i+'_option'" class="d-flex justify-content-start align-items-center">
+          <input [id]="opt_i+'_option'" (input)="setValue(option)" type="checkbox" [checked]="input_values[option?.[value_control] ?? '']">
+          <span > {{option?.[view_control]}} </span>
+        </label>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

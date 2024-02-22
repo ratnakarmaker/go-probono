@@ -19,6 +19,7 @@ import { UserComponent } from './authentication/registration/user/user.component
 import { LawyerComponent } from './authentication/registration/lawyer/lawyer.component';
 import { LawfirmComponent } from './authentication/registration/lawfirm/lawfirm.component';
 import { ComponentModule } from './commons/component/component.module';
+import { FormFieldsModule } from './commons/form-fields/form-fields.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ComponentModule } from './commons/component/component.module';
     ReactiveFormsModule,
     HttpClientModule,
     ComponentModule,
+    FormFieldsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

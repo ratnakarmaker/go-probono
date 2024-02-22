@@ -12,6 +12,50 @@ import { StorageService } from 'src/app/services/storage/storage.service';
 export class LoginComponent {
   protected dataForm: FormGroup;
 
+  protected mult: any[] = [];
+  protected dataList: any[] = [
+    {
+      id: 1,
+      name: 'a'
+    },
+    {
+      id: 2,
+      name: 'b'
+    },
+    {
+      id: 3,
+      name: 'c'
+    },
+    {
+      id: 4,
+      name: 'd'
+    },
+    {
+      id: 5,
+      name: 'e'
+    },
+    {
+      id: 6,
+      name: 'f'
+    },
+    {
+      id: 7,
+      name: 'g'
+    },
+    {
+      id: 8,
+      name: 'h'
+    },
+    {
+      id: 9,
+      name: 'i'
+    },
+    {
+      id: 10,
+      name: 'j'
+    }
+  ]
+
   constructor(
     private fb: FormBuilder,
     private api: ApiService,

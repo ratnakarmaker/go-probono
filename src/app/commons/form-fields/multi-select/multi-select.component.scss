@@ -1,0 +1,48 @@
+.autocomplete-form {
+  position: relative;
+  .multi-select{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    .single-select{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 50px;
+      border: 1px solid black;
+      margin: 4px 8px;
+      border-radius: 12px;
+      padding: 0 6px;
+    }
+  }
+  .option-holder {
+    max-height: 160px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 5px 3px #999999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 10000;
+    cursor: pointer;
+    .single-option {
+      padding: 4px 8px 4px 8px;
+    }
+    .single-option:hover {
+      background-color: blue;
+      color: #ffffff;
+    }
+    .single-option:last-child {
+      border: none;
+    }
+  }
+
+  .show-option {
+    display: block;
+  }
+  .hide-option {
+    display: none;
+  }
+}
