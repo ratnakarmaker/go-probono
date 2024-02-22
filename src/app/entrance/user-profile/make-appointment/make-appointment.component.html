@@ -33,7 +33,9 @@
       </div>
     </div>
     <div class="col-md-6 col-sm-12">
-      
+      <app-multi-select [control]="searchForm.get('lawyer_type')" [dataList]="lawyerTypeList" [id]="'lawyer_type'"
+        [label]="'Lawyer Type'" [value_control]="'id'" [view_control]="'name'"></app-multi-select>
+
       <!-- <div class="form-group">
         <label for="lawyer_type">Lawyer Type</label>
         <select id="lawyer_type" class="form-select" formControlName="lawyer_type" multiple>
