@@ -49,5 +49,6 @@ export class MultiSelectComponent {
         [option?.[this.value_control]]: option
       }
     }
+    this.controlChange.emit(Object.keys(this.input_values))
   }
 }

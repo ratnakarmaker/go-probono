@@ -5,15 +5,27 @@
     justify-content: flex-start;
     flex-flow: row wrap;
     align-items: flex-start;
+    border: 1px solid black;
+    cursor: text;
     .single-select{
       display: flex;
       justify-content: space-between;
       align-items: center;
       min-width: 50px;
       border: 1px solid black;
-      margin: 4px 8px;
+      margin: 4px 2px;
       border-radius: 12px;
       padding: 0 6px;
+      cursor: pointer;
+    }
+    .search-field{
+      min-width: 35%;
+      max-width: 100%;
+      border: none;
+      height: 34px;
+      &:focus-visible{
+        outline: none;
+      }
     }
   }
   .option-holder {
@@ -29,6 +41,9 @@
     cursor: pointer;
     .single-option {
       padding: 4px 8px 4px 8px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
     .single-option:hover {
       background-color: blue;

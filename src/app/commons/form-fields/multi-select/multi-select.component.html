@@ -1,18 +1,17 @@
 <div class="form-group autocomplete-form">
   <label [for]="id">{{ label }}</label>
-  <div class="multi-select">
-    <div class="single-select" *ngFor="let selected of selectedList()">
+  <div class="multi-select" (click)="input_field?.nativeElement.focus()" #autocomplete_input>
+    <div class="single-select" *ngFor="let selected of selectedList()" (click)="setValue(selected)">
       {{ selected?.[view_control] }}
-      <fa-icon (click)="setValue(selected)" icon="xmark"></fa-icon>
+      <fa-icon icon="xmark"></fa-icon>
     </div>
     <input
       [(ngModel)]="search_text"
       [id]="'custom-autocomplete-input' + id"
       type="text"
-      class="form-control"
-      [placeholder]="'Enter ' + label"
+      class="search-field"
+      placeholder="Enter search text"
       autocomplete="off"
-      #autocomplete_input
     />
   </div>
   <div
@@ -23,8 +22,8 @@
   >
     <ng-container *ngFor="let option of dataList; let opt_i = index">
       <ng-container *ngIf="optionShower(option)">
-        <label [for]="opt_i+'_option'" class="d-flex justify-content-start align-items-center">
-          <input [id]="opt_i+'_option'" (input)="setValue(option)" type="checkbox" [checked]="input_values[option?.[value_control] ?? '']">
+        <label [for]="opt_i+'_option'" class="single-option">
+          <input class="me-2" [id]="opt_i+'_option'" (input)="setValue(option)" type="checkbox" [checked]="input_values[option?.[value_control] ?? '']">
           <span > {{option?.[view_control]}} </span>
         </label>
       </ng-container>
